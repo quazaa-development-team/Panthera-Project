@@ -1,0 +1,72 @@
+<RCC>
+    <qresource prefix="/Splash" >
+        <file>Resource/Splash.png</file>
+    </qresource>
+    <qresource prefix="/Icons" >
+        <file>Resource/Panthera.png</file>
+        <file>Resource/Home_32x32.png</file>
+        <file>Resource/download2-32.png</file>
+        <file>Resource/film-reel-32x32.png</file>
+        <file>Resource/Folder Libary_32.png</file>
+        <file>Resource/Network-32.png</file>
+        <file>Resource/search-32.png</file>
+        <file>Resource/Keys_32.png</file>
+        <file>Resource/Chat-32.png</file>
+        <file>Resource/Splash.png</file>
+        <file>Resource/agt_action_success-32.png</file>
+        <file>Resource/button_cancel-32.png</file>
+        <file>Resource/connect_creating-32.png</file>
+        <file>Resource/connect_established-32.png</file>
+        <file>Resource/connect_no-32.png</file>
+        <file>Resource/workstation-locked-Vista_32.png</file>
+        <file>Resource/globe-Vista_32.png</file>
+        <file>Resource/Internet_32.png</file>
+        <file>Resource/Downloader_32.png</file>
+        <file>Resource/fileclose-32.png</file>
+        <file>Resource/Column-Chart-32x32.png</file>
+        <file>Resource/donkey-32x32.png</file>
+        <file>Resource/Earth Security.png</file>
+        <file>Resource/Download.png</file>
+        <file>Resource/Entire Network.png</file>
+        <file>Resource/Network Connections.png</file>
+        <file>Resource/Internet Connect.png</file>
+        <file>Resource/Message.png</file>
+        <file>Resource/G2.png</file>
+        <file>Resource/G1.png</file>
+        <file>Resource/Bittorent Downloads.png</file>
+        <file>Resource/Bittorrent_32.png</file>
+        <file>Resource/Check mark copy.png</file>
+        <file>Resource/Desktop graphite.png</file>
+        <file>Resource/Download server.png</file>
+        <file>Resource/Error Circle.png</file>
+        <file>Resource/Filetype URL.png</file>
+        <file>Resource/Folder - Internet_32.png</file>
+        <file>Resource/Folder Download.png</file>
+        <file>Resource/Folder Web.png</file>
+        <file>Resource/Folder.png</file>
+        <file>Resource/Graph.png</file>
+        <file>Resource/Help.png</file>
+        <file>Resource/Html.png</file>
+        <file>Resource/Image.png</file>
+        <file>Resource/INF File.png</file>
+        <file>Resource/Language.png</file>
+        <file>Resource/Package network.png</file>
+        <file>Resource/Question Block.png</file>
+        <file>Resource/REG File.png</file>
+        <file>Resource/Torrent File.png</file>
+        <file>Resource/Workgroup.png</file>
+        <file>Resource/Zealot.png</file>
+        <file>Resource/wizard_32.png</file>
+        <file>Resource/money_32.png</file>
+        <file>Resource/Tourist guidebook.png</file>
+        <file>Resource/BittorrentSeed.png</file>
+        <file>Resource/SearchMonitor.png</file>
+        <file>Resource/Gear.png</file>
+        <file>Resource/Leaf.png</file>
+        <file>Resource/Lock.png</file>
+        <file>Resource/locknkey.png</file>
+        <file>Resource/Settings.png</file>
+        <file>Resource/Wallpaper Settings.png</file>
+    </qresource>
+    <qresource prefix="/html" />
+</RCC>
