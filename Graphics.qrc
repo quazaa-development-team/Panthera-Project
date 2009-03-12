@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/Splash" >
         <file>Resource/Splash.png</file>
+        <file>Resource/PantheraHomeSplash.png</file>
     </qresource>
     <qresource prefix="/Icons" >
         <file>Resource/Panthera.png</file>
@@ -67,6 +68,12 @@
         <file>Resource/locknkey.png</file>
         <file>Resource/Settings.png</file>
         <file>Resource/Wallpaper Settings.png</file>
+        <file>Resource/Earth Alert_32.png</file>
+        <file>Resource/Earth Download_32.png</file>
+        <file>Resource/Earth Scan_32.png</file>
+        <file>Resource/Earth Stop_32.png</file>
+        <file>Resource/Earth Upload_32.png</file>
+        <file>Resource/Earth_32.png</file>
     </qresource>
     <qresource prefix="/html" />
 </RCC>

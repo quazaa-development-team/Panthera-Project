@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Wed Mar 11 14:25:17 2009
+** Created: Thu Mar 12 01:36:39 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -14,17 +14,25 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QComboBox>
+#include <QtGui/QFrame>
 #include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
+#include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QStackedWidget>
 #include <QtGui/QStatusBar>
+#include <QtGui/QTableWidget>
 #include <QtGui/QToolBar>
+#include <QtGui/QTreeWidget>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
-#include <QtWebKit/QWebView>
 
 QT_BEGIN_NAMESPACE
 
@@ -79,8 +87,43 @@ public:
     QWidget *Home;
     QGridLayout *gridLayout_2;
     QGroupBox *groupBoxHome;
+    QGridLayout *gridLayout_11;
+    QFrame *frame;
     QGridLayout *gridLayout_10;
-    QWebView *webView;
+    QTreeWidget *treeDownloads;
+    QTreeWidget *treeUpload;
+    QTreeWidget *treeLibrary;
+    QTreeWidget *treeWidget;
+    QTableWidget *tableConn;
+    QGroupBox *groupBox;
+    QGridLayout *gridLayout_26;
+    QLabel *headerLbl;
+    QSpacerItem *horizontalSpacer_7;
+    QGridLayout *gridLayout_23;
+    QLineEdit *lineEditSearch;
+    QPushButton *pushButtonSearch;
+    QComboBox *typeCombo;
+    QPushButton *AdvancedBtn;
+    QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *label_57;
+    QLabel *label_63;
+    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer_5;
+    QVBoxLayout *verticalLayout_2;
+    QGridLayout *gridLayout_13;
+    QLabel *label;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
+    QSpacerItem *verticalSpacer;
+    QSpacerItem *horizontalSpacer_3;
+    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *horizontalSpacer_10;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label_62;
+    QLabel *label_64;
     QWidget *Library;
     QGridLayout *gridLayout_3;
     QGroupBox *groupBoxLibrary;
@@ -119,7 +162,7 @@ public:
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QString::fromUtf8("MainWindowClass"));
-        MainWindowClass->resize(612, 400);
+        MainWindowClass->resize(1258, 655);
         QIcon icon;
         icon.addPixmap(QPixmap(QString::fromUtf8("Resource/Panthera.png")), QIcon::Normal, QIcon::Off);
         MainWindowClass->setWindowIcon(icon);
@@ -358,17 +401,278 @@ public:
         groupBoxHome->setObjectName(QString::fromUtf8("groupBoxHome"));
         groupBoxHome->setAlignment(Qt::AlignCenter);
         groupBoxHome->setFlat(true);
-        gridLayout_10 = new QGridLayout(groupBoxHome);
+        gridLayout_11 = new QGridLayout(groupBoxHome);
+        gridLayout_11->setSpacing(6);
+        gridLayout_11->setMargin(0);
+        gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
+        frame = new QFrame(groupBoxHome);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy1);
+        frame->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        gridLayout_10 = new QGridLayout(frame);
         gridLayout_10->setSpacing(6);
-        gridLayout_10->setMargin(0);
+        gridLayout_10->setMargin(11);
         gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
-        gridLayout_10->setSizeConstraint(QLayout::SetDefaultConstraint);
-        gridLayout_10->setHorizontalSpacing(6);
-        webView = new QWebView(groupBoxHome);
-        webView->setObjectName(QString::fromUtf8("webView"));
-        webView->setUrl(QUrl("about:blank"));
+        treeDownloads = new QTreeWidget(frame);
+        QIcon icon42;
+        icon42.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Earth Download_32.png")), QIcon::Normal, QIcon::Off);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setIcon(0, icon42);
+        treeDownloads->setHeaderItem(__qtreewidgetitem);
+        treeDownloads->setObjectName(QString::fromUtf8("treeDownloads"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Liberation Mono"));
+        font.setPointSize(9);
+        treeDownloads->setFont(font);
+        treeDownloads->setMouseTracking(false);
+        treeDownloads->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout_10->addWidget(webView, 0, 0, 1, 1);
+        gridLayout_10->addWidget(treeDownloads, 1, 0, 1, 1);
+
+        treeUpload = new QTreeWidget(frame);
+        QIcon icon43;
+        icon43.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Earth Upload_32.png")), QIcon::Normal, QIcon::Off);
+        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
+        __qtreewidgetitem1->setIcon(0, icon43);
+        treeUpload->setHeaderItem(__qtreewidgetitem1);
+        treeUpload->setObjectName(QString::fromUtf8("treeUpload"));
+        treeUpload->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_10->addWidget(treeUpload, 3, 0, 1, 1);
+
+        treeLibrary = new QTreeWidget(frame);
+        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem();
+        __qtreewidgetitem2->setIcon(0, icon5);
+        treeLibrary->setHeaderItem(__qtreewidgetitem2);
+        treeLibrary->setObjectName(QString::fromUtf8("treeLibrary"));
+        treeLibrary->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_10->addWidget(treeLibrary, 0, 0, 1, 1);
+
+        treeWidget = new QTreeWidget(frame);
+        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem();
+        __qtreewidgetitem3->setIcon(0, icon13);
+        treeWidget->setHeaderItem(__qtreewidgetitem3);
+        treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
+
+        gridLayout_10->addWidget(treeWidget, 6, 0, 1, 1);
+
+        tableConn = new QTableWidget(frame);
+        if (tableConn->columnCount() < 1)
+            tableConn->setColumnCount(1);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        __qtablewidgetitem->setIcon(icon18);
+        tableConn->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        tableConn->setObjectName(QString::fromUtf8("tableConn"));
+        tableConn->setShowGrid(false);
+
+        gridLayout_10->addWidget(tableConn, 4, 0, 1, 1);
+
+
+        gridLayout_11->addWidget(frame, 0, 0, 1, 1);
+
+        groupBox = new QGroupBox(groupBoxHome);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        groupBox->setFlat(true);
+        gridLayout_26 = new QGridLayout(groupBox);
+        gridLayout_26->setSpacing(6);
+        gridLayout_26->setMargin(11);
+        gridLayout_26->setObjectName(QString::fromUtf8("gridLayout_26"));
+        headerLbl = new QLabel(groupBox);
+        headerLbl->setObjectName(QString::fromUtf8("headerLbl"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(headerLbl->sizePolicy().hasHeightForWidth());
+        headerLbl->setSizePolicy(sizePolicy2);
+        headerLbl->setStyleSheet(QString::fromUtf8("border-image: url(:/Pixmaps/panthera.png);"));
+        headerLbl->setPixmap(QPixmap(QString::fromUtf8(":/Splash/Resource/PantheraHomeSplash.png")));
+
+        gridLayout_26->addWidget(headerLbl, 0, 0, 1, 4);
+
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer_7, 1, 0, 1, 4);
+
+        gridLayout_23 = new QGridLayout();
+        gridLayout_23->setSpacing(6);
+        gridLayout_23->setObjectName(QString::fromUtf8("gridLayout_23"));
+        lineEditSearch = new QLineEdit(groupBox);
+        lineEditSearch->setObjectName(QString::fromUtf8("lineEditSearch"));
+
+        gridLayout_23->addWidget(lineEditSearch, 0, 2, 1, 3);
+
+        pushButtonSearch = new QPushButton(groupBox);
+        pushButtonSearch->setObjectName(QString::fromUtf8("pushButtonSearch"));
+        sizePolicy2.setHeightForWidth(pushButtonSearch->sizePolicy().hasHeightForWidth());
+        pushButtonSearch->setSizePolicy(sizePolicy2);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Liberation Mono"));
+        pushButtonSearch->setFont(font1);
+
+        gridLayout_23->addWidget(pushButtonSearch, 0, 5, 1, 1);
+
+        typeCombo = new QComboBox(groupBox);
+        typeCombo->setObjectName(QString::fromUtf8("typeCombo"));
+        QSizePolicy sizePolicy3(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(typeCombo->sizePolicy().hasHeightForWidth());
+        typeCombo->setSizePolicy(sizePolicy3);
+        typeCombo->setFont(font1);
+        typeCombo->setCursor(QCursor(Qt::PointingHandCursor));
+
+        gridLayout_23->addWidget(typeCombo, 1, 2, 1, 1);
+
+        AdvancedBtn = new QPushButton(groupBox);
+        AdvancedBtn->setObjectName(QString::fromUtf8("AdvancedBtn"));
+        sizePolicy2.setHeightForWidth(AdvancedBtn->sizePolicy().hasHeightForWidth());
+        AdvancedBtn->setSizePolicy(sizePolicy2);
+        AdvancedBtn->setFont(font1);
+
+        gridLayout_23->addWidget(AdvancedBtn, 1, 3, 1, 1);
+
+        horizontalSpacer_8 = new QSpacerItem(64, 23, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_23->addItem(horizontalSpacer_8, 1, 4, 1, 1);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_23->addItem(horizontalSpacer_9, 1, 5, 1, 1);
+
+        label_57 = new QLabel(groupBox);
+        label_57->setObjectName(QString::fromUtf8("label_57"));
+        sizePolicy2.setHeightForWidth(label_57->sizePolicy().hasHeightForWidth());
+        label_57->setSizePolicy(sizePolicy2);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Liberation Mono"));
+        font2.setPointSize(8);
+        font2.setBold(true);
+        font2.setWeight(75);
+        label_57->setFont(font2);
+        label_57->setAlignment(Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing);
+
+        gridLayout_23->addWidget(label_57, 1, 1, 1, 1);
+
+        label_63 = new QLabel(groupBox);
+        label_63->setObjectName(QString::fromUtf8("label_63"));
+        sizePolicy2.setHeightForWidth(label_63->sizePolicy().hasHeightForWidth());
+        label_63->setSizePolicy(sizePolicy2);
+        label_63->setFont(font2);
+        label_63->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout_23->addWidget(label_63, 0, 1, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_23->addItem(horizontalSpacer_2, 0, 0, 1, 1);
+
+
+        gridLayout_26->addLayout(gridLayout_23, 3, 0, 1, 3);
+
+        horizontalSpacer_5 = new QSpacerItem(135, 23, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer_5, 3, 3, 1, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        gridLayout_13 = new QGridLayout();
+        gridLayout_13->setSpacing(6);
+        gridLayout_13->setObjectName(QString::fromUtf8("gridLayout_13"));
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout_13->addWidget(label, 1, 1, 1, 1);
+
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout_13->addWidget(label_3, 2, 1, 1, 1);
+
+        label_4 = new QLabel(groupBox);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        gridLayout_13->addWidget(label_4, 3, 1, 1, 1);
+
+        label_5 = new QLabel(groupBox);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        gridLayout_13->addWidget(label_5, 4, 1, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_13->addItem(verticalSpacer, 5, 1, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_13->addItem(horizontalSpacer_3, 1, 0, 1, 1);
+
+
+        verticalLayout_2->addLayout(gridLayout_13);
+
+
+        gridLayout_26->addLayout(verticalLayout_2, 6, 0, 2, 2);
+
+        horizontalSpacer_6 = new QSpacerItem(427, 13, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer_6, 6, 2, 1, 2);
+
+        horizontalSpacer_10 = new QSpacerItem(126, 41, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer_10, 7, 3, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(758, 28, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer_4, 4, 0, 1, 4);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_26->addItem(horizontalSpacer, 2, 3, 1, 1);
+
+        label_62 = new QLabel(groupBox);
+        label_62->setObjectName(QString::fromUtf8("label_62"));
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Maximum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(label_62->sizePolicy().hasHeightForWidth());
+        label_62->setSizePolicy(sizePolicy4);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Liberation Mono"));
+        font3.setPointSize(11);
+        font3.setBold(true);
+        font3.setWeight(75);
+        label_62->setFont(font3);
+        label_62->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+
+        gridLayout_26->addWidget(label_62, 2, 0, 1, 1);
+
+        label_64 = new QLabel(groupBox);
+        label_64->setObjectName(QString::fromUtf8("label_64"));
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(label_64->sizePolicy().hasHeightForWidth());
+        label_64->setSizePolicy(sizePolicy5);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Liberation Mono"));
+        font4.setPointSize(9);
+        font4.setBold(true);
+        font4.setWeight(75);
+        label_64->setFont(font4);
+        label_64->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+
+        gridLayout_26->addWidget(label_64, 5, 0, 1, 1);
+
+
+        gridLayout_11->addWidget(groupBox, 0, 1, 1, 1);
 
 
         gridLayout_2->addWidget(groupBoxHome, 0, 0, 1, 1);
@@ -478,7 +782,7 @@ public:
         MainWindowClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindowClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 612, 21));
+        menuBar->setGeometry(QRect(0, 0, 1258, 21));
         menuNetwork = new QMenu(menuBar);
         menuNetwork->setObjectName(QString::fromUtf8("menuNetwork"));
         menuConnect_To = new QMenu(menuNetwork);
@@ -633,6 +937,69 @@ public:
         actionDonate->setText(QApplication::translate("MainWindowClass", "Donate", 0, QApplication::UnicodeUTF8));
         actionPanthera_Forums->setText(QApplication::translate("MainWindowClass", "Panthera Forums", 0, QApplication::UnicodeUTF8));
         groupBoxHome->setTitle(QApplication::translate("MainWindowClass", "Home", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem = treeDownloads->headerItem();
+        ___qtreewidgetitem->setText(0, QApplication::translate("MainWindowClass", "Downloads", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem1 = treeUpload->headerItem();
+        ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindowClass", "Uploads", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem2 = treeLibrary->headerItem();
+        ___qtreewidgetitem2->setText(0, QApplication::translate("MainWindowClass", "My Library", 0, QApplication::UnicodeUTF8));
+        QTreeWidgetItem *___qtreewidgetitem3 = treeWidget->headerItem();
+        ___qtreewidgetitem3->setText(0, QApplication::translate("MainWindowClass", "Torrents", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem = tableConn->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindowClass", "Connections", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QString());
+        headerLbl->setText(QString());
+        pushButtonSearch->setText(QApplication::translate("MainWindowClass", "Start Search", 0, QApplication::UnicodeUTF8));
+        pushButtonSearch->setShortcut(QApplication::translate("MainWindowClass", "Return", 0, QApplication::UnicodeUTF8));
+        typeCombo->clear();
+        typeCombo->insertItems(0, QStringList()
+         << QString()
+         << QApplication::translate("MainWindowClass", "Mp3", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindowClass", "Audio", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MainWindowClass", "Video", 0, QApplication::UnicodeUTF8)
+        );
+        AdvancedBtn->setText(QApplication::translate("MainWindowClass", "Advanced", 0, QApplication::UnicodeUTF8));
+        label_57->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Mono'; font-size:8pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">File Type:</p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_63->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Mono'; font-size:8pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Keyword:</p></body></html>", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/Wallpaper Settings.png\" /><span style=\" font-size:8pt;\"> </span><span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">Skins:</span><span style=\" font-size:12pt; font-weight:600; color:#0000ff;\"> </span><span style=\" font-size:12pt; color:#000000;\">Change Panthera's look and feel</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/wizard_32.png\" /> <span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">Settings Wizard:</span><span style=\" font-size:12pt; color:#0000ff;\"> </span><span style=\" font-size:12pt; color:#000000;\">Edit Panthera's settings</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/Question Block.png\" /> <span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">Quick Help:</span><span style=\" font-size:12pt; color:#000000;\"> Get help using Panthera</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/Earth Security.png\" /> <span style=\" font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;\">Security Filters:</span><span style=\" font-size:12pt; color:#000000;\"> Add security filters to block spam</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_62->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Mono'; font-size:11pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:12pt;\">Welcome to Panthera!</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/search-32.png\" /><span style=\" font-size:12pt;\"> </span><span style=\" font-family:'MS Shell Dlg 2'; font-size:12pt; color:#aa0000;\">Enter keywords to search for a file below.</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        label_64->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Liberation Mono'; font-size:9pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/Gear.png\" /><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; color:#aa0000;\">Customise Panthera</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         groupBoxLibrary->setTitle(QApplication::translate("MainWindowClass", "Library", 0, QApplication::UnicodeUTF8));
         groupBoxMedia->setStyleSheet(QString());
         groupBoxMedia->setTitle(QApplication::translate("MainWindowClass", "Media", 0, QApplication::UnicodeUTF8));
