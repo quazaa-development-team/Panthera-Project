@@ -1090,7 +1090,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionPacket_Dump">
    <property name="icon">
     <iconset resource="Graphics.qrc">
-     <normaloff>:/Icons/Resource/Package network.png</normaloff>:/Icons/Resource/Package network.png</iconset>
+     <normaloff>:/Icons/Resource/Desktop graphite.png</normaloff>:/Icons/Resource/Desktop graphite.png</iconset>
    </property>
    <property name="text">
     <string>Packet Dump</string>
