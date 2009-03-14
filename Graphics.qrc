@@ -1,7 +1,8 @@
 <RCC>
-    <qresource prefix="/Splash" >
+    <qresource prefix="/Graphics" >
         <file>Resource/Splash.png</file>
         <file>Resource/PantheraHomeSplash.png</file>
+        <file>Resource/VLC.png</file>
     </qresource>
     <qresource prefix="/Icons" >
         <file>Resource/Panthera.png</file>
@@ -74,6 +75,77 @@
         <file>Resource/Earth Stop_32.png</file>
         <file>Resource/Earth Upload_32.png</file>
         <file>Resource/Earth_32.png</file>
+        <file>Resource/Folder Documents.png</file>
+        <file>Resource/Cinema Display blue.png</file>
+        <file>Resource/Document Info.png</file>
+        <file>Resource/Edit Add.png</file>
+        <file>Resource/Edit Remove.png</file>
+        <file>Resource/Erase All.png</file>
+        <file>Resource/PantheraHomeSplash.png</file>
+        <file>Resource/Pause Queue.png</file>
+        <file>Resource/Player Eject.png</file>
+        <file>Resource/Player End.png</file>
+        <file>Resource/Player Fwd.png</file>
+        <file>Resource/Player Pause.png</file>
+        <file>Resource/Player Play.png</file>
+        <file>Resource/Player Rew.png</file>
+        <file>Resource/Player Start.png</file>
+        <file>Resource/Player Stop.png</file>
+        <file>Resource/Player Volume.png</file>
+        <file>Resource/Playlist.png</file>
+        <file>Resource/Plugins.png</file>
+        <file>Resource/Remove.png</file>
+        <file>Resource/Save All.png</file>
+        <file>Resource/Save File.png</file>
+        <file>Resource/Speaker.png</file>
+        <file>Resource/View Full Size.png</file>
+        <file>Resource/view_bottom-256.png</file>
+        <file>Resource/view_choose-256.png</file>
+        <file>Resource/view_detailed-32.png</file>
+        <file>Resource/view_detailed-256.png</file>
+        <file>Resource/view_icon-256.png</file>
+        <file>Resource/view_left_right-256.png</file>
+        <file>Resource/view_multicolumn-256.png</file>
+        <file>Resource/view_remove2-256.png</file>
+        <file>Resource/view_remove-256.png</file>
+        <file>Resource/view_right-256.png</file>
+        <file>Resource/view_right_p-256.png</file>
+        <file>Resource/view_sidetree-256.png</file>
+        <file>Resource/view_text-256.png</file>
+        <file>Resource/view_top_bottom-256.png</file>
+        <file>Resource/view_tree-256.png</file>
+        <file>Resource/VisualHub.png</file>
+        <file>Resource/VLC.png</file>
+        <file>Resource/Volume Normal Blue.png</file>
+        <file>Resource/Zoom In.png</file>
+        <file>Resource/Zoom Out.png</file>
     </qresource>
     <qresource prefix="/html" />
+    <qresource prefix="/Player" >
+        <file>Resource/Player Stop.png</file>
+        <file>Resource/Pause Queue.png</file>
+        <file>Resource/Player Eject.png</file>
+        <file>Resource/Player End.png</file>
+        <file>Resource/Player Fwd.png</file>
+        <file>Resource/Player Pause.png</file>
+        <file>Resource/Player Play.png</file>
+        <file>Resource/Player Rew.png</file>
+        <file>Resource/Player Start.png</file>
+        <file>Resource/Volume Normal Blue.png</file>
+        <file>Resource/Cinema Display blue.png</file>
+        <file>Resource/VisualHub.png</file>
+        <file>Resource/Zoom In.png</file>
+        <file>Resource/Zoom Out.png</file>
+        <file>Resource/Edit Add.png</file>
+        <file>Resource/Edit Remove.png</file>
+        <file>Resource/Erase All.png</file>
+        <file>Resource/Playlist.png</file>
+        <file>Resource/Plugins.png</file>
+        <file>Resource/Remove.png</file>
+        <file>Resource/Save All.png</file>
+        <file>Resource/Save File.png</file>
+        <file>Resource/View Full Size.png</file>
+        <file>Resource/Player Volume.png</file>
+        <file>Resource/Speaker.png</file>
+    </qresource>
 </RCC>

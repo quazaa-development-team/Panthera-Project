@@ -7,9 +7,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1258</width>
-    <height>655</height>
+    <width>863</width>
+    <height>618</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Panthera</string>
@@ -27,7 +33,7 @@
      <number>0</number>
     </property>
     <item row="0" column="0">
-     <widget class="QStackedWidget" name="pagesWidget">
+     <widget class="QStackedWidget" name="pagesMain">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -35,7 +41,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Home">
        <layout class="QGridLayout" name="gridLayout_2">
@@ -57,113 +63,6 @@
            <property name="margin">
             <number>0</number>
            </property>
-           <item row="0" column="0">
-            <widget class="QFrame" name="frameHomeStatus">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_10">
-              <item row="1" column="0">
-               <widget class="QTreeWidget" name="treeDownloads">
-                <property name="font">
-                 <font>
-                  <family>Liberation Mono</family>
-                  <pointsize>9</pointsize>
-                 </font>
-                </property>
-                <property name="mouseTracking">
-                 <bool>false</bool>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <column>
-                 <property name="text">
-                  <string>Downloads</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Graphics.qrc">
-                   <normaloff>:/Icons/Resource/Earth Download_32.png</normaloff>:/Icons/Resource/Earth Download_32.png</iconset>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QTreeWidget" name="treeUpload">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <column>
-                 <property name="text">
-                  <string>Uploads</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Graphics.qrc">
-                   <normaloff>:/Icons/Resource/Earth Upload_32.png</normaloff>:/Icons/Resource/Earth Upload_32.png</iconset>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QTreeWidget" name="treeLibrary">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <column>
-                 <property name="text">
-                  <string>My Library</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Graphics.qrc">
-                   <normaloff>:/Icons/Resource/Folder Libary_32.png</normaloff>:/Icons/Resource/Folder Libary_32.png</iconset>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QTreeWidget" name="treeWidget">
-                <column>
-                 <property name="text">
-                  <string>Torrents</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Graphics.qrc">
-                   <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
-                 </property>
-                </column>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QTableWidget" name="tableConn">
-                <property name="showGrid">
-                 <bool>false</bool>
-                </property>
-                <column>
-                 <property name="text">
-                  <string>Connections</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="Graphics.qrc">
-                   <normaloff>:/Icons/Resource/connect_creating-32.png</normaloff>:/Icons/Resource/connect_creating-32.png</iconset>
-                 </property>
-                </column>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
            <item row="0" column="1">
             <widget class="QFrame" name="frameHome">
              <property name="styleSheet">
@@ -178,14 +77,20 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>500</width>
+                  <height>120</height>
+                 </size>
+                </property>
                 <property name="styleSheet">
-                 <string notr="true">border-image: url(:/Pixmaps/panthera.png);</string>
+                 <string notr="true">border-image: url(:/Graphics/Resource/PantheraHomeSplash.png);</string>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="Graphics.qrc">:/Splash/Resource/PantheraHomeSplash.png</pixmap>
+                 <pixmap>:/Splash/Resource/PantheraHomeSplash.png</pixmap>
                 </property>
                </widget>
               </item>
@@ -298,7 +203,7 @@
                  </spacer>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QLabel" name="label_57">
+                 <widget class="QLabel" name="labelFileType">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -326,7 +231,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QLabel" name="label_63">
+                 <widget class="QLabel" name="labelKeyword">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -392,7 +297,7 @@ p, li { white-space: pre-wrap; }
                 <item>
                  <layout class="QGridLayout" name="gridLayout_13">
                   <item row="1" column="1">
-                   <widget class="QLabel" name="label">
+                   <widget class="QLabel" name="labelSkins">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -403,7 +308,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLabel" name="label_3">
+                   <widget class="QLabel" name="labelSettings">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -414,7 +319,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLabel" name="label_4">
+                   <widget class="QLabel" name="labelHelp">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -425,7 +330,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="4" column="1">
-                   <widget class="QLabel" name="label_5">
+                   <widget class="QLabel" name="labelSecurity">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -439,6 +344,9 @@ p, li { white-space: pre-wrap; }
                    <spacer name="horizontalSpacer_3">
                     <property name="orientation">
                      <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -479,7 +387,7 @@ p, li { white-space: pre-wrap; }
                </spacer>
               </item>
               <item row="1" column="0">
-               <widget class="QLabel" name="label_62">
+               <widget class="QLabel" name="labelWelcome">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
                   <horstretch>0</horstretch>
@@ -508,7 +416,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="3" column="0">
-               <widget class="QLabel" name="label_64">
+               <widget class="QLabel" name="labelCustomise">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -551,6 +459,110 @@ p, li { white-space: pre-wrap; }
              </layout>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QFrame" name="frameHomeStatus">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="1" column="0">
+               <widget class="QTreeWidget" name="treeDownloads">
+                <property name="font">
+                 <font>
+                  <family>Liberation Mono</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>Downloads</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Earth Download_32.png</normaloff>:/Icons/Resource/Earth Download_32.png</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QTreeWidget" name="treeUpload">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>Uploads</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Earth Upload_32.png</normaloff>:/Icons/Resource/Earth Upload_32.png</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QTreeWidget" name="treeLibrary">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>My Library</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Folder Libary_32.png</normaloff>:/Icons/Resource/Folder Libary_32.png</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QTreeWidget" name="treeWidget">
+                <column>
+                 <property name="text">
+                  <string>Torrents</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QTreeWidget" name="treeConnection">
+                <column>
+                 <property name="text">
+                  <string>Connection</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/connect_creating-32.png</normaloff>:/Icons/Resource/connect_creating-32.png</iconset>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -572,6 +584,308 @@ p, li { white-space: pre-wrap; }
           <property name="flat">
            <bool>true</bool>
           </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QFrame" name="frameNav">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>241</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_16">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0" colspan="2">
+               <widget class="QToolBox" name="toolBox">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="pageNavFolders">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>237</width>
+                   <height>436</height>
+                  </rect>
+                 </property>
+                 <attribute name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Folder.png</normaloff>:/Icons/Resource/Folder.png</iconset>
+                 </attribute>
+                 <attribute name="label">
+                  <string>Folders</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_18">
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QTreeView" name="treeView_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="pageNavOrganiser">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>237</width>
+                   <height>436</height>
+                  </rect>
+                 </property>
+                 <attribute name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Folder Documents.png</normaloff>:/Icons/Resource/Folder Documents.png</iconset>
+                 </attribute>
+                 <attribute name="label">
+                  <string>Organiser</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_17">
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QTreeView" name="treeView">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QToolButton" name="toolButtonShare">
+                <property name="toolTip">
+                 <string>Manage the physical folders in your library.</string>
+                </property>
+                <property name="text">
+                 <string>Share Files</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Icons/Resource/Folder Download.png</normaloff>:/Icons/Resource/Folder Download.png</iconset>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonTextBesideIcon</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="comboBoxType"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QStackedWidget" name="pagesLibrary">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="pageFolders"/>
+             <widget class="QWidget" name="pageOrganiser">
+              <layout class="QGridLayout" name="gridLayout_19">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0" colspan="4">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/Icons/Resource/Folder Libary_32.png&quot; /&gt; &lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Exploring My Shareaza Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="7">
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>143</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="9">
+                <widget class="QToolButton" name="toolButton_2">
+                 <property name="text">
+                  <string>Tile View</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/view_multicolumn-256.png</normaloff>:/Icons/Resource/view_multicolumn-256.png</iconset>
+                 </property>
+                 <property name="popupMode">
+                  <enum>QToolButton::InstantPopup</enum>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="10">
+                <widget class="QToolButton" name="toolButton_3">
+                 <property name="text">
+                  <string>Show Details</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/view_detailed-32.png</normaloff>:/Icons/Resource/view_detailed-32.png</iconset>
+                 </property>
+                 <property name="popupMode">
+                  <enum>QToolButton::InstantPopup</enum>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 </property>
+                 <property name="autoRaise">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="11">
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QToolButton" name="toolButton_4">
+                 <property name="text">
+                  <string>Create Album</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="8">
+                <widget class="QPlainTextEdit" name="plainTextEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QToolButton" name="toolButton_5">
+                 <property name="text">
+                  <string>Delete Album</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="Graphics.qrc">
+                   <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2" colspan="3">
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::MinimumExpanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -595,6 +909,806 @@ p, li { white-space: pre-wrap; }
           <property name="flat">
            <bool>true</bool>
           </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QFrame" name="frameMediaScreen">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="frame_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(39,39,39);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QFrame" name="frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(39, 39, 39);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QToolButton" name="toolButtonMediaPrevious">
+                <property name="toolTip">
+                 <string>Previous</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Previous</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Start.png</normaloff>:/Player/Resource/Player Start.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+                <property name="arrowType">
+                 <enum>Qt::NoArrow</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QToolButton" name="toolButtonMediaRewind">
+                <property name="toolTip">
+                 <string>Rewind</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Rewind</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Rew.png</normaloff>:/Player/Resource/Player Rew.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QToolButton" name="toolButtonMediaStop">
+                <property name="toolTip">
+                 <string>Stop</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Stop.png</normaloff>:/Player/Resource/Player Stop.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QToolButton" name="toolButtonMediaPlay">
+                <property name="toolTip">
+                 <string>Play</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Play</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Play.png</normaloff>:/Player/Resource/Player Play.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QToolButton" name="toolButtonMediaPause">
+                <property name="toolTip">
+                 <string>Pause</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Pause</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Pause.png</normaloff>:/Player/Resource/Player Pause.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QToolButton" name="toolButtonMediaFastForward">
+                <property name="toolTip">
+                 <string>Fast Forward</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Fast Forward</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player Fwd.png</normaloff>:/Player/Resource/Player Fwd.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QToolButton" name="toolButtonMediaNext">
+                <property name="toolTip">
+                 <string>Next</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Next</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Player End.png</normaloff>:/Player/Resource/Player End.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="14">
+               <widget class="QLabel" name="labelVolume">
+                <property name="toolTip">
+                 <string>Volume</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="Graphics.qrc">:/Player/Resource/Speaker.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="13">
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="15">
+               <widget class="QSlider" name="horizontalSliderVolume">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>130</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="9">
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Minimum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="10">
+               <widget class="QToolButton" name="toolButton">
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>Toggle Full Screen</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Toggle Full Screen</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Cinema Display blue.png</normaloff>:/Player/Resource/Cinema Display blue.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="11">
+               <widget class="QToolButton" name="toolButtonZoom">
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>Adjust Zoom and Aspect Ratio</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Adjust Zoom and Aspect Ratio</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/View Full Size.png</normaloff>:/Player/Resource/View Full Size.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="8">
+               <widget class="QSlider" name="horizontalSliderSeek">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="invertedAppearance">
+                 <bool>false</bool>
+                </property>
+                <property name="invertedControls">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="12">
+               <widget class="QToolButton" name="toolButtonPlugins">
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>39</red>
+                      <green>39</green>
+                      <blue>39</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>Select Visual Plugin for audio</string>
+                </property>
+                <property name="styleSheet">
+                 <string>color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Select Visual Plugin for audio</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="Graphics.qrc">
+                  <normaloff>:/Player/Resource/Plugins.png</normaloff>:/Player/Resource/Plugins.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::InstantPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -708,7 +1822,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1258</width>
+     <width>863</width>
      <height>21</height>
     </rect>
    </property>
@@ -1153,7 +2267,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionChoose_Skin">
    <property name="icon">
     <iconset resource="Graphics.qrc">
-     <normaloff>:/Icons/Resource/Image.png</normaloff>:/Icons/Resource/Image.png</iconset>
+     <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
    </property>
    <property name="text">
     <string>Choose Skin</string>
