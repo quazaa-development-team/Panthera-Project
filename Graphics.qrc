@@ -119,6 +119,23 @@
         <file>Resource/Volume Normal Blue.png</file>
         <file>Resource/Zoom In.png</file>
         <file>Resource/Zoom Out.png</file>
+        <file>Resource/Application.png</file>
+        <file>Resource/Applications.png</file>
+        <file>Resource/Archive.png</file>
+        <file>Resource/Document.png</file>
+        <file>Resource/EMule simple.png</file>
+        <file>Resource/Images.png</file>
+        <file>Resource/Notebook.png</file>
+        <file>Resource/Presentacion.png</file>
+        <file>Resource/Snes.png</file>
+        <file>Resource/source.png</file>
+        <file>Resource/Spreadsheet2.png</file>
+        <file>Resource/toolbar downloads.png</file>
+        <file>Resource/Ares.png</file>
+        <file>Resource/Broom.png</file>
+        <file>Resource/Filter.png</file>
+        <file>Resource/Trash.png</file>
+        <file>Resource/irc protocol.png</file>
     </qresource>
     <qresource prefix="/html" />
     <qresource prefix="/Player" >
@@ -147,5 +164,31 @@
         <file>Resource/View Full Size.png</file>
         <file>Resource/Player Volume.png</file>
         <file>Resource/Speaker.png</file>
+    </qresource>
+    <qresource prefix="/Icons/FileType" >
+        <file>Resource/24x24 File Type/Wallpaper Settings.png</file>
+        <file>Resource/24x24 File Type/Applications.png</file>
+        <file>Resource/24x24 File Type/Archive.png</file>
+        <file>Resource/24x24 File Type/Bittorrent_32.png</file>
+        <file>Resource/24x24 File Type/Document.png</file>
+        <file>Resource/24x24 File Type/Images.png</file>
+        <file>Resource/24x24 File Type/Notebook.png</file>
+        <file>Resource/24x24 File Type/Presentacion.png</file>
+        <file>Resource/24x24 File Type/search-32.png</file>
+        <file>Resource/24x24 File Type/Snes.png</file>
+        <file>Resource/24x24 File Type/source.png</file>
+        <file>Resource/24x24 File Type/Speaker.png</file>
+        <file>Resource/24x24 File Type/Spreadsheet2.png</file>
+        <file>Resource/24x24 File Type/VisualHub.png</file>
+        <file>Resource/24x24 File Type/Earth Download_32.png</file>
+        <file>Resource/24x24 File Type/Earth Scan_32.png</file>
+        <file>Resource/24x24 File Type/Earth Upload_32.png</file>
+        <file>Resource/24x24 File Type/Download server.png</file>
+        <file>Resource/24x24 File Type/Folder Libary_32.png</file>
+        <file>Resource/24x24 File Type/Home_32x32.png</file>
+        <file>Resource/24x24 File Type/Earth Security.png</file>
+        <file>Resource/24x24 File Type/Message.png</file>
+        <file>Resource/24x24 File Type/Workgroup.png</file>
+        <file>Resource/24x24 File Type/irc protocol.png</file>
     </qresource>
 </RCC>
