@@ -136,6 +136,14 @@
         <file>Resource/Filter.png</file>
         <file>Resource/Trash.png</file>
         <file>Resource/irc protocol.png</file>
+        <file>Resource/Key.png</file>
+        <file>Resource/Modify key.png</file>
+        <file>Resource/Open key.png</file>
+        <file>Resource/Remove key.png</file>
+        <file>Resource/Save key.png</file>
+        <file>Resource/Secrecy.png</file>
+        <file>Resource/Add key.png</file>
+        <file>Resource/KeyGlobe.png</file>
     </qresource>
     <qresource prefix="/html" />
     <qresource prefix="/Player" >
@@ -190,5 +198,6 @@
         <file>Resource/24x24 File Type/Message.png</file>
         <file>Resource/24x24 File Type/Workgroup.png</file>
         <file>Resource/24x24 File Type/irc protocol.png</file>
+        <file>Resource/24x24 File Type/Lock.png</file>
     </qresource>
 </RCC>
