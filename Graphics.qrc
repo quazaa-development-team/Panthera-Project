@@ -144,6 +144,11 @@
         <file>Resource/Secrecy.png</file>
         <file>Resource/Add key.png</file>
         <file>Resource/KeyGlobe.png</file>
+        <file>Resource/group remove.png</file>
+        <file>Resource/group add.png</file>
+        <file>Resource/Group Event.png</file>
+        <file>Resource/Group Event 48.png</file>
+        <file>Resource/Forum.png</file>
     </qresource>
     <qresource prefix="/html" />
     <qresource prefix="/Player" >
@@ -199,5 +204,28 @@
         <file>Resource/24x24 File Type/Workgroup.png</file>
         <file>Resource/24x24 File Type/irc protocol.png</file>
         <file>Resource/24x24 File Type/Lock.png</file>
+        <file>Resource/24x24 File Type/Desktop graphite.png</file>
+        <file>Resource/24x24 File Type/Group Event.png</file>
+        <file>Resource/24x24 File Type/Identity.png</file>
+        <file>Resource/24x24 File Type/TV SZ.png</file>
+        <file>Resource/24x24 File Type/Door.png</file>
+    </qresource>
+    <qresource prefix="/Smileys" >
+        <file>Resource/Smileys/Angel.png</file>
+        <file>Resource/Smileys/Angry.png</file>
+        <file>Resource/Smileys/Cha ching.png</file>
+        <file>Resource/Smileys/Cool.png</file>
+        <file>Resource/Smileys/Grin.png</file>
+        <file>Resource/Smileys/Happy.png</file>
+        <file>Resource/Smileys/Hmm.png</file>
+        <file>Resource/Smileys/Kissy.png</file>
+        <file>Resource/Smileys/Nervous.png</file>
+        <file>Resource/Smileys/Sad.png</file>
+        <file>Resource/Smileys/Shame.png</file>
+        <file>Resource/Smileys/Surprise.png</file>
+        <file>Resource/Smileys/Tongue.png</file>
+        <file>Resource/Smileys/Vault.png</file>
+        <file>Resource/Smileys/Weepy.png</file>
+        <file>Resource/Smileys/Winky.png</file>
     </qresource>
 </RCC>

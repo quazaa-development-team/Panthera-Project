@@ -62,11 +62,11 @@
  </data>
  <data>
   <variable>activeRunConfiguration</variable>
-  <value type="int" >2</value>
+  <value type="int" >1</value>
  </data>
  <data>
   <variable>activebuildconfiguration</variable>
-  <value type="QString" >Release</value>
+  <value type="QString" >Debug</value>
  </data>
  <data>
   <variable>buildConfiguration-Debug</variable>
@@ -283,7 +283,7 @@
     <value type="QString" >CONFIG+=release</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >C:/Qt/2009.01/qt/bin/qmake.exe</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >F:/Programming/Pantheraproject/trunk</value>
    <value key="buildConfiguration" type="int" >8</value>
   </valuemap>
