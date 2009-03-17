@@ -3,6 +3,7 @@
         <file>Resource/Splash.png</file>
         <file>Resource/PantheraHomeSplash.png</file>
         <file>Resource/VLC.png</file>
+        <file>Resource/Panthera48.png</file>
     </qresource>
     <qresource prefix="/Icons" >
         <file>Resource/Panthera.png</file>

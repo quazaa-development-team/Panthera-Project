@@ -7,7 +7,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1165</width>
+    <width>1181</width>
     <height>733</height>
    </rect>
   </property>
@@ -41,7 +41,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Home">
        <layout class="QGridLayout" name="gridLayout_2">
@@ -66,7 +66,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -74,7 +74,7 @@
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QLabel" name="label_35">
+             <widget class="QLabel" name="labelHomeHeader">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -178,7 +178,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="6" column="0">
-               <widget class="QTreeWidget" name="treeWidget">
+               <widget class="QTreeWidget" name="treeTorrents">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                 </property>
@@ -276,7 +276,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="1" column="2">
-                 <widget class="QComboBox" name="typeCombo">
+                 <widget class="QComboBox" name="comboBoxFileType">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -508,7 +508,7 @@ p, li { white-space: pre-wrap; }
                  </spacer>
                 </item>
                 <item row="1" column="4">
-                 <widget class="QPushButton" name="AdvancedBtn">
+                 <widget class="QPushButton" name="pushButtonAdvanced">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -738,7 +738,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -746,7 +746,7 @@ p, li { white-space: pre-wrap; }
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QLabel" name="label_34">
+             <widget class="QLabel" name="labelLibraryHeader">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -760,7 +760,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/Icons/FileType/Resource/24x24 File Type/Folder Libary_32.png&quot; /&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;img src=&quot;:/Icons/FileType/Resource/24x24 File Type/Folder Libary_32.png&quot; /&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </widget>
@@ -798,14 +798,14 @@ p, li { white-space: pre-wrap; }
                  <enum>QFrame::Plain</enum>
                 </property>
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="pageNavFolders">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
+                   <width>83</width>
                    <height>62</height>
                   </rect>
                  </property>
@@ -821,7 +821,7 @@ p, li { white-space: pre-wrap; }
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QTreeView" name="treeView_2">
+                   <widget class="QTreeView" name="treeViewNavFolders">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -837,8 +837,8 @@ p, li { white-space: pre-wrap; }
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>98</width>
-                   <height>62</height>
+                   <width>256</width>
+                   <height>544</height>
                   </rect>
                  </property>
                  <attribute name="icon">
@@ -853,7 +853,7 @@ p, li { white-space: pre-wrap; }
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QTreeView" name="treeView">
+                   <widget class="QTreeView" name="treeViewNavOrganiser">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -907,7 +907,7 @@ p, li { white-space: pre-wrap; }
               <enum>QFrame::StyledPanel</enum>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="pageFolders">
               <layout class="QGridLayout" name="gridLayout_21">
@@ -1154,7 +1154,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -2149,7 +2149,7 @@ color: rgb(255, 255, 255);</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -3680,7 +3680,7 @@ p, li { white-space: pre-wrap; }
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>98</width>
+                <width>969</width>
                 <height>118</height>
                </rect>
               </property>
@@ -3860,7 +3860,7 @@ p, li { white-space: pre-wrap; }
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(0, 85, 127);</string>
+                 <string notr="true">background-color: rgb(11, 27, 99);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -4261,7 +4261,7 @@ p, li { white-space: pre-wrap; }
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(0, 85, 127);</string>
+                 <string notr="true">background-color: rgb(11, 27, 99);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -4540,7 +4540,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -4757,7 +4757,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -5075,7 +5075,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -5103,7 +5103,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="4" column="0">
-            <widget class="QTextEdit" name="textEdit"/>
+            <widget class="QTextEdit" name="textEditSystem"/>
            </item>
           </layout>
          </widget>
@@ -5133,7 +5133,7 @@ p, li { white-space: pre-wrap; }
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 85, 127);</string>
+              <string notr="true">background-color: rgb(11, 27, 99);</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -5736,7 +5736,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1165</width>
+     <width>1181</width>
      <height>21</height>
     </rect>
    </property>

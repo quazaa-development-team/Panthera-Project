@@ -23,3 +23,9 @@ void Splash::changeEvent(QEvent *e)
         break;
     }
 }
+
+void Splash::updateProgress(int percent, QString status)
+{
+    m_ui->progressBar->setValue(percent);
+    m_ui->labelStatus->setText(status);
+}

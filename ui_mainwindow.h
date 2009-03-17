@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Mar 16 04:44:53 2009
+** Created: Mon Mar 16 18:16:30 2009
 **      by: Qt User Interface Compiler version 4.5.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -98,13 +98,13 @@ public:
     QFrame *frameHome;
     QGridLayout *gridLayout_11;
     QFrame *frameHomeHeader;
-    QLabel *label_35;
+    QLabel *labelHomeHeader;
     QFrame *frameHomeStatus;
     QGridLayout *gridLayout_10;
     QTreeWidget *treeDownloads;
     QTreeWidget *treeUpload;
     QTreeWidget *treeLibrary;
-    QTreeWidget *treeWidget;
+    QTreeWidget *treeTorrents;
     QTreeWidget *treeConnection;
     QFrame *frameWelcome;
     QGridLayout *gridLayout_26;
@@ -112,12 +112,12 @@ public:
     QGridLayout *gridLayout_23;
     QLineEdit *lineEditSearch;
     QPushButton *pushButtonSearch;
-    QComboBox *typeCombo;
+    QComboBox *comboBoxFileType;
     QSpacerItem *horizontalSpacer_9;
     QLabel *labelFileType;
     QLabel *labelKeyword;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *AdvancedBtn;
+    QPushButton *pushButtonAdvanced;
     QSpacerItem *horizontalSpacer_5;
     QVBoxLayout *verticalLayout_2;
     QGridLayout *gridLayout_13;
@@ -136,16 +136,16 @@ public:
     QFrame *frameLibrary;
     QGridLayout *gridLayout_15;
     QFrame *frameLibraryHeader;
-    QLabel *label_34;
+    QLabel *labelLibraryHeader;
     QFrame *frameNav;
     QGridLayout *gridLayout_16;
     QToolBox *toolBox;
     QWidget *pageNavFolders;
     QGridLayout *gridLayout_18;
-    QTreeView *treeView_2;
+    QTreeView *treeViewNavFolders;
     QWidget *pageNavOrganiser;
     QGridLayout *gridLayout_17;
-    QTreeView *treeView;
+    QTreeView *treeViewNavOrganiser;
     QToolButton *toolButtonShare;
     QComboBox *comboBoxType;
     QStackedWidget *pagesLibrary;
@@ -392,7 +392,7 @@ public:
     QFrame *line_13;
     QFrame *frameDownloadsHeader_5;
     QLabel *label_41;
-    QTextEdit *textEdit;
+    QTextEdit *textEditSystem;
     QWidget *Chat;
     QGridLayout *gridLayout_9;
     QFrame *frameChat;
@@ -453,7 +453,7 @@ public:
     {
         if (MainWindowClass->objectName().isEmpty())
             MainWindowClass->setObjectName(QString::fromUtf8("MainWindowClass"));
-        MainWindowClass->resize(1165, 733);
+        MainWindowClass->resize(1181, 733);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -705,12 +705,12 @@ public:
         frameHomeHeader = new QFrame(frameHome);
         frameHomeHeader->setObjectName(QString::fromUtf8("frameHomeHeader"));
         frameHomeHeader->setMinimumSize(QSize(0, 23));
-        frameHomeHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameHomeHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameHomeHeader->setFrameShape(QFrame::NoFrame);
         frameHomeHeader->setFrameShadow(QFrame::Raised);
-        label_35 = new QLabel(frameHomeHeader);
-        label_35->setObjectName(QString::fromUtf8("label_35"));
-        label_35->setGeometry(QRect(0, 0, 151, 21));
+        labelHomeHeader = new QLabel(frameHomeHeader);
+        labelHomeHeader->setObjectName(QString::fromUtf8("labelHomeHeader"));
+        labelHomeHeader->setGeometry(QRect(0, 0, 151, 21));
 
         gridLayout_11->addWidget(frameHomeHeader, 0, 0, 1, 2);
 
@@ -764,15 +764,15 @@ public:
 
         gridLayout_10->addWidget(treeLibrary, 0, 0, 1, 1);
 
-        treeWidget = new QTreeWidget(frameHomeStatus);
+        treeTorrents = new QTreeWidget(frameHomeStatus);
         QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem();
         __qtreewidgetitem3->setIcon(0, icon13);
-        treeWidget->setHeaderItem(__qtreewidgetitem3);
-        treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
-        treeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        treeWidget->setFrameShape(QFrame::Box);
+        treeTorrents->setHeaderItem(__qtreewidgetitem3);
+        treeTorrents->setObjectName(QString::fromUtf8("treeTorrents"));
+        treeTorrents->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        treeTorrents->setFrameShape(QFrame::Box);
 
-        gridLayout_10->addWidget(treeWidget, 6, 0, 1, 1);
+        gridLayout_10->addWidget(treeTorrents, 6, 0, 1, 1);
 
         treeConnection = new QTreeWidget(frameHomeStatus);
         QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem();
@@ -825,52 +825,52 @@ public:
 
         gridLayout_23->addWidget(pushButtonSearch, 0, 5, 1, 1);
 
-        typeCombo = new QComboBox(frameWelcome);
-        typeCombo->addItem(icon6, QString());
+        comboBoxFileType = new QComboBox(frameWelcome);
+        comboBoxFileType->addItem(icon6, QString());
         QIcon icon43;
         icon43.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Applications.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon43, QString());
+        comboBoxFileType->addItem(icon43, QString());
         QIcon icon44;
         icon44.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Archive.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon44, QString());
+        comboBoxFileType->addItem(icon44, QString());
         QIcon icon45;
         icon45.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Speaker.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon45, QString());
-        typeCombo->addItem(icon13, QString());
+        comboBoxFileType->addItem(icon45, QString());
+        comboBoxFileType->addItem(icon13, QString());
         QIcon icon46;
         icon46.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Notebook.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon46, QString());
+        comboBoxFileType->addItem(icon46, QString());
         QIcon icon47;
         icon47.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Images.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon47, QString());
+        comboBoxFileType->addItem(icon47, QString());
         QIcon icon48;
         icon48.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Presentacion.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon48, QString());
+        comboBoxFileType->addItem(icon48, QString());
         QIcon icon49;
         icon49.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Snes.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon49, QString());
-        typeCombo->addItem(icon32, QString());
+        comboBoxFileType->addItem(icon49, QString());
+        comboBoxFileType->addItem(icon32, QString());
         QIcon icon50;
         icon50.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/source.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon50, QString());
+        comboBoxFileType->addItem(icon50, QString());
         QIcon icon51;
         icon51.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Spreadsheet2.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon51, QString());
-        typeCombo->addItem(icon10, QString());
+        comboBoxFileType->addItem(icon51, QString());
+        comboBoxFileType->addItem(icon10, QString());
         QIcon icon52;
         icon52.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Document.png")), QIcon::Normal, QIcon::Off);
-        typeCombo->addItem(icon52, QString());
-        typeCombo->setObjectName(QString::fromUtf8("typeCombo"));
+        comboBoxFileType->addItem(icon52, QString());
+        comboBoxFileType->setObjectName(QString::fromUtf8("comboBoxFileType"));
         QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(typeCombo->sizePolicy().hasHeightForWidth());
-        typeCombo->setSizePolicy(sizePolicy3);
-        typeCombo->setFont(font1);
-        typeCombo->setCursor(QCursor(Qt::PointingHandCursor));
-        typeCombo->setFrame(true);
+        sizePolicy3.setHeightForWidth(comboBoxFileType->sizePolicy().hasHeightForWidth());
+        comboBoxFileType->setSizePolicy(sizePolicy3);
+        comboBoxFileType->setFont(font1);
+        comboBoxFileType->setCursor(QCursor(Qt::PointingHandCursor));
+        comboBoxFileType->setFrame(true);
 
-        gridLayout_23->addWidget(typeCombo, 1, 2, 1, 1);
+        gridLayout_23->addWidget(comboBoxFileType, 1, 2, 1, 1);
 
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -903,13 +903,13 @@ public:
 
         gridLayout_23->addItem(horizontalSpacer_2, 0, 0, 1, 1);
 
-        AdvancedBtn = new QPushButton(frameWelcome);
-        AdvancedBtn->setObjectName(QString::fromUtf8("AdvancedBtn"));
-        sizePolicy2.setHeightForWidth(AdvancedBtn->sizePolicy().hasHeightForWidth());
-        AdvancedBtn->setSizePolicy(sizePolicy2);
-        AdvancedBtn->setFont(font1);
+        pushButtonAdvanced = new QPushButton(frameWelcome);
+        pushButtonAdvanced->setObjectName(QString::fromUtf8("pushButtonAdvanced"));
+        sizePolicy2.setHeightForWidth(pushButtonAdvanced->sizePolicy().hasHeightForWidth());
+        pushButtonAdvanced->setSizePolicy(sizePolicy2);
+        pushButtonAdvanced->setFont(font1);
 
-        gridLayout_23->addWidget(AdvancedBtn, 1, 4, 1, 1);
+        gridLayout_23->addWidget(pushButtonAdvanced, 1, 4, 1, 1);
 
 
         gridLayout_26->addLayout(gridLayout_23, 2, 0, 1, 3);
@@ -1022,12 +1022,12 @@ public:
         frameLibraryHeader = new QFrame(frameLibrary);
         frameLibraryHeader->setObjectName(QString::fromUtf8("frameLibraryHeader"));
         frameLibraryHeader->setMinimumSize(QSize(0, 23));
-        frameLibraryHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameLibraryHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameLibraryHeader->setFrameShape(QFrame::NoFrame);
         frameLibraryHeader->setFrameShadow(QFrame::Raised);
-        label_34 = new QLabel(frameLibraryHeader);
-        label_34->setObjectName(QString::fromUtf8("label_34"));
-        label_34->setGeometry(QRect(0, 0, 111, 21));
+        labelLibraryHeader = new QLabel(frameLibraryHeader);
+        labelLibraryHeader->setObjectName(QString::fromUtf8("labelLibraryHeader"));
+        labelLibraryHeader->setGeometry(QRect(0, 0, 111, 21));
 
         gridLayout_15->addWidget(frameLibraryHeader, 0, 0, 1, 2);
 
@@ -1051,32 +1051,32 @@ public:
         toolBox->setFrameShadow(QFrame::Plain);
         pageNavFolders = new QWidget();
         pageNavFolders->setObjectName(QString::fromUtf8("pageNavFolders"));
-        pageNavFolders->setGeometry(QRect(0, 0, 98, 62));
+        pageNavFolders->setGeometry(QRect(0, 0, 256, 544));
         gridLayout_18 = new QGridLayout(pageNavFolders);
         gridLayout_18->setSpacing(6);
         gridLayout_18->setMargin(0);
         gridLayout_18->setObjectName(QString::fromUtf8("gridLayout_18"));
-        treeView_2 = new QTreeView(pageNavFolders);
-        treeView_2->setObjectName(QString::fromUtf8("treeView_2"));
-        sizePolicy6.setHeightForWidth(treeView_2->sizePolicy().hasHeightForWidth());
-        treeView_2->setSizePolicy(sizePolicy6);
+        treeViewNavFolders = new QTreeView(pageNavFolders);
+        treeViewNavFolders->setObjectName(QString::fromUtf8("treeViewNavFolders"));
+        sizePolicy6.setHeightForWidth(treeViewNavFolders->sizePolicy().hasHeightForWidth());
+        treeViewNavFolders->setSizePolicy(sizePolicy6);
 
-        gridLayout_18->addWidget(treeView_2, 0, 0, 1, 1);
+        gridLayout_18->addWidget(treeViewNavFolders, 0, 0, 1, 1);
 
         toolBox->addItem(pageNavFolders, icon31, QString::fromUtf8("Folders"));
         pageNavOrganiser = new QWidget();
         pageNavOrganiser->setObjectName(QString::fromUtf8("pageNavOrganiser"));
-        pageNavOrganiser->setGeometry(QRect(0, 0, 98, 62));
+        pageNavOrganiser->setGeometry(QRect(0, 0, 256, 544));
         gridLayout_17 = new QGridLayout(pageNavOrganiser);
         gridLayout_17->setSpacing(6);
         gridLayout_17->setMargin(0);
         gridLayout_17->setObjectName(QString::fromUtf8("gridLayout_17"));
-        treeView = new QTreeView(pageNavOrganiser);
-        treeView->setObjectName(QString::fromUtf8("treeView"));
-        sizePolicy6.setHeightForWidth(treeView->sizePolicy().hasHeightForWidth());
-        treeView->setSizePolicy(sizePolicy6);
+        treeViewNavOrganiser = new QTreeView(pageNavOrganiser);
+        treeViewNavOrganiser->setObjectName(QString::fromUtf8("treeViewNavOrganiser"));
+        sizePolicy6.setHeightForWidth(treeViewNavOrganiser->sizePolicy().hasHeightForWidth());
+        treeViewNavOrganiser->setSizePolicy(sizePolicy6);
 
-        gridLayout_17->addWidget(treeView, 0, 0, 1, 1);
+        gridLayout_17->addWidget(treeViewNavOrganiser, 0, 0, 1, 1);
 
         QIcon icon53;
         icon53.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Folder Documents.png")), QIcon::Normal, QIcon::Off);
@@ -1242,7 +1242,7 @@ public:
         frameMediaHeader = new QFrame(frameMedia);
         frameMediaHeader->setObjectName(QString::fromUtf8("frameMediaHeader"));
         frameMediaHeader->setMinimumSize(QSize(0, 23));
-        frameMediaHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameMediaHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameMediaHeader->setFrameShape(QFrame::NoFrame);
         frameMediaHeader->setFrameShadow(QFrame::Raised);
         label_33 = new QLabel(frameMediaHeader);
@@ -1560,7 +1560,7 @@ public:
         frameSearchHeader = new QFrame(frameSearch);
         frameSearchHeader->setObjectName(QString::fromUtf8("frameSearchHeader"));
         frameSearchHeader->setMinimumSize(QSize(0, 23));
-        frameSearchHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameSearchHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameSearchHeader->setFrameShape(QFrame::NoFrame);
         frameSearchHeader->setFrameShadow(QFrame::Raised);
         label_32 = new QLabel(frameSearchHeader);
@@ -1978,7 +1978,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 98, 118));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 969, 118));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         gridLayout_25->addWidget(scrollArea, 3, 1, 1, 1);
@@ -2087,7 +2087,7 @@ public:
         frameDownloadsHeader = new QFrame(frameDownloads);
         frameDownloadsHeader->setObjectName(QString::fromUtf8("frameDownloadsHeader"));
         frameDownloadsHeader->setMinimumSize(QSize(0, 23));
-        frameDownloadsHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameDownloadsHeader->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameDownloadsHeader->setFrameShape(QFrame::NoFrame);
         frameDownloadsHeader->setFrameShadow(QFrame::Raised);
         label_30 = new QLabel(frameDownloadsHeader);
@@ -2454,7 +2454,7 @@ public:
         frameDownloadsHeader_2 = new QFrame(frameSecurity);
         frameDownloadsHeader_2->setObjectName(QString::fromUtf8("frameDownloadsHeader_2"));
         frameDownloadsHeader_2->setMinimumSize(QSize(0, 23));
-        frameDownloadsHeader_2->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameDownloadsHeader_2->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameDownloadsHeader_2->setFrameShape(QFrame::NoFrame);
         frameDownloadsHeader_2->setFrameShadow(QFrame::Raised);
         label_36 = new QLabel(frameDownloadsHeader_2);
@@ -2583,7 +2583,7 @@ public:
         frameDownloadsHeader_3 = new QFrame(frameNetwork);
         frameDownloadsHeader_3->setObjectName(QString::fromUtf8("frameDownloadsHeader_3"));
         frameDownloadsHeader_3->setMinimumSize(QSize(0, 23));
-        frameDownloadsHeader_3->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameDownloadsHeader_3->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameDownloadsHeader_3->setFrameShape(QFrame::NoFrame);
         frameDownloadsHeader_3->setFrameShadow(QFrame::Raised);
         label_37 = new QLabel(frameDownloadsHeader_3);
@@ -2749,10 +2749,10 @@ public:
 
         gridLayout_36->addWidget(frameDownloadsHeader_5, 3, 0, 1, 1);
 
-        textEdit = new QTextEdit(frameNetwork);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEditSystem = new QTextEdit(frameNetwork);
+        textEditSystem->setObjectName(QString::fromUtf8("textEditSystem"));
 
-        gridLayout_36->addWidget(textEdit, 4, 0, 1, 1);
+        gridLayout_36->addWidget(textEditSystem, 4, 0, 1, 1);
 
 
         gridLayout_8->addWidget(frameNetwork, 0, 0, 1, 1);
@@ -2773,7 +2773,7 @@ public:
         frameDownloadsHeader_4 = new QFrame(frameChat);
         frameDownloadsHeader_4->setObjectName(QString::fromUtf8("frameDownloadsHeader_4"));
         frameDownloadsHeader_4->setMinimumSize(QSize(0, 23));
-        frameDownloadsHeader_4->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 127);"));
+        frameDownloadsHeader_4->setStyleSheet(QString::fromUtf8("background-color: rgb(11, 27, 99);"));
         frameDownloadsHeader_4->setFrameShape(QFrame::NoFrame);
         frameDownloadsHeader_4->setFrameShadow(QFrame::Raised);
         label_38 = new QLabel(frameDownloadsHeader_4);
@@ -3063,7 +3063,7 @@ public:
         MainWindowClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindowClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1165, 21));
+        menuBar->setGeometry(QRect(0, 0, 1181, 21));
         menuNetwork = new QMenu(menuBar);
         menuNetwork->setObjectName(QString::fromUtf8("menuNetwork"));
         menuConnect_To = new QMenu(menuNetwork);
@@ -3164,9 +3164,9 @@ public:
 
         retranslateUi(MainWindowClass);
 
-        pagesMain->setCurrentIndex(7);
-        toolBox->setCurrentIndex(0);
-        pagesLibrary->setCurrentIndex(1);
+        pagesMain->setCurrentIndex(0);
+        toolBox->setCurrentIndex(1);
+        pagesLibrary->setCurrentIndex(0);
         stackedFileType->setCurrentIndex(0);
 
 
@@ -3222,7 +3222,7 @@ public:
         actionDonate->setText(QApplication::translate("MainWindowClass", "Donate", 0, QApplication::UnicodeUTF8));
         actionPanthera_Forums->setText(QApplication::translate("MainWindowClass", "Panthera Forums", 0, QApplication::UnicodeUTF8));
         actionAres->setText(QApplication::translate("MainWindowClass", "Ares", 0, QApplication::UnicodeUTF8));
-        label_35->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        labelHomeHeader->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
@@ -3233,27 +3233,27 @@ public:
         ___qtreewidgetitem1->setText(0, QApplication::translate("MainWindowClass", "Uploads", 0, QApplication::UnicodeUTF8));
         QTreeWidgetItem *___qtreewidgetitem2 = treeLibrary->headerItem();
         ___qtreewidgetitem2->setText(0, QApplication::translate("MainWindowClass", "My Library", 0, QApplication::UnicodeUTF8));
-        QTreeWidgetItem *___qtreewidgetitem3 = treeWidget->headerItem();
+        QTreeWidgetItem *___qtreewidgetitem3 = treeTorrents->headerItem();
         ___qtreewidgetitem3->setText(0, QApplication::translate("MainWindowClass", "Torrents", 0, QApplication::UnicodeUTF8));
         QTreeWidgetItem *___qtreewidgetitem4 = treeConnection->headerItem();
         ___qtreewidgetitem4->setText(0, QApplication::translate("MainWindowClass", "Connection", 0, QApplication::UnicodeUTF8));
         labelSplash->setText(QString());
         pushButtonSearch->setText(QApplication::translate("MainWindowClass", "Start Search", 0, QApplication::UnicodeUTF8));
         pushButtonSearch->setShortcut(QApplication::translate("MainWindowClass", "Return", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(0, QApplication::translate("MainWindowClass", "Any File Type", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(1, QApplication::translate("MainWindowClass", "Application", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(2, QApplication::translate("MainWindowClass", "Archive", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(3, QApplication::translate("MainWindowClass", "Audio", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(4, QApplication::translate("MainWindowClass", "Bittorrent", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(5, QApplication::translate("MainWindowClass", "Book", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(6, QApplication::translate("MainWindowClass", "Image", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(7, QApplication::translate("MainWindowClass", "Presentation", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(8, QApplication::translate("MainWindowClass", "ROM Image", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(9, QApplication::translate("MainWindowClass", "Skin", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(10, QApplication::translate("MainWindowClass", "Source Code", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(11, QApplication::translate("MainWindowClass", "Spreadsheet", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(12, QApplication::translate("MainWindowClass", "Video", 0, QApplication::UnicodeUTF8));
-        typeCombo->setItemText(13, QApplication::translate("MainWindowClass", "Word Processing", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(0, QApplication::translate("MainWindowClass", "Any File Type", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(1, QApplication::translate("MainWindowClass", "Application", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(2, QApplication::translate("MainWindowClass", "Archive", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(3, QApplication::translate("MainWindowClass", "Audio", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(4, QApplication::translate("MainWindowClass", "Bittorrent", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(5, QApplication::translate("MainWindowClass", "Book", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(6, QApplication::translate("MainWindowClass", "Image", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(7, QApplication::translate("MainWindowClass", "Presentation", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(8, QApplication::translate("MainWindowClass", "ROM Image", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(9, QApplication::translate("MainWindowClass", "Skin", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(10, QApplication::translate("MainWindowClass", "Source Code", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(11, QApplication::translate("MainWindowClass", "Spreadsheet", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(12, QApplication::translate("MainWindowClass", "Video", 0, QApplication::UnicodeUTF8));
+        comboBoxFileType->setItemText(13, QApplication::translate("MainWindowClass", "Word Processing", 0, QApplication::UnicodeUTF8));
 
         labelFileType->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -3265,7 +3265,7 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Liberation Mono'; font-size:8pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Keyword:</p></body></html>", 0, QApplication::UnicodeUTF8));
-        AdvancedBtn->setText(QApplication::translate("MainWindowClass", "Advanced", 0, QApplication::UnicodeUTF8));
+        pushButtonAdvanced->setText(QApplication::translate("MainWindowClass", "Advanced", 0, QApplication::UnicodeUTF8));
         labelSkins->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3297,11 +3297,11 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Liberation Mono'; font-size:9pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/Resource/Gear.png\" /><span style=\" font-size:12pt;\"> </span><span style=\" font-size:12pt; color:#aa0000;\">Customise Panthera</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        label_34->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        labelLibraryHeader->setText(QApplication::translate("MainWindowClass", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/FileType/Resource/24x24 File Type/Folder Libary_32.png\" /><span style=\" font-size:8pt;\"> </span><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Library</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\"> </span><img src=\":/Icons/FileType/Resource/24x24 File Type/Folder Libary_32.png\" /><span style=\" font-size:8pt;\"> </span><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Library</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         toolBox->setItemText(toolBox->indexOf(pageNavFolders), QApplication::translate("MainWindowClass", "Folders", 0, QApplication::UnicodeUTF8));
         toolBox->setItemText(toolBox->indexOf(pageNavOrganiser), QApplication::translate("MainWindowClass", "Organiser", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
@@ -3744,7 +3744,7 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/FileType/Resource/24x24 File Type/Group Event.png\" /><span style=\" font-size:8pt;\"> </span><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Users In Channel</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/Icons/FileType/Resource/24x24 File Type/Group Event.png\" /><span style=\" font-size:8pt;\"> </span><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Users In Room</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         menuNetwork->setTitle(QApplication::translate("MainWindowClass", "Network", 0, QApplication::UnicodeUTF8));
         menuConnect_To->setTitle(QApplication::translate("MainWindowClass", "Choose Networks", 0, QApplication::UnicodeUTF8));
         menuUsers->setTitle(QApplication::translate("MainWindowClass", "Host", 0, QApplication::UnicodeUTF8));

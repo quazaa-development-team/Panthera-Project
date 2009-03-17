@@ -20,6 +20,7 @@ private:
     Ui::MainWindowClass *ui;
 
 private slots:
+    void on_actionSettings_triggered();
     void on_actionChat_triggered();
     void on_actionMedia_triggered();
     void on_actionNetwork_triggered();

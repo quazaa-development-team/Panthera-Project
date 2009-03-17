@@ -13,6 +13,7 @@ class Splash : public QDialog {
 public:
     explicit Splash(QWidget *parent = 0);
     virtual ~Splash();
+    void updateProgress(int percent, QString status);
 
 protected:
     virtual void changeEvent(QEvent *e);

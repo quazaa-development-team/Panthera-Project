@@ -10,9 +10,12 @@ TARGET = Panthera
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    splash.cpp
+    splash.cpp \
+    settings.cpp
 HEADERS += mainwindow.h \
-    splash.h
+    splash.h \
+    settings.h
 FORMS += mainwindow.ui \
-    splash.ui
+    splash.ui \
+    settings.ui
 RESOURCES += Graphics.qrc
