@@ -23,6 +23,7 @@
 #define SETTINGS_H
 
 #include <QtGui/QDialog>
+#include "ui_settings.h"
 
 namespace Ui {
     class Settings;
@@ -34,6 +35,7 @@ class Settings : public QDialog {
 public:
     explicit Settings(QWidget *parent = 0);
     virtual ~Settings();
+    void switchSettingsPage(int pageIndex);
 
 protected:
     virtual void changeEvent(QEvent *e);
@@ -42,7 +44,15 @@ private:
     Ui::Settings *m_ui;
 
 private slots:
-    void on_pushButton_released();
+    void on_toolButton_clicked();
+    void on_labelWebIntegration_linkActivated(QString link);
+    void on_labelCommunity_linkActivated(QString link);
+    void on_labelMediaPlayer_linkActivated(QString link);
+    void on_labelLibrary_linkActivated(QString link);
+    void on_labelBasic_linkActivated(QString link);
+    void on_treeWidgetSettingsNavigation_itemClicked(QTreeWidgetItem* item, int column);
+    void on_pushButtonOK_clicked();
+    void on_pushButtonCancel_clicked();
 };
 
 #endif // SETTINGS_H

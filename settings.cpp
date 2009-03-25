@@ -21,6 +21,7 @@
 
 #include "settings.h"
 #include "ui_settings.h"
+#include "profile.h"
 
 Settings::Settings(QWidget *parent) :
     QDialog(parent),
@@ -45,7 +46,120 @@ void Settings::changeEvent(QEvent *e)
     }
 }
 
-void Settings::on_pushButton_released()
+void Settings::on_pushButtonCancel_clicked()
 {
     this->close();
+}
+
+void Settings::on_pushButtonOK_clicked()
+{
+    this->close();
+}
+
+void Settings::on_treeWidgetSettingsNavigation_itemClicked(QTreeWidgetItem* item, int column)
+{
+        QByteArray m_aItemName;
+        m_aItemName.append(item->text(column));
+
+        if (m_aItemName.contains("General"))
+        {
+            m_ui->pagesSettings->setCurrentIndex(0);
+            return;
+        } else if (m_aItemName.contains("Basic")) {
+            m_ui->pagesSettings->setCurrentIndex(1);
+            return;
+        } else if (m_aItemName.contains("Library")) {
+            m_ui->pagesSettings->setCurrentIndex(2);
+            return;
+        } else if (m_aItemName.contains("Media Player")) {
+            m_ui->pagesSettings->setCurrentIndex(3);
+            return;
+        } else if (m_aItemName.contains("Chat")) {
+            m_ui->pagesSettings->setCurrentIndex(4);
+            return;
+        } else if (m_aItemName.contains("Web")) {
+            m_ui->pagesSettings->setCurrentIndex(5);
+            return;
+        } else if (m_aItemName.contains("Internet")) {
+            m_ui->pagesSettings->setCurrentIndex(6);
+            return;
+        } else if (m_aItemName.contains("Connection")) {
+            m_ui->pagesSettings->setCurrentIndex(7);
+            return;
+        } else if (m_aItemName.contains("Downloads")) {
+            m_ui->pagesSettings->setCurrentIndex(8);
+            return;
+        } else if (m_aItemName.contains("Uploads")) {
+            m_ui->pagesSettings->setCurrentIndex(9);
+            return;
+        } else if (m_aItemName.contains("Remote Access")) {
+            m_ui->pagesSettings->setCurrentIndex(10);
+            return;
+        } else if (m_aItemName.contains("Networks")) {
+            m_ui->pagesSettings->setCurrentIndex(11);
+            return;
+        } else if (m_aItemName.contains("Gnutella")) {
+            m_ui->pagesSettings->setCurrentIndex(12);
+            return;
+        } else if (m_aItemName.contains("Ares")) {
+            m_ui->pagesSettings->setCurrentIndex(13);
+            return;
+        } else if (m_aItemName.contains("Basic")) {
+            m_ui->pagesSettings->setCurrentIndex(14);
+            return;
+        } else if (m_aItemName.contains("eDonkey 2k")) {
+            m_ui->pagesSettings->setCurrentIndex(15);
+            return;
+        } else if (m_aItemName.contains("Bittorrent")) {
+            m_ui->pagesSettings->setCurrentIndex(16);
+            return;
+        } else if (m_aItemName.contains("Protocols")) {
+            m_ui->pagesSettings->setCurrentIndex(17);
+            return;
+        } else if (m_aItemName.contains("Skins")) {
+            m_ui->pagesSettings->setCurrentIndex(18);
+            return;
+        } else if (m_aItemName.contains("Plugins")) {
+            m_ui->pagesSettings->setCurrentIndex(19);
+            return;
+        } else if (m_aItemName.contains("Advanced")) {
+            m_ui->pagesSettings->setCurrentIndex(20);
+            return;
+        }
+}
+
+void Settings::switchSettingsPage(int pageIndex)
+{
+    m_ui->pagesSettings->setCurrentIndex(pageIndex);
+}
+
+void Settings::on_labelBasic_linkActivated(QString link)
+{
+    m_ui->pagesSettings->setCurrentIndex(1);
+}
+
+void Settings::on_labelLibrary_linkActivated(QString link)
+{
+    m_ui->pagesSettings->setCurrentIndex(2);
+}
+
+void Settings::on_labelMediaPlayer_linkActivated(QString link)
+{
+    m_ui->pagesSettings->setCurrentIndex(3);
+}
+
+void Settings::on_labelCommunity_linkActivated(QString link)
+{
+    m_ui->pagesSettings->setCurrentIndex(4);
+}
+
+void Settings::on_labelWebIntegration_linkActivated(QString link)
+{
+    m_ui->pagesSettings->setCurrentIndex(5);
+}
+
+void Settings::on_toolButton_clicked()
+{
+    Profile *winProfile = new Profile(this);
+    winProfile->show();
 }

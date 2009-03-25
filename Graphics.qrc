@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/Graphics" >
-        <file>Resource/Splash.png</file>
         <file>Resource/PantheraHomeSplash.png</file>
         <file>Resource/VLC.png</file>
         <file>Resource/Panthera48.png</file>
+        <file>Resource/Volume.png</file>
     </qresource>
     <qresource prefix="/Icons" >
         <file>Resource/Panthera.png</file>
@@ -15,7 +15,6 @@
         <file>Resource/search-32.png</file>
         <file>Resource/Keys_32.png</file>
         <file>Resource/Chat-32.png</file>
-        <file>Resource/Splash.png</file>
         <file>Resource/agt_action_success-32.png</file>
         <file>Resource/button_cancel-32.png</file>
         <file>Resource/connect_creating-32.png</file>
@@ -150,8 +149,10 @@
         <file>Resource/Group Event.png</file>
         <file>Resource/Group Event 48.png</file>
         <file>Resource/Forum.png</file>
+        <file>Resource/Tagged heart.png</file>
+        <file>Resource/Ghost invisible.png</file>
+        <file>Resource/SpeakerMute.png</file>
     </qresource>
-    <qresource prefix="/html" />
     <qresource prefix="/Player" >
         <file>Resource/Player Stop.png</file>
         <file>Resource/Pause Queue.png</file>
@@ -210,6 +211,7 @@
         <file>Resource/24x24 File Type/Identity.png</file>
         <file>Resource/24x24 File Type/TV SZ.png</file>
         <file>Resource/24x24 File Type/Door.png</file>
+        <file>Resource/24x24 File Type/connect_creating-32.png</file>
     </qresource>
     <qresource prefix="/Smileys" >
         <file>Resource/Smileys/Angel.png</file>

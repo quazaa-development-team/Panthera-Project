@@ -1,7 +1,7 @@
 //
 // mainwindow.h
 //
-// Copyright © Panthera Project, 2009.
+// Copyright  Panthera Project, 2009.
 // This file is part of PANTHERA (www.pantheraproject.net)
 //
 // Panthera is free software; you can redistribute it
@@ -23,6 +23,7 @@
 #define MAINWINDOW_H
 
 #include <QtGui/QMainWindow>
+#include <QSystemTrayIcon>
 
 namespace Ui
 {
@@ -36,20 +37,33 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    QSystemTrayIcon *trayIcon;
+    QMenu *menu;
+    bool systemTrayVisible;
 
 private:
     Ui::MainWindowClass *ui;
 
 private slots:
+    void on_toolButtonChatSettings_clicked();
+    void on_toolButtonNetworkSettings_clicked();
+    void on_toolButtonVolume_toggled(bool checked);
+    void on_labelMyLibraryLink_linkActivated(QString link);
+    void on_labelMyTransfersLink_linkActivated(QString link);
+    void on_labelSecurity_linkActivated(QString link);
+    void on_pagesLibraryNavigator_currentChanged(int index);
+    void on_pagesMain_currentChanged(int page);
+    void on_comboBoxSearchFileType_currentIndexChanged(int index);
+    void on_labelSkins_linkActivated(QString link);
     void on_actionSettings_triggered();
-    void on_actionChat_triggered();
-    void on_actionMedia_triggered();
-    void on_actionNetwork_triggered();
-    void on_actionSecurity_triggered();
-    void on_actionTransfers_triggered();
-    void on_actionSearch_triggered();
-    void on_actionLibrary_triggered();
-    void on_actionHome_triggered();
+    void on_actionChat_triggered(bool checked);
+    void on_actionMedia_triggered(bool checked);
+    void on_actionNetwork_triggered(bool checked);
+    void on_actionSecurity_triggered(bool checked);
+    void on_actionTransfers_triggered(bool checked);
+    void on_actionSearch_triggered(bool checked);
+    void on_actionLibrary_triggered(bool checked);
+    void on_actionHome_triggered(bool checked);
     void on_actionExit_triggered();
 };
 
