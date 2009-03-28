@@ -17,7 +17,7 @@
    <string>Edit Your Profile</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="Graphics.qrc">
     <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
   </property>
   <property name="modal">
@@ -194,7 +194,7 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageIdentity">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -991,6 +991,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Graphics.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>875</width>
-    <height>417</height>
+    <width>794</width>
+    <height>342</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -81,7 +81,7 @@ QToolButton:checked {
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="Home">
        <layout class="QGridLayout" name="gridLayout_2">
@@ -159,8 +159,8 @@ p, li { white-space: pre-wrap; }
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
-                   <width>524</width>
+                   <y>-325</y>
+                   <width>579</width>
                    <height>569</height>
                   </rect>
                  </property>
@@ -168,7 +168,7 @@ p, li { white-space: pre-wrap; }
                   <item row="4" column="1">
                    <layout class="QGridLayout" name="gridLayout_46">
                     <item row="1" column="2">
-                     <widget class="QLabel" name="labelStartDownloading">
+                     <widget class="QLabel" name="labelOpenTorrent">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -179,7 +179,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="0" column="2">
-                     <widget class="QLabel" name="label_28">
+                     <widget class="QLabel" name="labelURLDownload">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -249,7 +249,7 @@ p, li { white-space: pre-wrap; }
                    </spacer>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLabel" name="label_35">
+                   <widget class="QLabel" name="labelWelcomeDownloadHeader">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -260,7 +260,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="5" column="1">
-                   <widget class="QLabel" name="label_34">
+                   <widget class="QLabel" name="labelWelcomeSearchHeader">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -271,7 +271,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="7" column="1">
-                   <widget class="QLabel" name="labelCustomise">
+                   <widget class="QLabel" name="labelWelcomeCustomise">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -304,9 +304,9 @@ p, li { white-space: pre-wrap; }
                    </spacer>
                   </item>
                   <item row="8" column="1">
-                   <layout class="QGridLayout" name="gridLayout_13">
+                   <layout class="QGridLayout" name="gridLayoutCustomise">
                     <item row="1" column="1">
-                     <widget class="QLabel" name="labelSkins">
+                     <widget class="QLabel" name="labelCustomiseSkins">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -317,7 +317,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="2" column="1">
-                     <widget class="QLabel" name="labelSettings">
+                     <widget class="QLabel" name="labelCustomiseSettings">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -328,7 +328,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="3" column="1">
-                     <widget class="QLabel" name="labelHelp">
+                     <widget class="QLabel" name="labelCustomiseHelp">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -339,7 +339,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="4" column="1">
-                     <widget class="QLabel" name="labelSecurity">
+                     <widget class="QLabel" name="labelCustomiseSecurity">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -381,7 +381,7 @@ p, li { white-space: pre-wrap; }
                    </spacer>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLabel" name="labelSplash">
+                   <widget class="QLabel" name="labelWelcomeSplash">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -429,7 +429,7 @@ p, li { white-space: pre-wrap; }
                         <string>Any File Type</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
                        </property>
                       </item>
@@ -438,7 +438,7 @@ p, li { white-space: pre-wrap; }
                         <string>Application</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Applications.png</normaloff>:/Icons/Resource/Applications.png</iconset>
                        </property>
                       </item>
@@ -447,7 +447,7 @@ p, li { white-space: pre-wrap; }
                         <string>Archive</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Archive.png</normaloff>:/Icons/Resource/Archive.png</iconset>
                        </property>
                       </item>
@@ -456,7 +456,7 @@ p, li { white-space: pre-wrap; }
                         <string>Audio</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
                        </property>
                       </item>
@@ -465,7 +465,7 @@ p, li { white-space: pre-wrap; }
                         <string>Bittorrent</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
                        </property>
                       </item>
@@ -474,7 +474,7 @@ p, li { white-space: pre-wrap; }
                         <string>Book</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Notebook.png</normaloff>:/Icons/Resource/Notebook.png</iconset>
                        </property>
                       </item>
@@ -483,7 +483,7 @@ p, li { white-space: pre-wrap; }
                         <string>Image</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Images.png</normaloff>:/Icons/Resource/Images.png</iconset>
                        </property>
                       </item>
@@ -492,7 +492,7 @@ p, li { white-space: pre-wrap; }
                         <string>Presentation</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Presentacion.png</normaloff>:/Icons/Resource/Presentacion.png</iconset>
                        </property>
                       </item>
@@ -501,7 +501,7 @@ p, li { white-space: pre-wrap; }
                         <string>ROM Image</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Snes.png</normaloff>:/Icons/Resource/Snes.png</iconset>
                        </property>
                       </item>
@@ -510,7 +510,7 @@ p, li { white-space: pre-wrap; }
                         <string>Skin</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
                        </property>
                       </item>
@@ -519,7 +519,7 @@ p, li { white-space: pre-wrap; }
                         <string>Source Code</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/source.png</normaloff>:/Icons/Resource/source.png</iconset>
                        </property>
                       </item>
@@ -528,7 +528,7 @@ p, li { white-space: pre-wrap; }
                         <string>Spreadsheet</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Spreadsheet2.png</normaloff>:/Icons/Resource/Spreadsheet2.png</iconset>
                        </property>
                       </item>
@@ -537,7 +537,7 @@ p, li { white-space: pre-wrap; }
                         <string>Video</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
                        </property>
                       </item>
@@ -546,7 +546,7 @@ p, li { white-space: pre-wrap; }
                         <string>Word Processing</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Document.png</normaloff>:/Icons/Resource/Document.png</iconset>
                        </property>
                       </item>
@@ -646,7 +646,24 @@ p, li { white-space: pre-wrap; }
                        <string notr="true">QToolButton {
     border: 1px solid rgb(128, 177, 255);
     background-color: transparent;
-}</string>
+}
+
+ QToolButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+QToolButton:checked {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+ QToolButton:hover {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
                       </property>
                       <property name="text">
                        <string>Start Search</string>
@@ -668,7 +685,24 @@ p, li { white-space: pre-wrap; }
                        <string notr="true">QToolButton {
     border: 1px solid rgb(128, 177, 255);
     background-color: transparent;
-}</string>
+}
+
+ QToolButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+QToolButton:checked {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+ QToolButton:hover {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
                       </property>
                       <property name="text">
                        <string>Advanced</string>
@@ -745,6 +779,12 @@ p, li { white-space: pre-wrap; }
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>185</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -829,7 +869,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item row="4" column="0">
-                      <widget class="QListWidget" name="listWidget_3">
+                      <widget class="QListWidget" name="listWidgetUploadsTool">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -845,12 +885,18 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="3" column="0">
-                   <widget class="QFrame" name="frameMyLibraryTool_3">
+                   <widget class="QFrame" name="frameConnectionTool">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>119</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -869,7 +915,7 @@ p, li { white-space: pre-wrap; }
                       <number>0</number>
                      </property>
                      <item row="1" column="0" colspan="2">
-                      <widget class="QLabel" name="labelMyLibraryToolHeader_3">
+                      <widget class="QLabel" name="labelConnectionToolHeader">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -896,11 +942,11 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item row="2" column="0">
-                      <widget class="QListWidget" name="listWidgetMyLibraryTool_3">
+                      <widget class="QListWidget" name="listWidgetConnectionTool">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
-                         <height>60</height>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="styleSheet">
@@ -909,7 +955,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item row="3" column="0">
-                      <widget class="QLabel" name="labelSharedFiles_3">
+                      <widget class="QLabel" name="labelConnectionTime">
                        <property name="text">
                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -926,12 +972,18 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="4" column="0">
-                   <widget class="QFrame" name="frameMyLibraryTool_2">
+                   <widget class="QFrame" name="frameTorrentsTool">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>99</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -950,7 +1002,13 @@ p, li { white-space: pre-wrap; }
                       <number>0</number>
                      </property>
                      <item row="2" column="0">
-                      <widget class="QListWidget" name="listWidgetMyLibraryTool_2">
+                      <widget class="QListWidget" name="listWidgetTorrentsTool">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -963,7 +1021,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item row="3" column="0">
-                      <widget class="QLabel" name="labelSharedFiles_2">
+                      <widget class="QLabel" name="labelSeedTorrentLink">
                        <property name="text">
                         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -974,7 +1032,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="labelMyLibraryToolHeader_2">
+                      <widget class="QLabel" name="labelMyTorrentsToolHeader">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -1010,6 +1068,12 @@ p, li { white-space: pre-wrap; }
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>176</height>
+                     </size>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -1196,7 +1260,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QFrame" name="frameNav">
+            <widget class="QFrame" name="frameLibraryNavigator">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1240,7 +1304,7 @@ p, li { white-space: pre-wrap; }
                  <number>4</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButtonShare">
+                 <widget class="QToolButton" name="toolButtonShareFiles">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1263,7 +1327,7 @@ p, li { white-space: pre-wrap; }
                    <string>Share Files</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Folder Download.png</normaloff>:/Icons/Resource/Folder Download.png</iconset>
                   </property>
                   <property name="popupMode">
@@ -1329,7 +1393,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <widget class="QWidget" name="pageLibraryNavigatorFolders">
                  <attribute name="icon">
-                  <iconset resource="Graphics.qrc">
+                  <iconset>
                    <normaloff>:/Icons/Resource/Folder.png</normaloff>:/Icons/Resource/Folder.png</iconset>
                  </attribute>
                  <attribute name="title">
@@ -1340,7 +1404,7 @@ p, li { white-space: pre-wrap; }
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QTreeWidget" name="treeWidgetNavFolders">
+                   <widget class="QTreeWidget" name="treeWidgetLibraryNavigatorFolders">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1364,7 +1428,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                 <widget class="QWidget" name="pageLibraryNavigatorOrganiser">
                  <attribute name="icon">
-                  <iconset resource="Graphics.qrc">
+                  <iconset>
                    <normaloff>:/Icons/Resource/Folder Libary_32.png</normaloff>:/Icons/Resource/Folder Libary_32.png</iconset>
                  </attribute>
                  <attribute name="title">
@@ -1375,7 +1439,7 @@ p, li { white-space: pre-wrap; }
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QTreeWidget" name="treeWidgetNavOrganiser">
+                   <widget class="QTreeWidget" name="treeWidgetLibraryNavigatorOrganiser">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1398,7 +1462,7 @@ p, li { white-space: pre-wrap; }
                       <string>All Files</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Folder Libary_32.png</normaloff>:/Icons/Resource/Folder Libary_32.png</iconset>
                      </property>
                     </item>
@@ -1407,7 +1471,7 @@ p, li { white-space: pre-wrap; }
                       <string>Favourites</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Tagged heart.png</normaloff>:/Icons/Resource/Tagged heart.png</iconset>
                      </property>
                     </item>
@@ -1416,7 +1480,7 @@ p, li { white-space: pre-wrap; }
                       <string>Ghost Files</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Ghost invisible.png</normaloff>:/Icons/Resource/Ghost invisible.png</iconset>
                      </property>
                     </item>
@@ -1425,7 +1489,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Applications</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/Applications.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Applications.png</iconset>
                      </property>
                      <item>
@@ -1439,7 +1503,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Books</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/Notebook.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Notebook.png</iconset>
                      </property>
                      <item>
@@ -1453,7 +1517,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Documents</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/Document.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Document.png</iconset>
                      </property>
                      <item>
@@ -1467,7 +1531,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Images</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/Images.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Images.png</iconset>
                      </property>
                      <item>
@@ -1481,7 +1545,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Music</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/Speaker.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Speaker.png</iconset>
                      </property>
                      <item>
@@ -1510,7 +1574,7 @@ p, li { white-space: pre-wrap; }
                       <string>My Video</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/FileType/Resource/24x24 File Type/VisualHub.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/VisualHub.png</iconset>
                      </property>
                      <item>
@@ -1577,7 +1641,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label">
+                  <widget class="QLabel" name="labelFoldersHeader">
                    <property name="minimumSize">
                     <size>
                      <width>240</width>
@@ -1607,12 +1671,12 @@ p, li { white-space: pre-wrap; }
                   </spacer>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QToolButton" name="toolButton_2">
+                  <widget class="QToolButton" name="toolButtonFoldersSetView">
                    <property name="text">
                     <string>Tile View</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/view_multicolumn-256.png</normaloff>:/Icons/Resource/view_multicolumn-256.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1624,15 +1688,18 @@ p, li { white-space: pre-wrap; }
                    <property name="autoRaise">
                     <bool>true</bool>
                    </property>
+                   <property name="arrowType">
+                    <enum>Qt::NoArrow</enum>
+                   </property>
                   </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="QToolButton" name="toolButton_3">
+                  <widget class="QToolButton" name="toolButtonFoldersShowDetails">
                    <property name="text">
                     <string>Show Details</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/view_detailed-32.png</normaloff>:/Icons/Resource/view_detailed-32.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1649,7 +1716,7 @@ p, li { white-space: pre-wrap; }
                 </layout>
                </item>
                <item row="1" column="0">
-                <widget class="QFrame" name="frameFileBrowser">
+                <widget class="QFrame" name="frameFoldersFileBrowser">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
                    <horstretch>0</horstretch>
@@ -1673,46 +1740,6 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QToolButton" name="toolButton_4">
-                   <property name="text">
-                    <string>Create Album</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="Graphics.qrc">
-                     <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
-                   </property>
-                   <property name="popupMode">
-                    <enum>QToolButton::InstantPopup</enum>
-                   </property>
-                   <property name="toolButtonStyle">
-                    <enum>Qt::ToolButtonTextBesideIcon</enum>
-                   </property>
-                   <property name="autoRaise">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QToolButton" name="toolButton_5">
-                   <property name="text">
-                    <string>Delete Album</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="Graphics.qrc">
-                     <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
-                   </property>
-                   <property name="popupMode">
-                    <enum>QToolButton::InstantPopup</enum>
-                   </property>
-                   <property name="toolButtonStyle">
-                    <enum>Qt::ToolButtonTextBesideIcon</enum>
-                   </property>
-                   <property name="autoRaise">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
                   <spacer name="horizontalSpacer_11">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
@@ -1728,13 +1755,13 @@ p, li { white-space: pre-wrap; }
                    </property>
                   </spacer>
                  </item>
-                 <item row="0" column="4">
-                  <widget class="QToolButton" name="toolButtonLibSearch">
+                 <item row="0" column="2">
+                  <widget class="QToolButton" name="toolButtonFoldersSearchFiles">
                    <property name="text">
                     <string>Search</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1748,8 +1775,8 @@ p, li { white-space: pre-wrap; }
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="3">
-                  <widget class="QLineEdit" name="lineEdit">
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="lineEditFoldersSearchFiles">
                    <property name="maximumSize">
                     <size>
                      <width>250</width>
@@ -1779,12 +1806,12 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QToolButton" name="toolButton_10">
+                  <widget class="QToolButton" name="toolButtonOrganiserAddAlbum">
                    <property name="text">
                     <string>Create Album</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1799,12 +1826,12 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QToolButton" name="toolButton_11">
+                  <widget class="QToolButton" name="toolButtonOrganiserDeleteAlbum">
                    <property name="text">
                     <string>Delete Album</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1835,12 +1862,12 @@ p, li { white-space: pre-wrap; }
                   </spacer>
                  </item>
                  <item row="0" column="4">
-                  <widget class="QToolButton" name="toolButtonLibSearch_2">
+                  <widget class="QToolButton" name="toolButtonOrganiserFileSearch">
                    <property name="text">
                     <string>Search</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1855,7 +1882,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="lineEditOrganiserFileSearch">
                    <property name="maximumSize">
                     <size>
                      <width>250</width>
@@ -1875,7 +1902,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_3">
+                  <widget class="QLabel" name="labelOrganiserHeader">
                    <property name="minimumSize">
                     <size>
                      <width>240</width>
@@ -1905,12 +1932,12 @@ p, li { white-space: pre-wrap; }
                   </spacer>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QToolButton" name="toolButton_12">
+                  <widget class="QToolButton" name="toolButtonOrganiserSetView">
                    <property name="text">
                     <string>Tile View</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/view_multicolumn-256.png</normaloff>:/Icons/Resource/view_multicolumn-256.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1925,12 +1952,12 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="QToolButton" name="toolButton_13">
+                  <widget class="QToolButton" name="toolButtonOrganiserShowDetails">
                    <property name="text">
                     <string>Show Details</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="Graphics.qrc">
+                    <iconset>
                      <normaloff>:/Icons/Resource/view_detailed-32.png</normaloff>:/Icons/Resource/view_detailed-32.png</iconset>
                    </property>
                    <property name="popupMode">
@@ -1947,7 +1974,7 @@ p, li { white-space: pre-wrap; }
                 </layout>
                </item>
                <item row="1" column="0">
-                <widget class="QFrame" name="frameFileBrowser_2">
+                <widget class="QFrame" name="frameOrganiserFileBrowser">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
                    <horstretch>0</horstretch>
@@ -2120,7 +2147,7 @@ p, li { white-space: pre-wrap; }
                    <string>...</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -2138,7 +2165,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButtonRemMedia">
+                 <widget class="QToolButton" name="toolButtonRemoveMedia">
                   <property name="toolTip">
                    <string>Remove media file from the playlist.</string>
                   </property>
@@ -2146,7 +2173,7 @@ p, li { white-space: pre-wrap; }
                    <string>...</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -2177,7 +2204,7 @@ p, li { white-space: pre-wrap; }
                  </spacer>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QToolButton" name="toolButtonClrPlst">
+                 <widget class="QToolButton" name="toolButtonClearPlaylist">
                   <property name="toolTip">
                    <string>Clear playlist.</string>
                   </property>
@@ -2185,7 +2212,7 @@ p, li { white-space: pre-wrap; }
                    <string>...</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -2203,7 +2230,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="4">
-                 <widget class="QToolButton" name="toolButtonSavePlst">
+                 <widget class="QToolButton" name="toolButtonSavePlaylist">
                   <property name="toolTip">
                    <string>Save playlist.</string>
                   </property>
@@ -2211,7 +2238,7 @@ p, li { white-space: pre-wrap; }
                    <string>...</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Save All.png</normaloff>:/Icons/Resource/Save All.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -2290,7 +2317,7 @@ p, li { white-space: pre-wrap; }
                  <string>Previous</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Start.png</normaloff>:/Player/Resource/Player Start.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2322,7 +2349,7 @@ p, li { white-space: pre-wrap; }
                  <string>Rewind</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Rew.png</normaloff>:/Player/Resource/Player Rew.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2351,7 +2378,7 @@ p, li { white-space: pre-wrap; }
                  <string>Stop</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Stop.png</normaloff>:/Player/Resource/Player Stop.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2380,7 +2407,7 @@ p, li { white-space: pre-wrap; }
                  <string>Play</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Play.png</normaloff>:/Player/Resource/Player Play.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2409,7 +2436,7 @@ p, li { white-space: pre-wrap; }
                  <string>Pause</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Pause.png</normaloff>:/Player/Resource/Player Pause.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2438,7 +2465,7 @@ p, li { white-space: pre-wrap; }
                  <string>Fast Forward</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player Fwd.png</normaloff>:/Player/Resource/Player Fwd.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2467,7 +2494,7 @@ p, li { white-space: pre-wrap; }
                  <string>Next</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Player End.png</normaloff>:/Player/Resource/Player End.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2498,7 +2525,7 @@ p, li { white-space: pre-wrap; }
                </spacer>
               </item>
               <item row="0" column="15">
-               <widget class="QSlider" name="horizontalSliderVolume">
+               <widget class="QSlider" name="horizontalSliderMediaVolume">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                   <horstretch>130</horstretch>
@@ -2553,7 +2580,7 @@ QSlider::handle:horizontal {
                </spacer>
               </item>
               <item row="0" column="10">
-               <widget class="QToolButton" name="toolButton">
+               <widget class="QToolButton" name="toolButtonMediaToggleFullScreen">
                 <property name="palette">
                  <palette>
                   <active>
@@ -2682,7 +2709,7 @@ QSlider::handle:horizontal {
                  <string>Toggle Full Screen</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Cinema Display blue.png</normaloff>:/Player/Resource/Cinema Display blue.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2700,7 +2727,7 @@ QSlider::handle:horizontal {
                </widget>
               </item>
               <item row="0" column="11">
-               <widget class="QToolButton" name="toolButtonZoom">
+               <widget class="QToolButton" name="toolButtonMediaZoom">
                 <property name="palette">
                  <palette>
                   <active>
@@ -2829,7 +2856,7 @@ QSlider::handle:horizontal {
                  <string>Adjust Zoom and Aspect Ratio</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/View Full Size.png</normaloff>:/Player/Resource/View Full Size.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2847,7 +2874,7 @@ QSlider::handle:horizontal {
                </widget>
               </item>
               <item row="0" column="8">
-               <widget class="QSlider" name="horizontalSliderSeek">
+               <widget class="QSlider" name="horizontalSliderMediaSeek">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -2888,7 +2915,7 @@ QSlider::handle:horizontal {
                </widget>
               </item>
               <item row="0" column="12">
-               <widget class="QToolButton" name="toolButtonPlugins">
+               <widget class="QToolButton" name="toolButtonMediaPlugins">
                 <property name="palette">
                  <palette>
                   <active>
@@ -3017,7 +3044,7 @@ QSlider::handle:horizontal {
                  <string>Select Visual Plugin for audio</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Player/Resource/Plugins.png</normaloff>:/Player/Resource/Plugins.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -3035,7 +3062,7 @@ QSlider::handle:horizontal {
                </widget>
               </item>
               <item row="0" column="14">
-               <widget class="QToolButton" name="toolButtonVolume">
+               <widget class="QToolButton" name="toolButtonMediaVolumeMute">
                 <property name="styleSheet">
                  <string notr="true">QToolButton {
     border: 1px solid transparent;
@@ -3064,7 +3091,7 @@ QToolButton:checked {
                  <string>Volume</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="Graphics.qrc">
+                 <iconset>
                   <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -3103,7 +3130,7 @@ QToolButton:checked {
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="0" column="0" colspan="2">
+           <item row="0" column="0" colspan="3">
             <widget class="QFrame" name="frameSearchHeader">
              <property name="minimumSize">
               <size>
@@ -3141,80 +3168,7 @@ p, li { white-space: pre-wrap; }
              </layout>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QFrame" name="frameSearches">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::Panel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_68">
-              <property name="horizontalSpacing">
-               <number>3</number>
-              </property>
-              <property name="verticalSpacing">
-               <number>0</number>
-              </property>
-              <property name="margin">
-               <number>0</number>
-              </property>
-              <item row="0" column="0">
-               <widget class="QLabel" name="labelSearches">
-                <property name="text">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/Icons/FileType/Resource/24x24 File Type/search-32.png&quot; /&gt; &lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Searches:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QTableWidget" name="tableWidget"/>
-           </item>
-           <item row="3" column="1">
-            <widget class="QScrollArea" name="scrollAreaSearchDetails">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>120</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="widgetResizable">
-              <bool>true</bool>
-             </property>
-             <widget class="QWidget" name="scrollAreaWidgetContents">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>48</width>
-                <height>118</height>
-               </rect>
-              </property>
-             </widget>
-            </widget>
-           </item>
-           <item row="4" column="1">
+           <item row="2" column="1" colspan="2">
             <layout class="QGridLayout" name="gridLayoutBottomToolbar">
              <item row="0" column="0">
               <widget class="QToolButton" name="toolButtonSearchDownload">
@@ -3222,7 +3176,7 @@ p, li { white-space: pre-wrap; }
                 <string>Download</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/FileType/Resource/24x24 File Type/Earth Download_32.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Earth Download_32.png</iconset>
                </property>
                <property name="popupMode">
@@ -3255,7 +3209,7 @@ p, li { white-space: pre-wrap; }
                 <string>Browse User</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Network Connections.png</normaloff>:/Icons/Resource/Network Connections.png</iconset>
                </property>
                <property name="popupMode">
@@ -3282,7 +3236,7 @@ p, li { white-space: pre-wrap; }
                 <string>Show Search</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/view_right_p-256.png</normaloff>:/Icons/Resource/view_right_p-256.png</iconset>
                </property>
                <property name="checkable">
@@ -3308,7 +3262,7 @@ p, li { white-space: pre-wrap; }
                 <string>Show Details</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/view_bottom-256.png</normaloff>:/Icons/Resource/view_bottom-256.png</iconset>
                </property>
                <property name="checkable">
@@ -3329,10 +3283,10 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="7">
-              <widget class="QLineEdit" name="lineEditFilter"/>
+              <widget class="QLineEdit" name="lineEditSearchFilter"/>
              </item>
              <item row="0" column="8">
-              <widget class="QToolButton" name="toolButtonFilterMore">
+              <widget class="QToolButton" name="toolButtonSearchFilterMore">
                <property name="text">
                 <string>More...</string>
                </property>
@@ -3348,7 +3302,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="6">
-              <widget class="QLabel" name="labelFilter">
+              <widget class="QLabel" name="labelSearchFilter">
                <property name="text">
                 <string>Filter:</string>
                </property>
@@ -3356,7 +3310,7 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </item>
-           <item row="1" column="0" rowspan="4">
+           <item row="1" column="0" rowspan="2">
             <widget class="QScrollArea" name="scrollAreaSearchConfig">
              <property name="minimumSize">
               <size>
@@ -3380,7 +3334,7 @@ p, li { white-space: pre-wrap; }
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
+                <y>-120</y>
                 <width>178</width>
                 <height>448</height>
                </rect>
@@ -3433,7 +3387,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="4" column="0">
-                     <widget class="QLabel" name="labelSearchToolFileType">
+                     <widget class="QLabel" name="labelSearchFileType">
                       <property name="text">
                        <string>File Type:</string>
                       </property>
@@ -3449,7 +3403,7 @@ p, li { white-space: pre-wrap; }
                         <string>Any File Type</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
                        </property>
                       </item>
@@ -3458,7 +3412,7 @@ p, li { white-space: pre-wrap; }
                         <string>Application</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Applications.png</normaloff>:/Icons/Resource/Applications.png</iconset>
                        </property>
                       </item>
@@ -3467,7 +3421,7 @@ p, li { white-space: pre-wrap; }
                         <string>Archive</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Archive.png</normaloff>:/Icons/Resource/Archive.png</iconset>
                        </property>
                       </item>
@@ -3476,7 +3430,7 @@ p, li { white-space: pre-wrap; }
                         <string>Audio</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
                        </property>
                       </item>
@@ -3485,7 +3439,7 @@ p, li { white-space: pre-wrap; }
                         <string>Bittorrent</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
                        </property>
                       </item>
@@ -3494,7 +3448,7 @@ p, li { white-space: pre-wrap; }
                         <string>Book</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Notebook.png</normaloff>:/Icons/Resource/Notebook.png</iconset>
                        </property>
                       </item>
@@ -3503,7 +3457,7 @@ p, li { white-space: pre-wrap; }
                         <string>Image</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Images.png</normaloff>:/Icons/Resource/Images.png</iconset>
                        </property>
                       </item>
@@ -3512,7 +3466,7 @@ p, li { white-space: pre-wrap; }
                         <string>Presentation</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Presentacion.png</normaloff>:/Icons/Resource/Presentacion.png</iconset>
                        </property>
                       </item>
@@ -3521,7 +3475,7 @@ p, li { white-space: pre-wrap; }
                         <string>ROM Image</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Snes.png</normaloff>:/Icons/Resource/Snes.png</iconset>
                        </property>
                       </item>
@@ -3530,7 +3484,7 @@ p, li { white-space: pre-wrap; }
                         <string>Skin</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
                        </property>
                       </item>
@@ -3539,7 +3493,7 @@ p, li { white-space: pre-wrap; }
                         <string>Source Code</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/source.png</normaloff>:/Icons/Resource/source.png</iconset>
                        </property>
                       </item>
@@ -3548,7 +3502,7 @@ p, li { white-space: pre-wrap; }
                         <string>Spreadsheet</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Spreadsheet2.png</normaloff>:/Icons/Resource/Spreadsheet2.png</iconset>
                        </property>
                       </item>
@@ -3557,7 +3511,7 @@ p, li { white-space: pre-wrap; }
                         <string>Video</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
                        </property>
                       </item>
@@ -3566,7 +3520,7 @@ p, li { white-space: pre-wrap; }
                         <string>Word Processing</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="Graphics.qrc">
+                        <iconset>
                          <normaloff>:/Icons/Resource/Document.png</normaloff>:/Icons/Resource/Document.png</iconset>
                        </property>
                       </item>
@@ -3604,7 +3558,7 @@ p, li { white-space: pre-wrap; }
                        <number>6</number>
                       </property>
                       <item row="0" column="0">
-                       <widget class="QToolButton" name="toolButtonSearch_2">
+                       <widget class="QToolButton" name="toolButtonSearchStart">
                         <property name="styleSheet">
                          <string notr="true"/>
                         </property>
@@ -3612,7 +3566,7 @@ p, li { white-space: pre-wrap; }
                          <string>Search</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
                         </property>
                         <property name="popupMode">
@@ -3627,7 +3581,7 @@ p, li { white-space: pre-wrap; }
                        </widget>
                       </item>
                       <item row="0" column="1">
-                       <widget class="QToolButton" name="toolButtonClear">
+                       <widget class="QToolButton" name="toolButtonSearchClear">
                         <property name="styleSheet">
                          <string notr="true"/>
                         </property>
@@ -3635,7 +3589,7 @@ p, li { white-space: pre-wrap; }
                          <string>Clear</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
                         </property>
                         <property name="popupMode">
@@ -3655,7 +3609,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QFrame" name="frameAdvanced">
+                  <widget class="QFrame" name="frameSearchNetworks">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -3681,7 +3635,7 @@ p, li { white-space: pre-wrap; }
                     <item row="1" column="0" colspan="2">
                      <layout class="QGridLayout" name="gridLayout_60">
                       <item row="0" column="0">
-                       <widget class="QLabel" name="labelNetworks">
+                       <widget class="QLabel" name="labelSearchNetworks">
                         <property name="text">
                          <string>Search On These Networks</string>
                         </property>
@@ -3690,50 +3644,50 @@ p, li { white-space: pre-wrap; }
                      </layout>
                     </item>
                     <item row="2" column="0" colspan="2">
-                     <layout class="QGridLayout" name="gridLayoutNetworks">
+                     <layout class="QGridLayout" name="gridLayoutSearchNetworks">
                       <property name="spacing">
                        <number>0</number>
                       </property>
                       <item row="0" column="0">
-                       <widget class="QCheckBox" name="checkBoxG2">
+                       <widget class="QCheckBox" name="checkBoxSearchG2">
                         <property name="text">
                          <string>G2</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
                         </property>
                        </widget>
                       </item>
                       <item row="1" column="0">
-                       <widget class="QCheckBox" name="checkBoxG1">
+                       <widget class="QCheckBox" name="checkBoxSearchG1">
                         <property name="text">
                          <string>G1</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
                         </property>
                        </widget>
                       </item>
                       <item row="0" column="1">
-                       <widget class="QCheckBox" name="checkBoxAres">
+                       <widget class="QCheckBox" name="checkBoxSearchAres">
                         <property name="text">
                          <string>Ares</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
                         </property>
                        </widget>
                       </item>
                       <item row="1" column="1">
-                       <widget class="QCheckBox" name="checkBoxED2k">
+                       <widget class="QCheckBox" name="checkBoxSearchED2k">
                         <property name="text">
                          <string>eDonkey 2K</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Graphics.qrc">
+                         <iconset>
                           <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
                         </property>
                        </widget>
@@ -3741,7 +3695,7 @@ p, li { white-space: pre-wrap; }
                      </layout>
                     </item>
                     <item row="0" column="0" colspan="2">
-                     <widget class="QLabel" name="labelAdvancedHeader">
+                     <widget class="QLabel" name="labelSearchNetworksHeader">
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(78, 124, 179);</string>
                       </property>
@@ -3787,7 +3741,7 @@ p, li { white-space: pre-wrap; }
                     <enum>QFrame::Sunken</enum>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="pageAnyFile">
                     <layout class="QGridLayout" name="gridLayout_64">
@@ -4062,7 +4016,7 @@ p, li { white-space: pre-wrap; }
                       <number>0</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="labelArchive">
+                      <widget class="QLabel" name="labelArchiveHeader">
                        <property name="styleSheet">
                         <string notr="true">background-color: rgb(255, 255, 255);</string>
                        </property>
@@ -4094,8 +4048,8 @@ p, li { white-space: pre-wrap; }
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>83</width>
-                          <height>16</height>
+                          <width>162</width>
+                          <height>60</height>
                          </rect>
                         </property>
                        </widget>
@@ -4112,7 +4066,7 @@ p, li { white-space: pre-wrap; }
                       <number>0</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="labelAudio">
+                      <widget class="QLabel" name="labelAudioHeader">
                        <property name="styleSheet">
                         <string notr="true">background-color: rgb(255, 255, 255);</string>
                        </property>
@@ -4144,8 +4098,8 @@ p, li { white-space: pre-wrap; }
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>83</width>
-                          <height>16</height>
+                          <width>162</width>
+                          <height>60</height>
                          </rect>
                         </property>
                        </widget>
@@ -4162,7 +4116,7 @@ p, li { white-space: pre-wrap; }
                       <number>0</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label_14">
+                      <widget class="QLabel" name="labelBittorrentHeader">
                        <property name="styleSheet">
                         <string notr="true">background-color: rgb(255, 255, 255);</string>
                        </property>
@@ -4194,8 +4148,8 @@ p, li { white-space: pre-wrap; }
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>83</width>
-                          <height>16</height>
+                          <width>162</width>
+                          <height>60</height>
                          </rect>
                         </property>
                        </widget>
@@ -4644,8 +4598,8 @@ p, li { white-space: pre-wrap; }
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>83</width>
-                          <height>16</height>
+                          <width>162</width>
+                          <height>60</height>
                          </rect>
                         </property>
                        </widget>
@@ -4700,7 +4654,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="1" column="0">
-                     <widget class="QLabel" name="labelSearching">
+                     <widget class="QLabel" name="labelResultsSearching">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -4711,14 +4665,14 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="2" column="0">
-                     <widget class="QLabel" name="labelSearchingStatus">
+                     <widget class="QLabel" name="labelResultsSearchingStatus">
                       <property name="text">
                        <string>Not currently searching.</string>
                       </property>
                      </widget>
                     </item>
                     <item row="3" column="0">
-                     <widget class="QLabel" name="labelFound">
+                     <widget class="QLabel" name="labelResultsFound">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -4729,14 +4683,14 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="4" column="0">
-                     <widget class="QLabel" name="labelFoundStatus">
+                     <widget class="QLabel" name="labelResultsFoundStatus">
                       <property name="text">
                        <string>No Files Found.</string>
                       </property>
                      </widget>
                     </item>
                     <item row="5" column="0">
-                     <widget class="QLabel" name="labelBlocked">
+                     <widget class="QLabel" name="labelResultsBlocked">
                       <property name="text">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -4747,7 +4701,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item row="6" column="0">
-                     <widget class="QLabel" name="labelBlockedStatus">
+                     <widget class="QLabel" name="labelResultsBlockedStatus">
                       <property name="text">
                        <string>0 peers, 0 files</string>
                       </property>
@@ -4757,6 +4711,123 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                 </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QTabWidget" name="pagesSearches">
+             <property name="styleSheet">
+              <string notr="true">QTabWidget::pane { /* The tab widget frame */
+     border-top: 2px solid #C2C7CB;
+ }
+
+ QTabWidget::tab-bar {
+     left: 5px; /* move to the right by 5px */
+ }
+
+ /* Style the tab using the tab sub-control. Note that
+     it reads QTabBar _not_ QTabWidget */
+ QTabBar::tab {
+     background:transparent;
+     border: 2px solid transparent;
+     min-width: 8ex;
+     padding: 2px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QTabBar::tab:selected {
+     border: 1px solid rgb(78, 96, 255);
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="tabsClosable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="tabSearch">
+              <attribute name="icon">
+               <iconset>
+                <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
+              </attribute>
+              <attribute name="title">
+               <string>Search</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_89">
+               <property name="margin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QScrollArea" name="scrollAreaSearchDetails">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents_5">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>595</width>
+                    <height>78</height>
+                   </rect>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_68">
+                   <property name="margin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QTableWidget" name="tableWidgetSearchDetails"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QScrollArea" name="scrollAreaSearchItemDetails">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>120</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>595</width>
+                    <height>118</height>
+                   </rect>
+                  </property>
+                 </widget>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -4821,7 +4892,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_30">
+                  <widget class="QLabel" name="labelDownloadsHeader">
                    <property name="text">
                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -4835,14 +4906,14 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="0">
-               <layout class="QGridLayout" name="gridLayout_29">
+               <layout class="QGridLayout" name="gridLayoutDownloadsFilterToolbar">
                 <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButton_17">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilterAll">
                   <property name="text">
                    <string>All</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/toolbar downloads.png</normaloff>:/Icons/Resource/toolbar downloads.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -4854,12 +4925,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="4">
-                 <widget class="QToolButton" name="toolButton_19">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilterBittorrent">
                   <property name="text">
                    <string>Bittorrent</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -4871,12 +4942,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QToolButton" name="toolButton_20">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilterImage">
                   <property name="text">
                    <string>Image</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Images.png</normaloff>:/Icons/Resource/Images.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -4888,12 +4959,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="2">
-                 <widget class="QToolButton" name="toolButton_21">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilterVideo">
                   <property name="text">
                    <string>Video</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -4905,12 +4976,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButton_22">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilterAudio">
                   <property name="text">
                    <string>Audio</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -4937,7 +5008,7 @@ p, li { white-space: pre-wrap; }
                </layout>
               </item>
               <item row="2" column="0">
-               <widget class="QTableWidget" name="tableWidget_2">
+               <widget class="QTableWidget" name="tableWidgetDownloads">
                 <column>
                  <property name="text">
                   <string>File Name</string>
@@ -4981,7 +5052,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="3" column="0">
-               <layout class="QGridLayout" name="gridLayout_30">
+               <layout class="QGridLayout" name="gridLayoutDownloadsToolbar">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -4999,12 +5070,12 @@ p, li { white-space: pre-wrap; }
                  </spacer>
                 </item>
                 <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButtonPreview">
+                 <widget class="QToolButton" name="toolButtonDownloadsPreview">
                   <property name="text">
                    <string>Preview</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Player/Resource/Player Play.png</normaloff>:/Player/Resource/Player Play.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5016,12 +5087,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="2">
-                 <widget class="QToolButton" name="toolButton_23">
+                 <widget class="QToolButton" name="toolButtonDownloadsPause">
                   <property name="text">
                    <string>Pause</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Player/Resource/Player Pause.png</normaloff>:/Player/Resource/Player Pause.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5040,12 +5111,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QToolButton" name="toolButton_24">
+                 <widget class="QToolButton" name="toolButtonDownloadsCancel">
                   <property name="text">
                    <string>Cancel</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Player/Resource/Erase All.png</normaloff>:/Player/Resource/Erase All.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5064,12 +5135,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="6">
-                 <widget class="QToolButton" name="toolButton_25">
+                 <widget class="QToolButton" name="toolButtonDownloadsShowMonitor">
                   <property name="text">
                    <string>Show Monitor</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5081,12 +5152,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="7">
-                 <widget class="QToolButton" name="toolButton_26">
+                 <widget class="QToolButton" name="toolButtonDownloadsProperties">
                   <property name="text">
                    <string>Properties</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5098,12 +5169,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="11">
-                 <widget class="QToolButton" name="toolButton_27">
+                 <widget class="QToolButton" name="toolButtonDownloadsAddTorrent">
                   <property name="text">
                    <string>Add Torrent</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5115,12 +5186,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="12">
-                 <widget class="QToolButton" name="toolButton_28">
+                 <widget class="QToolButton" name="toolButtonDownloadsClearCompleted">
                   <property name="text">
                    <string>Clear Completed</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Broom.png</normaloff>:/Icons/Resource/Broom.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5132,12 +5203,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="14">
-                 <widget class="QToolButton" name="toolButton_29">
+                 <widget class="QToolButton" name="toolButtonDownloadsFilter">
                   <property name="text">
                    <string>Filter</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Filter.png</normaloff>:/Icons/Resource/Filter.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5163,12 +5234,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="4">
-                 <widget class="QToolButton" name="toolButton_35">
+                 <widget class="QToolButton" name="toolButtonDownloadsMarkJunk">
                   <property name="text">
                    <string>Mark As Junk</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Trash.png</normaloff>:/Icons/Resource/Trash.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5224,7 +5295,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_31">
+                  <widget class="QLabel" name="labelUploadsHeader">
                    <property name="text">
                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -5238,7 +5309,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QTableWidget" name="tableWidget_3">
+               <widget class="QTableWidget" name="tableWidgetUploads">
                 <column>
                  <property name="text">
                   <string>File Name</string>
@@ -5282,17 +5353,17 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="2" column="0">
-               <layout class="QGridLayout" name="gridLayout_27">
+               <layout class="QGridLayout" name="gridLayoutUploadsToolbar">
                 <property name="spacing">
                  <number>0</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButton_30">
+                 <widget class="QToolButton" name="toolButtonUploadsOpenPlay">
                   <property name="text">
                    <string>Open Or Play</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Player Play.png</normaloff>:/Icons/Resource/Player Play.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5317,12 +5388,12 @@ p, li { white-space: pre-wrap; }
                  </spacer>
                 </item>
                 <item row="0" column="2">
-                 <widget class="QToolButton" name="toolButton_31">
+                 <widget class="QToolButton" name="toolButtonUploadsClear">
                   <property name="text">
                    <string>Clear Upload</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Broom.png</normaloff>:/Icons/Resource/Broom.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5348,12 +5419,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="5">
-                 <widget class="QToolButton" name="toolButton_32">
+                 <widget class="QToolButton" name="toolButtonUploadsBrowseUser">
                   <property name="text">
                    <string>Browse User</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Network Connections.png</normaloff>:/Icons/Resource/Network Connections.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5365,12 +5436,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="6">
-                 <widget class="QToolButton" name="toolButton_33">
+                 <widget class="QToolButton" name="toolButtonUploadsChatUser">
                   <property name="text">
                    <string>Chat With User</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/irc protocol.png</normaloff>:/Icons/Resource/irc protocol.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5389,12 +5460,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="8">
-                 <widget class="QToolButton" name="toolButton_34">
+                 <widget class="QToolButton" name="toolButtonUploadsBanUser">
                   <property name="text">
                    <string>Ban User</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5406,12 +5477,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QToolButton" name="toolButton_36">
+                 <widget class="QToolButton" name="toolButtonUploadsMarkJunk">
                   <property name="text">
                    <string>Mark As Junk</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Trash.png</normaloff>:/Icons/Resource/Trash.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5423,12 +5494,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="10">
-                 <widget class="QToolButton" name="toolButton_37">
+                 <widget class="QToolButton" name="toolButtonUploadsClearCompleted">
                   <property name="text">
                    <string>Clear Completed</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Broom.png</normaloff>:/Icons/Resource/Broom.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5440,12 +5511,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="11">
-                 <widget class="QToolButton" name="toolButton_38">
+                 <widget class="QToolButton" name="toolButtonUploadsFilter">
                   <property name="text">
                    <string>Filter</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Filter.png</normaloff>:/Icons/Resource/Filter.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -5481,7 +5552,7 @@ p, li { white-space: pre-wrap; }
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QFrame" name="frameDownloadsHeader_2">
+            <widget class="QFrame" name="frameSecurityHeader">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -5505,7 +5576,7 @@ p, li { white-space: pre-wrap; }
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_36">
+               <widget class="QLabel" name="labelSecurityHeader">
                 <property name="text">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -5519,7 +5590,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QTableWidget" name="tableWidget_4">
+            <widget class="QTableWidget" name="tableWidgetSecurity">
              <column>
               <property name="text">
                <string>Address/Content</string>
@@ -5548,7 +5619,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="2" column="0">
-            <layout class="QGridLayout" name="gridLayout_34">
+            <layout class="QGridLayout" name="gridLayoutSecurityToolbar">
              <item row="0" column="7">
               <spacer name="horizontalSpacer_16">
                <property name="orientation">
@@ -5563,12 +5634,12 @@ p, li { white-space: pre-wrap; }
               </spacer>
              </item>
              <item row="0" column="0">
-              <widget class="QToolButton" name="toolButton_6">
+              <widget class="QToolButton" name="toolButtonSecurityAddRule">
                <property name="text">
                 <string>Add Rule</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Add key.png</normaloff>:/Icons/Resource/Add key.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5580,12 +5651,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QToolButton" name="toolButton_7">
+              <widget class="QToolButton" name="toolButtonSecurityRemoveRule">
                <property name="text">
                 <string>Remove Rule</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Remove key.png</normaloff>:/Icons/Resource/Remove key.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5597,12 +5668,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="4">
-              <widget class="QToolButton" name="toolButton_8">
+              <widget class="QToolButton" name="toolButtonSecurityImportRules">
                <property name="text">
                 <string>Import Rules</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Open key.png</normaloff>:/Icons/Resource/Open key.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5614,12 +5685,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="5">
-              <widget class="QToolButton" name="toolButton_9">
+              <widget class="QToolButton" name="toolButtonSecurityExportRules">
                <property name="text">
                 <string>Export Rules</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Save key.png</normaloff>:/Icons/Resource/Save key.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5645,12 +5716,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="2">
-              <widget class="QToolButton" name="toolButton_39">
+              <widget class="QToolButton" name="toolButtonSecurityModifyRule">
                <property name="text">
                 <string>Modify Rule</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Modify key.png</normaloff>:/Icons/Resource/Modify key.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5662,12 +5733,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="8">
-              <widget class="QToolButton" name="toolButton_40">
+              <widget class="QToolButton" name="toolButtonSecuritySubscribeRules">
                <property name="text">
                 <string>Subscribe To Rules List</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/KeyGlobe.png</normaloff>:/Icons/Resource/KeyGlobe.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5700,7 +5771,7 @@ p, li { white-space: pre-wrap; }
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QFrame" name="frameDownloadsHeader_3">
+            <widget class="QFrame" name="frameNeigboursHeader">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -5724,7 +5795,7 @@ p, li { white-space: pre-wrap; }
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_37">
+               <widget class="QLabel" name="labelNeigboursHeader">
                 <property name="text">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -5738,7 +5809,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QTableWidget" name="tableWidget_5">
+            <widget class="QTableWidget" name="tableWidgetNeigbours">
              <column>
               <property name="text">
                <string>Address</string>
@@ -5797,7 +5868,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="2" column="0">
-            <layout class="QGridLayout" name="gridLayout_35">
+            <layout class="QGridLayout" name="gridLayoutNeigboursToolbar">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -5815,12 +5886,12 @@ p, li { white-space: pre-wrap; }
               </spacer>
              </item>
              <item row="0" column="0">
-              <widget class="QToolButton" name="toolButton_41">
+              <widget class="QToolButton" name="toolButtonNeigboursConnect">
                <property name="text">
                 <string>Connect To</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Internet Connect.png</normaloff>:/Icons/Resource/Internet Connect.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5832,12 +5903,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QToolButton" name="toolButton_42">
+              <widget class="QToolButton" name="toolButtonNeigboursDisconnect">
                <property name="text">
                 <string>Disconnect</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/connect_no-32.png</normaloff>:/Icons/Resource/connect_no-32.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5849,12 +5920,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="4">
-              <widget class="QToolButton" name="toolButton_43">
+              <widget class="QToolButton" name="toolButtonNeigboursHostBrowse">
                <property name="text">
                 <string>Browse</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Network Connections.png</normaloff>:/Icons/Resource/Network Connections.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5873,12 +5944,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="5">
-              <widget class="QToolButton" name="toolButton_44">
+              <widget class="QToolButton" name="toolButtonNeigboursHostChat">
                <property name="text">
                 <string>Chat With</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/irc protocol.png</normaloff>:/Icons/Resource/irc protocol.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5890,12 +5961,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="6">
-              <widget class="QToolButton" name="toolButton_45">
+              <widget class="QToolButton" name="toolButtonNeigboursBan">
                <property name="text">
                 <string>Ban</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -5907,12 +5978,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="11">
-              <widget class="QToolButton" name="toolButton_46">
+              <widget class="QToolButton" name="toolButtonNetworkED2k">
                <property name="text">
                 <string>eDonkey 2k</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
                </property>
                <property name="checkable">
@@ -5927,12 +5998,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="10">
-              <widget class="QToolButton" name="toolButton_47">
+              <widget class="QToolButton" name="toolButtonNetworkAres">
                <property name="text">
                 <string>Ares</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
                </property>
                <property name="checkable">
@@ -5947,12 +6018,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="9">
-              <widget class="QToolButton" name="toolButton_48">
+              <widget class="QToolButton" name="toolButtonNetworkG1">
                <property name="text">
                 <string>G1</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
                </property>
                <property name="checkable">
@@ -5967,12 +6038,12 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="8">
-              <widget class="QToolButton" name="toolButton_49">
+              <widget class="QToolButton" name="toolButtonNetworkG2">
                <property name="text">
                 <string>G2</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
                </property>
                <property name="checkable">
@@ -6002,7 +6073,7 @@ p, li { white-space: pre-wrap; }
                 <string>Settings</string>
                </property>
                <property name="icon">
-                <iconset resource="Graphics.qrc">
+                <iconset>
                  <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
                </property>
                <property name="toolButtonStyle">
@@ -6021,7 +6092,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item row="0" column="3">
-              <widget class="QLabel" name="label_2">
+              <widget class="QLabel" name="labelNeigboursHost">
                <property name="text">
                 <string>Host:</string>
                </property>
@@ -6033,7 +6104,7 @@ p, li { white-space: pre-wrap; }
             <widget class="QTextEdit" name="textEditSystem"/>
            </item>
            <item row="4" column="0">
-            <widget class="QFrame" name="frameDownloadsHeader_5">
+            <widget class="QFrame" name="frameSystemHeader">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -6049,23 +6120,25 @@ p, li { white-space: pre-wrap; }
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QLabel" name="label_41">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>111</width>
-                <height>21</height>
-               </rect>
+             <layout class="QGridLayout" name="gridLayout_88">
+              <property name="margin">
+               <number>0</number>
               </property>
-              <property name="text">
-               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="labelSystemHeader">
+                <property name="text">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/Icons/FileType/Resource/24x24 File Type/Desktop graphite.png&quot; /&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;System&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-             </widget>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -6088,7 +6161,7 @@ p, li { white-space: pre-wrap; }
             <number>0</number>
            </property>
            <item row="0" column="0" colspan="3">
-            <widget class="QFrame" name="frameDownloadsHeader_4">
+            <widget class="QFrame" name="frameChatHeader">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -6112,7 +6185,7 @@ p, li { white-space: pre-wrap; }
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_38">
+               <widget class="QLabel" name="labelChatHeader">
                 <property name="text">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -6126,7 +6199,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="0" rowspan="3">
-            <widget class="QFrame" name="frame">
+            <widget class="QFrame" name="frameChatRoomsFriends">
              <property name="minimumSize">
               <size>
                <width>210</width>
@@ -6147,7 +6220,7 @@ p, li { white-space: pre-wrap; }
                <number>6</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_2">
+               <widget class="QFrame" name="frameRooms">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -6177,7 +6250,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_42">
+                  <widget class="QLabel" name="labelRoomsHeader">
                    <property name="styleSheet">
                     <string notr="true">background-color: rgb(78, 124, 179);</string>
                    </property>
@@ -6197,7 +6270,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QListWidget" name="listWidget">
+                  <widget class="QListWidget" name="listWidgetRooms">
                    <property name="maximumSize">
                     <size>
                      <width>200</width>
@@ -6228,7 +6301,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="2" column="0">
-                  <layout class="QGridLayout" name="gridLayout_37">
+                  <layout class="QGridLayout" name="gridLayoutRoomsToolbar">
                    <property name="topMargin">
                     <number>4</number>
                    </property>
@@ -6236,7 +6309,7 @@ p, li { white-space: pre-wrap; }
                     <number>4</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_51">
+                    <widget class="QToolButton" name="toolButtonRoomsAdd">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -6244,7 +6317,7 @@ p, li { white-space: pre-wrap; }
                       <string>Add</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
                      </property>
                      <property name="toolButtonStyle">
@@ -6256,7 +6329,7 @@ p, li { white-space: pre-wrap; }
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QToolButton" name="toolButton_52">
+                    <widget class="QToolButton" name="toolButtonRoomsRemove">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -6264,7 +6337,7 @@ p, li { white-space: pre-wrap; }
                       <string>Remove</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
                      </property>
                      <property name="toolButtonStyle">
@@ -6281,7 +6354,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_9">
+               <widget class="QFrame" name="frameFriends">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -6305,7 +6378,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_43">
+                  <widget class="QLabel" name="labelFreindsHeader">
                    <property name="styleSheet">
                     <string notr="true">background-color: rgb(78, 124, 179);</string>
                    </property>
@@ -6325,7 +6398,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QListWidget" name="listWidget_2">
+                  <widget class="QListWidget" name="listWidgetFriends">
                    <property name="maximumSize">
                     <size>
                      <width>200</width>
@@ -6341,7 +6414,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="2" column="0">
-                  <layout class="QGridLayout" name="gridLayout_38">
+                  <layout class="QGridLayout" name="gridLayoutFriendsToolbar">
                    <property name="topMargin">
                     <number>4</number>
                    </property>
@@ -6349,7 +6422,7 @@ p, li { white-space: pre-wrap; }
                     <number>4</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_53">
+                    <widget class="QToolButton" name="toolButtonFriendsAdd">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -6357,7 +6430,7 @@ p, li { white-space: pre-wrap; }
                       <string>Add</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
                      </property>
                      <property name="toolButtonStyle">
@@ -6369,7 +6442,7 @@ p, li { white-space: pre-wrap; }
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QToolButton" name="toolButton_54">
+                    <widget class="QToolButton" name="toolButtonFriendsRemove">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -6377,7 +6450,7 @@ p, li { white-space: pre-wrap; }
                       <string>Remove</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="Graphics.qrc">
+                      <iconset>
                        <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
                      </property>
                      <property name="toolButtonStyle">
@@ -6397,7 +6470,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QFrame" name="frame_11">
+            <widget class="QFrame" name="frameChatWelcome">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -6427,7 +6500,7 @@ p, li { white-space: pre-wrap; }
                <number>0</number>
               </property>
               <item row="0" column="1">
-               <widget class="QLabel" name="label_45">
+               <widget class="QLabel" name="labelChatWelcomeLogo">
                 <property name="text">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -6438,7 +6511,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QLabel" name="label_44">
+               <widget class="QLabel" name="labelChatWelcomeText">
                 <property name="text">
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -6479,7 +6552,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="2" column="1">
-            <widget class="QTextEdit" name="textEdit_2">
+            <widget class="QTextEdit" name="textEditChat">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                <horstretch>0</horstretch>
@@ -6489,7 +6562,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="3" column="1">
-            <widget class="QFrame" name="frame_10">
+            <widget class="QFrame" name="frameChatTools">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -6513,19 +6586,19 @@ p, li { white-space: pre-wrap; }
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <layout class="QGridLayout" name="gridLayout_39">
+               <layout class="QGridLayout" name="gridLayoutChatSendToolbar">
                 <property name="spacing">
                  <number>0</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QLineEdit" name="lineEdit_3">
+                 <widget class="QLineEdit" name="lineEditChatSend">
                   <property name="styleSheet">
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButton_55">
+                 <widget class="QToolButton" name="toolButtonChatSend">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
@@ -6533,7 +6606,7 @@ p, li { white-space: pre-wrap; }
                    <string>Send</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Forum.png</normaloff>:/Icons/Resource/Forum.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6547,12 +6620,12 @@ p, li { white-space: pre-wrap; }
                </layout>
               </item>
               <item row="1" column="0">
-               <layout class="QGridLayout" name="gridLayout_40">
+               <layout class="QGridLayout" name="gridLayoutChatToolbar">
                 <property name="spacing">
                  <number>0</number>
                 </property>
                 <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButton_56">
+                 <widget class="QToolButton" name="toolButtonChatConnect">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
@@ -6560,7 +6633,7 @@ p, li { white-space: pre-wrap; }
                    <string>Connect</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/connect_creating-32.png</normaloff>:/Icons/Resource/connect_creating-32.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6585,7 +6658,7 @@ p, li { white-space: pre-wrap; }
                  </spacer>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButton_57">
+                 <widget class="QToolButton" name="toolButtonChatDisconnect">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
@@ -6593,7 +6666,7 @@ p, li { white-space: pre-wrap; }
                    <string>Disconnect</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/connect_no-32.png</normaloff>:/Icons/Resource/connect_no-32.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6605,7 +6678,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QToolButton" name="toolButton_58">
+                 <widget class="QToolButton" name="toolButtonChatSmileys">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
@@ -6613,7 +6686,7 @@ p, li { white-space: pre-wrap; }
                    <string>Smileys</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Smileys/Resource/Smileys/Happy.png</normaloff>:/Smileys/Resource/Smileys/Happy.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6633,7 +6706,7 @@ p, li { white-space: pre-wrap; }
                    <string>Settings</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6645,12 +6718,12 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="5">
-                 <widget class="QToolButton" name="toolButton_14">
+                 <widget class="QToolButton" name="toolButtonChatEditProfile">
                   <property name="text">
                    <string>Edit Profile</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="Graphics.qrc">
+                   <iconset>
                     <normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</iconset>
                   </property>
                   <property name="toolButtonStyle">
@@ -6664,7 +6737,7 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item row="1" column="2" rowspan="3">
-            <widget class="QFrame" name="frame_12">
+            <widget class="QFrame" name="frameChatUsersSidebar">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -6691,7 +6764,7 @@ p, li { white-space: pre-wrap; }
                <number>6</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_15">
+               <widget class="QFrame" name="frameChatUsers">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -6715,7 +6788,7 @@ p, li { white-space: pre-wrap; }
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_47">
+                  <widget class="QLabel" name="labelChatUsersHeader">
                    <property name="styleSheet">
                     <string notr="true">background-color: rgb(78, 124, 179);</string>
                    </property>
@@ -6735,7 +6808,7 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QListWidget" name="listWidget_6">
+                  <widget class="QListWidget" name="listWidgetChatUsers">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -6755,6 +6828,44 @@ p, li { white-space: pre-wrap; }
                     <enum>QFrame::NoFrame</enum>
                    </property>
                   </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <layout class="QGridLayout" name="gridLayoutUsersToolbar">
+                   <property name="topMargin">
+                    <number>4</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>4</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QToolButton" name="toolButtonUsersAddFriend">
+                     <property name="text">
+                      <string>Add To Friends</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QToolButton" name="toolButtonUsersIgnore">
+                     <property name="text">
+                      <string>Ignore</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </widget>
@@ -6776,7 +6887,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>875</width>
+     <width>794</width>
      <height>21</height>
     </rect>
    </property>
@@ -6852,6 +6963,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShares"/>
     <addaction name="actionImport_Partials"/>
     <addaction name="actionQuickstart_Wizard"/>
+    <addaction name="actionSceduler"/>
     <addaction name="separator"/>
     <addaction name="actionOpen_Download_Folder"/>
     <addaction name="actionURL_Download"/>
@@ -6912,7 +7024,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExit">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/button_cancel-32.png</normaloff>:/Icons/Resource/button_cancel-32.png</iconset>
    </property>
    <property name="text">
@@ -6921,7 +7033,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
    </property>
    <property name="text">
@@ -6930,7 +7042,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionLock_Panels">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Keys_32.png</normaloff>:/Icons/Resource/Keys_32.png</iconset>
    </property>
    <property name="text">
@@ -6945,7 +7057,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Home_32x32.png</normaloff>:/Icons/Resource/Home_32x32.png</iconset>
    </property>
    <property name="text">
@@ -6963,7 +7075,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Folder Libary_32.png</normaloff>:/Icons/Resource/Folder Libary_32.png</iconset>
    </property>
    <property name="text">
@@ -6975,7 +7087,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
    </property>
    <property name="text">
@@ -6987,7 +7099,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Download.png</normaloff>:/Icons/Resource/Download.png</iconset>
    </property>
    <property name="text">
@@ -6999,7 +7111,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Lock.png</normaloff>:/Icons/Resource/Lock.png</iconset>
    </property>
    <property name="text">
@@ -7011,7 +7123,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Workgroup.png</normaloff>:/Icons/Resource/Workgroup.png</iconset>
    </property>
    <property name="text">
@@ -7023,7 +7135,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
    </property>
    <property name="text">
@@ -7032,7 +7144,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCreate_Torrent">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Bittorent Downloads.png</normaloff>:/Icons/Resource/Bittorent Downloads.png</iconset>
    </property>
    <property name="text">
@@ -7041,7 +7153,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSeed_Torrent">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/BittorrentSeed.png</normaloff>:/Icons/Resource/BittorrentSeed.png</iconset>
    </property>
    <property name="text">
@@ -7050,7 +7162,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionOpen_Torrent">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
    </property>
    <property name="text">
@@ -7062,7 +7174,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSettings">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
    </property>
    <property name="text">
@@ -7074,7 +7186,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
    </property>
    <property name="text">
@@ -7086,7 +7198,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
    </property>
    <property name="text">
@@ -7101,7 +7213,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
    </property>
    <property name="text">
@@ -7110,7 +7222,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionConnect">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/connect_creating-32.png</normaloff>:/Icons/Resource/connect_creating-32.png</iconset>
    </property>
    <property name="text">
@@ -7119,7 +7231,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionDisconnect">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/connect_no-32.png</normaloff>:/Icons/Resource/connect_no-32.png</iconset>
    </property>
    <property name="text">
@@ -7128,7 +7240,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionConnect_To">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Internet Connect.png</normaloff>:/Icons/Resource/Internet Connect.png</iconset>
    </property>
    <property name="text">
@@ -7137,7 +7249,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionBrowse">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Network Connections.png</normaloff>:/Icons/Resource/Network Connections.png</iconset>
    </property>
    <property name="text">
@@ -7146,7 +7258,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionExit_After_Transfers">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/fileclose-32.png</normaloff>:/Icons/Resource/fileclose-32.png</iconset>
    </property>
    <property name="text">
@@ -7158,7 +7270,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/irc protocol.png</normaloff>:/Icons/Resource/irc protocol.png</iconset>
    </property>
    <property name="text">
@@ -7170,7 +7282,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Network Connections.png</normaloff>:/Icons/Resource/Network Connections.png</iconset>
    </property>
    <property name="text">
@@ -7182,7 +7294,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Download server.png</normaloff>:/Icons/Resource/Download server.png</iconset>
    </property>
    <property name="text">
@@ -7194,7 +7306,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Graph.png</normaloff>:/Icons/Resource/Graph.png</iconset>
    </property>
    <property name="text">
@@ -7206,7 +7318,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Desktop graphite.png</normaloff>:/Icons/Resource/Desktop graphite.png</iconset>
    </property>
    <property name="text">
@@ -7218,7 +7330,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Desktop graphite.png</normaloff>:/Icons/Resource/Desktop graphite.png</iconset>
    </property>
    <property name="text">
@@ -7230,7 +7342,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/SearchMonitor.png</normaloff>:/Icons/Resource/SearchMonitor.png</iconset>
    </property>
    <property name="text">
@@ -7239,7 +7351,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionShares">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Folder Download.png</normaloff>:/Icons/Resource/Folder Download.png</iconset>
    </property>
    <property name="text">
@@ -7248,7 +7360,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionURL_Download">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Filetype URL.png</normaloff>:/Icons/Resource/Filetype URL.png</iconset>
    </property>
    <property name="text">
@@ -7257,7 +7369,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionImport_Partials">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/REG File.png</normaloff>:/Icons/Resource/REG File.png</iconset>
    </property>
    <property name="text">
@@ -7266,7 +7378,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionOpen_Download_Folder">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Folder.png</normaloff>:/Icons/Resource/Folder.png</iconset>
    </property>
    <property name="text">
@@ -7275,7 +7387,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionChoose_Skin">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
    </property>
    <property name="text">
@@ -7284,7 +7396,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionChoose_Language">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Language.png</normaloff>:/Icons/Resource/Language.png</iconset>
    </property>
    <property name="text">
@@ -7293,7 +7405,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionQuickstart_Wizard">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/wizard_32.png</normaloff>:/Icons/Resource/wizard_32.png</iconset>
    </property>
    <property name="text">
@@ -7302,7 +7414,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionUser_s_Guide">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Tourist guidebook.png</normaloff>:/Icons/Resource/Tourist guidebook.png</iconset>
    </property>
    <property name="text">
@@ -7311,7 +7423,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionFAQ">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Question Block.png</normaloff>:/Icons/Resource/Question Block.png</iconset>
    </property>
    <property name="text">
@@ -7320,7 +7432,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionConnection_Test">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/connect_creating-32.png</normaloff>:/Icons/Resource/connect_creating-32.png</iconset>
    </property>
    <property name="text">
@@ -7329,7 +7441,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCheck_For_New_Version">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/agt_action_success-32.png</normaloff>:/Icons/Resource/agt_action_success-32.png</iconset>
    </property>
    <property name="text">
@@ -7338,7 +7450,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionDonate">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/money_32.png</normaloff>:/Icons/Resource/money_32.png</iconset>
    </property>
    <property name="text">
@@ -7347,7 +7459,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionPanthera_Forums">
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Zealot.png</normaloff>:/Icons/Resource/Zealot.png</iconset>
    </property>
    <property name="text">
@@ -7359,18 +7471,25 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="Graphics.qrc">
+    <iconset>
      <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
    </property>
    <property name="text">
     <string>Ares</string>
    </property>
   </action>
+  <action name="actionSceduler">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Icons/Resource/Scheduler.png</normaloff>:/Icons/Resource/Scheduler.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sceduler</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="Graphics.qrc"/>
- </resources>
+ <resources/>
  <connections/>
  <designerdata>
   <property name="gridDeltaX">

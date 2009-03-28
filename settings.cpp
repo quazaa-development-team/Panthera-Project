@@ -22,6 +22,7 @@
 #include "settings.h"
 #include "ui_settings.h"
 #include "profile.h"
+#include "persistentsettings.h"
 
 Settings::Settings(QWidget *parent) :
     QDialog(parent),
@@ -104,26 +105,23 @@ void Settings::on_treeWidgetSettingsNavigation_itemClicked(QTreeWidgetItem* item
         } else if (m_aItemName.contains("Ares")) {
             m_ui->pagesSettings->setCurrentIndex(13);
             return;
-        } else if (m_aItemName.contains("Basic")) {
+        } else if (m_aItemName.contains("eDonkey 2k")) {
             m_ui->pagesSettings->setCurrentIndex(14);
             return;
-        } else if (m_aItemName.contains("eDonkey 2k")) {
+        } else if (m_aItemName.contains("Bittorrent")) {
             m_ui->pagesSettings->setCurrentIndex(15);
             return;
-        } else if (m_aItemName.contains("Bittorrent")) {
+        } else if (m_aItemName.contains("Protocols")) {
             m_ui->pagesSettings->setCurrentIndex(16);
             return;
-        } else if (m_aItemName.contains("Protocols")) {
+        } else if (m_aItemName.contains("Skins")) {
             m_ui->pagesSettings->setCurrentIndex(17);
             return;
-        } else if (m_aItemName.contains("Skins")) {
+        } else if (m_aItemName.contains("Plugins")) {
             m_ui->pagesSettings->setCurrentIndex(18);
             return;
-        } else if (m_aItemName.contains("Plugins")) {
-            m_ui->pagesSettings->setCurrentIndex(19);
-            return;
         } else if (m_aItemName.contains("Advanced")) {
-            m_ui->pagesSettings->setCurrentIndex(20);
+            m_ui->pagesSettings->setCurrentIndex(19);
             return;
         }
 }
@@ -158,7 +156,7 @@ void Settings::on_labelWebIntegration_linkActivated(QString link)
     m_ui->pagesSettings->setCurrentIndex(5);
 }
 
-void Settings::on_toolButton_clicked()
+void Settings::on_toolButtonEditProfile_clicked()
 {
     Profile *winProfile = new Profile(this);
     winProfile->show();

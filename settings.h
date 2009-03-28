@@ -44,7 +44,7 @@ private:
     Ui::Settings *m_ui;
 
 private slots:
-    void on_toolButton_clicked();
+    void on_toolButtonEditProfile_clicked();
     void on_labelWebIntegration_linkActivated(QString link);
     void on_labelCommunity_linkActivated(QString link);
     void on_labelMediaPlayer_linkActivated(QString link);

@@ -17,7 +17,7 @@
    <string>Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Graphics.qrc">
+   <iconset>
     <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
   </property>
   <property name="modal">
@@ -115,134 +115,10 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </item>
-   <item row="1" column="0">
-    <widget class="QTreeWidget" name="treeWidgetSettingsNavigation">
-     <property name="minimumSize">
-      <size>
-       <width>110</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>180</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="headerHidden">
-      <bool>true</bool>
-     </property>
-     <column>
-      <property name="text">
-       <string>Navigation</string>
-      </property>
-     </column>
-     <item>
-      <property name="text">
-       <string extracomment="Parent general">General</string>
-      </property>
-      <item>
-       <property name="text">
-        <string extracomment="Child General">Basic</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string extracomment="Library">Library</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string extracomment="Media Player">Media Player</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Chat</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Web</string>
-       </property>
-      </item>
-     </item>
-     <item>
-      <property name="text">
-       <string>Internet</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Connection</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Downloads</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Uploads</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Remote Access</string>
-       </property>
-      </item>
-     </item>
-     <item>
-      <property name="text">
-       <string>Networks</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Gnutella</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ares</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>eDonkey 2k</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bittorrent</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Protocols</string>
-       </property>
-      </item>
-     </item>
-     <item>
-      <property name="text">
-       <string>Skins</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Plugins</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Advanced</string>
-      </property>
-     </item>
-    </widget>
-   </item>
    <item row="1" column="1">
     <widget class="QStackedWidget" name="pagesSettings">
      <property name="currentIndex">
-      <number>4</number>
+      <number>15</number>
      </property>
      <widget class="QWidget" name="pageGeneral">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -1694,7 +1570,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QGroupBox" name="groupBox_16">
+        <widget class="QGroupBox" name="groupBoxPlayerOpenFileTypes">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
@@ -1715,10 +1591,10 @@ p, li { white-space: pre-wrap; }
            <number>4</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="lineEditPlayerFileTypes"/>
           </item>
           <item row="1" column="0" rowspan="2">
-           <widget class="QListWidget" name="listWidget_3">
+           <widget class="QListWidget" name="listWidgetPlayerFilesList">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -1864,7 +1740,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="pushButtonAddPlayerFiles">
             <property name="minimumSize">
              <size>
               <width>60</width>
@@ -1883,7 +1759,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="pushButtonRemovePlayerFiles">
             <property name="minimumSize">
              <size>
               <width>60</width>
@@ -1915,13 +1791,19 @@ p, li { white-space: pre-wrap; }
         <number>4</number>
        </property>
        <item row="0" column="0" colspan="3">
-        <widget class="QGroupBox" name="groupBox_5">
+        <widget class="QGroupBox" name="groupBoxMyProfile">
          <property name="title">
           <string>My Profile</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_45">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="label_14">
+           <widget class="QLabel" name="labelProfileInfo">
             <property name="text">
              <string>You can use your profile to share information about yourself on Gnutella Chat and IRC. If you do not want to identify yourself, no information is required.</string>
             </property>
@@ -1934,7 +1816,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QToolButton" name="toolButton">
+           <widget class="QToolButton" name="toolButtonEditProfile">
             <property name="text">
              <string>Edit My Profile</string>
             </property>
@@ -1944,7 +1826,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QGroupBox" name="groupBox">
+        <widget class="QGroupBox" name="groupBoxIRCClient">
          <property name="title">
           <string>IRC Client Options</string>
          </property>
@@ -1956,30 +1838,30 @@ p, li { white-space: pre-wrap; }
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>2</number>
           </property>
           <property name="bottomMargin">
-           <number>0</number>
+           <number>2</number>
           </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="checkBoxConnectIRCOnStart">
             <property name="text">
              <string>Connect To Chat On Startup</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="checkBox_2">
+           <widget class="QCheckBox" name="checkBoxIRCFloodProtection">
             <property name="text">
              <string>Flood Protection</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QSpinBox" name="spinBox">
+           <widget class="QSpinBox" name="spinBoxIRCFloodLinesLimit">
             <property name="suffix">
              <string> lines per second.</string>
             </property>
@@ -1989,7 +1871,7 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QCheckBox" name="checkBox_3">
+           <widget class="QCheckBox" name="checkBoxIRCShowTimestamp">
             <property name="text">
              <string>Show Timestamp</string>
             </property>
@@ -1998,10 +1880,10 @@ p, li { white-space: pre-wrap; }
           <item row="4" column="0">
            <layout class="QGridLayout" name="gridLayout_12">
             <item row="0" column="1">
-             <widget class="QFontComboBox" name="fontComboBoxChat"/>
+             <widget class="QFontComboBox" name="fontComboBoxIRCChat"/>
             </item>
             <item row="0" column="0">
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="labelIRCChatFont">
               <property name="text">
                <string>Chat Font</string>
               </property>
@@ -2012,14 +1894,14 @@ p, li { white-space: pre-wrap; }
           <item row="5" column="0">
            <layout class="QGridLayout" name="gridLayout_42">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_15">
+             <widget class="QLabel" name="labelIRCServer">
               <property name="text">
                <string>Server</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="lineEditIRCServer">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2032,7 +1914,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QSpinBox" name="spinBoxPort">
+             <widget class="QSpinBox" name="spinBoxIRCPort">
               <property name="sizePolicy">
                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2059,9 +1941,9 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QGroupBox" name="groupBox_2">
+        <widget class="QGroupBox" name="groupBoxIRCColors">
          <property name="title">
-          <string>Colors</string>
+          <string>IRC Colors</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_47">
           <property name="leftMargin">
@@ -2077,12 +1959,15 @@ p, li { white-space: pre-wrap; }
            <number>0</number>
           </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_41">
+            <property name="margin">
+             <number>2</number>
+            </property>
             <item row="0" column="0">
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="labelColorServerMessages">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2096,19 +1981,19 @@ p, li { white-space: pre-wrap; }
                <enum>QFrame::Box</enum>
               </property>
               <property name="text">
-               <string>  </string>
+               <string/>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="labelServerMessages">
               <property name="text">
                <string>Server Messages</string>
               </property>
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="labelColorTopics">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2127,7 +2012,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="labelColorRoomActions">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2146,7 +2031,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QLabel" name="label_6">
+             <widget class="QLabel" name="labelColorNotices">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2165,7 +2050,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="4" column="0">
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="labelColorChatBackground">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2184,7 +2069,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QLabel" name="label_8">
+             <widget class="QLabel" name="labelColorText">
               <property name="maximumSize">
                <size>
                 <width>15</width>
@@ -2203,35 +2088,35 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QLabel" name="label_9">
+             <widget class="QLabel" name="labelColorTopics_2">
               <property name="text">
                <string>Topics</string>
               </property>
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="QLabel" name="label_10">
+             <widget class="QLabel" name="labelRoomActions">
               <property name="text">
                <string>Room Actions</string>
               </property>
              </widget>
             </item>
             <item row="3" column="1">
-             <widget class="QLabel" name="label_11">
+             <widget class="QLabel" name="labelNotices">
               <property name="text">
                <string>Notices</string>
               </property>
              </widget>
             </item>
             <item row="4" column="1">
-             <widget class="QLabel" name="label_12">
+             <widget class="QLabel" name="labelChatBackground">
               <property name="text">
                <string>Chat Background</string>
               </property>
              </widget>
             </item>
             <item row="5" column="1">
-             <widget class="QLabel" name="label_13">
+             <widget class="QLabel" name="labelText">
               <property name="text">
                <string>Text</string>
               </property>
@@ -2243,7 +2128,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QGroupBox" name="groupBox_4">
+        <widget class="QGroupBox" name="groupBoxGnutellaChat">
          <property name="title">
           <string>Gnutella Chat Options</string>
          </property>
@@ -2264,14 +2149,14 @@ p, li { white-space: pre-wrap; }
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QCheckBox" name="checkBox_4">
+           <widget class="QCheckBox" name="checkBoxGnutellaChatEnable">
             <property name="text">
              <string>Enable Gnutella Chat</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="checkBox_5">
+           <widget class="QCheckBox" name="checkBoxEnableChatOther">
             <property name="text">
              <string>Enable Chat Over Other Protocols</string>
             </property>
@@ -2281,7 +2166,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1" colspan="2">
-        <widget class="QGroupBox" name="groupBox_3">
+        <widget class="QGroupBox" name="groupBoxCommonSettings">
          <property name="title">
           <string>Common Settings</string>
          </property>
@@ -2302,14 +2187,14 @@ p, li { white-space: pre-wrap; }
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QCheckBox" name="checkBox_6">
+           <widget class="QCheckBox" name="checkBoxFilterSpam">
             <property name="text">
              <string>Filter Chat For Spam</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="checkBox_7">
+           <widget class="QCheckBox" name="checkBoxCensor">
             <property name="text">
              <string>Censor Profanity In Chat</string>
             </property>
@@ -2320,7 +2205,308 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="pageWeb"/>
+     <widget class="QWidget" name="pageWeb">
+      <layout class="QGridLayout" name="gridLayout_16">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Peer To Peer Link Handling</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Use Panthera To Open These Types Of Links:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox">
+              <property name="text">
+               <string>Magnet ( magnet: )</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="checkBox_2">
+              <property name="text">
+               <string>Gnutella ( gnutella: )</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="checkBox_3">
+              <property name="text">
+               <string>eDonkey 2k ( ed2k: )</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="checkBox_4">
+              <property name="text">
+               <string>Piolet ( mp2p: )</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="checkBox_5">
+              <property name="text">
+               <string>Bittorrent ( torrent: )</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Download Manager</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_15">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="text">
+             <string>Use Panthera to manage all my web downloads:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="lineEditPlayerFileTypes_2"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButtonAddPlayerFiles_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2" rowspan="3">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>The download manager plugin will only attempt to download file types listed here. Other file types will be handled by your web browser. Panthera must be running to manage downloads.</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" rowspan="2">
+           <widget class="QListWidget" name="listWidgetPlayerFilesList_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>aif</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>afc</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>aiff</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>asf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>asx</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>au</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>avi</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cda</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>m1v</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>m3u</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mid</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>midi</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mp2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mp3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mpa</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mpe</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mpeg</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mpg</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rmi</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>snd</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wav</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wax</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wma</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wmv</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wmx</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>wvx</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButtonRemovePlayerFiles_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="pageInternet">
       <layout class="QGridLayout" name="gridLayout_10">
        <property name="margin">
@@ -2478,10 +2664,1211 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="pageConnection"/>
-     <widget class="QWidget" name="pageDownloads"/>
-     <widget class="QWidget" name="pageUploads"/>
-     <widget class="QWidget" name="pageRemotAccess"/>
+     <widget class="QWidget" name="pageConnection">
+      <layout class="QGridLayout" name="gridLayout_54">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxInbound">
+         <property name="title">
+          <string>Inbound Address</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_19">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_17">
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelInboundAddress">
+              <property name="text">
+               <string>Address:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="comboBoxInboundAddress">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>Automatic</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="labelInboundSpeed">
+              <property name="text">
+               <string>Speed:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QComboBox" name="comboBoxInboundSpeed">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>3.50 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4.13 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>7.00 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>8.00 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>32 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>48 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>64 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>80 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>96 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>128 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>192 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>193 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>256 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>384 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>512 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>640 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.00 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.25 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.50 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3.00 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>5.49 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12.50 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18.92 MB/s</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <widget class="QSpinBox" name="spinBoxPantheraPort">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="prefix">
+               <string>Port: </string>
+              </property>
+              <property name="minimum">
+               <number>1024</number>
+              </property>
+              <property name="maximum">
+               <number>49151</number>
+              </property>
+              <property name="value">
+               <number>6350</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="checkBoxRandomPort">
+              <property name="text">
+               <string>Random</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QCheckBox" name="checkBoxForceBindingPort">
+              <property name="text">
+               <string>Force Binding To This Address</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxOutbound">
+         <property name="title">
+          <string>Outbound Address</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_48">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_20">
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelOutboundAddress">
+              <property name="text">
+               <string>Address</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="comboBoxOutboundAddress">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>Automatic</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="labelOutboundSpeed">
+              <property name="text">
+               <string>Speed</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QComboBox" name="comboBoxOutboundSpeed">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>3.50 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4.13 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>7.00 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>8.00 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>32 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>48 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>64 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>80 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>96 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>128 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>192 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>193 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>256 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>384 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>512 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>640 KB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.00 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.25 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1.50 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>3.00 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>5.49 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12.50 MB/s</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18.92 MB/s</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxConnectionOptions">
+         <property name="title">
+          <string>Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_51">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_50">
+            <item row="0" column="1">
+             <widget class="QLabel" name="labelAcceptIncoming">
+              <property name="text">
+               <string>Can Accept Incoming Connections</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="2">
+             <widget class="QCheckBox" name="checkBoxEnableUPnP">
+              <property name="text">
+               <string>Enable UPnP To Set Up Firewalls/Routers</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="2">
+             <widget class="QCheckBox" name="checkBoxIgnoreLocalIP">
+              <property name="text">
+               <string>Ignore Private/Local IP Addresses</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QComboBox" name="comboBoxAcceptIncoming">
+              <item>
+               <property name="text">
+                <string>Automatic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>No</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Yes</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="3">
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBoxConnectionTimeouts">
+         <property name="title">
+          <string>Timeouts</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_53">
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_52">
+            <item row="0" column="0">
+             <widget class="QSpinBox" name="spinBoxConnectionTimeout">
+              <property name="prefix">
+               <string>Connection: </string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>480</number>
+              </property>
+              <property name="value">
+               <number>16</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="spinBoxHandshakeTimeout">
+              <property name="prefix">
+               <string>Handshake: </string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>480</number>
+              </property>
+              <property name="value">
+               <number>45</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageDownloads">
+      <layout class="QGridLayout" name="gridLayout_57">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBoxSaveFolder">
+         <property name="title">
+          <string>Save Completed Files Here:</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_55">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="toolButtonSaveBrowse">
+            <property name="text">
+             <string>Browse For Completed</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBoxTempFolder">
+         <property name="title">
+          <string>Store Temporary Files Here:</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_56">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="lineEditTempFolder"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="toolButtonTempBrowse">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxNumberDownloads">
+         <property name="title">
+          <string>Number Of Downloads</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_58">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxMaxFiles">
+            <property name="prefix">
+             <string>Maximum Files: </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>26</number>
+            </property>
+            <property name="value">
+             <number>26</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QSpinBox" name="spinBoxMaxTransfers">
+            <property name="prefix">
+             <string>Maximum Transfers: </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QSpinBox" name="spinBoxTransfersPerFile">
+            <property name="prefix">
+             <string>Transfers Per File: </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QGroupBox" name="groupBoxTransferLimits">
+         <property name="title">
+          <string>Limits</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_59">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelTotalBandwidth">
+            <property name="text">
+             <string>Total Download Bandwidth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxDownloadBandwidth">
+            <item>
+             <property name="text">
+              <string>64 KB/s</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>128 KB/s</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>192 KB/s</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>217 KB/s</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>256 KB/s</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MAX</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelMaxQue">
+            <property name="text">
+             <string>Maximum Que Length:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxQueLength">
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>20</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MAX</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkBoxOnlyDownloadConnectedNetworks">
+         <property name="text">
+          <string>Only Download And Upload To Networks Which Are Connected</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageUploads">
+      <layout class="QGridLayout" name="gridLayout_64">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0" rowspan="2">
+        <widget class="QGroupBox" name="groupBoxUploadOptions">
+         <property name="title">
+          <string>Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_60">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxSharePartials">
+            <property name="text">
+             <string>Share NEW Partial Downloads</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBoxSharingLimitHub">
+            <property name="text">
+             <string>Limit Sharing In Hub Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="checkBoxSharePreviews">
+            <property name="text">
+             <string>Share Preview Files</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QSpinBox" name="spinBoxUniqueHostLimit">
+            <property name="prefix">
+             <string>Limit Per Unique host: </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBoxUserAgent">
+         <property name="title">
+          <string>User-Agent Filter</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_61">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QComboBox" name="comboBoxUserAgents">
+            <item>
+             <property name="text">
+              <string>Mozilla</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="toolButtonUserAgentAdd">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QToolButton" name="toolButtonUserAgentRemove">
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="groupBoxBandwidth">
+         <property name="title">
+          <string>Bandwidth</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_62">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxBandwidthLimit">
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>24</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>27</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>32</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MAX</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="comboBoxBandwidthLimitMode">
+            <item>
+             <property name="text">
+              <string>Average</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Maximum</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelBandwidthLimit">
+            <property name="text">
+             <string>Limit:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="labelBandwidthLimitMode">
+            <property name="text">
+             <string>Mode:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBoxQueues">
+         <property name="title">
+          <string>Queues</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_65">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_63">
+            <item row="0" column="1">
+             <widget class="QToolButton" name="toolButtonNewQueue">
+              <property name="text">
+               <string>New</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QToolButton" name="toolButtonDeleteQueue">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="2">
+             <widget class="QToolButton" name="toolButtonEditQueue">
+              <property name="text">
+               <string>Edit</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QTreeWidget" name="treeWidgetQueues">
+            <column>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Criteria</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Bandwidth</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Transfers</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageRemotAccess">
+      <layout class="QGridLayout" name="gridLayout_69">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxRemoteGuide">
+         <property name="title">
+          <string>Guide</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_68">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelRemoteGuide">
+            <property name="text">
+             <string>Panthera remote access allows you to leave Panthera running on your PC, and control it remotely using a web browser. You need to be able to accept incoming connections to use this feature. (I.E. properly set up routers and firewalls.)</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxRemoteEnable">
+         <property name="title">
+          <string>Enable</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_67">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="1" column="0">
+           <layout class="QGridLayout" name="gridLayout_70">
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="checkBoxRemoteEnable">
+              <property name="text">
+               <string>Enable Panthera Remote Access</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="labelRemoteStatus">
+              <property name="text">
+               <string>Remote Access Is Disabled</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="2">
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxRemoteCredentials">
+         <property name="title">
+          <string>Credentials</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_66">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelRemoteUsername">
+            <property name="text">
+             <string>Choose A Username</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditRemoteUsername"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelRemotePassword">
+            <property name="text">
+             <string>Choose A Password:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditRemotePassword">
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="pageNetworks">
       <layout class="QGridLayout" name="gridLayout_11">
        <property name="margin">
@@ -2523,7 +3910,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBox_10">
+        <widget class="QGroupBox" name="groupBoxG2">
          <property name="title">
           <string>Gnutella 2 Network</string>
          </property>
@@ -2543,7 +3930,7 @@ p, li { white-space: pre-wrap; }
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <widget class="QCheckBox" name="checkBox_30">
+             <widget class="QCheckBox" name="checkBoxConnectG2">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -2554,13 +3941,13 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Gnutella 2 (G2)</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_26">
+             <widget class="QLabel" name="labelConfigureG2">
               <property name="text">
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2589,7 +3976,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QGroupBox" name="groupBox_12">
+        <widget class="QGroupBox" name="groupBoxG1">
          <property name="title">
           <string>Original Gnutella Network</string>
          </property>
@@ -2609,7 +3996,7 @@ p, li { white-space: pre-wrap; }
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <widget class="QCheckBox" name="checkBox_29">
+             <widget class="QCheckBox" name="checkBoxConnectG1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -2620,13 +4007,13 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Original Gnutella (G1)</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_23">
+             <widget class="QLabel" name="labelConfigureG1">
               <property name="text">
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2655,7 +4042,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QGroupBox" name="groupBox_13">
+        <widget class="QGroupBox" name="groupBoxAres">
          <property name="title">
           <string>Ares</string>
          </property>
@@ -2675,7 +4062,7 @@ p, li { white-space: pre-wrap; }
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <widget class="QCheckBox" name="checkBox_28">
+             <widget class="QCheckBox" name="checkBoxConnectAres">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -2686,13 +4073,13 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Ares</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_25">
+             <widget class="QLabel" name="labelConfigureAres">
               <property name="text">
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2721,7 +4108,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QGroupBox" name="groupBox_11">
+        <widget class="QGroupBox" name="groupBoxED2k">
          <property name="title">
           <string>eDonkey 2k Network</string>
          </property>
@@ -2741,7 +4128,7 @@ p, li { white-space: pre-wrap; }
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <widget class="QCheckBox" name="checkBox_31">
+             <widget class="QCheckBox" name="checkBoxConnectED2k">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -2752,13 +4139,13 @@ p, li { white-space: pre-wrap; }
                <string>Connect To eDonkey 2k</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_28">
+             <widget class="QLabel" name="labelConfigureED2k">
               <property name="text">
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -2801,20 +4188,1042 @@ p, li { white-space: pre-wrap; }
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="pageGnutella"/>
+     <widget class="QWidget" name="pageGnutella">
+      <layout class="QGridLayout" name="gridLayout_76">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxG2Network">
+         <property name="title">
+          <string>Gnutella 2 Network</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_71">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBoxAlwaysConnectG2">
+            <property name="text">
+             <string>Always Connect To Gnutella 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBoxConnectG2Today">
+            <property name="text">
+             <string>Connect To Gnutella 2 Today</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelG2Mode">
+            <property name="text">
+             <string>Mode:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxG2Mode">
+            <item>
+             <property name="text">
+              <string>Optimal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Leaf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Hub</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBoxG1Network">
+         <property name="title">
+          <string>Gnutella 1 Network</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_72">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBoxAlwaysConnectG1">
+            <property name="text">
+             <string>Always Connect Gnutella 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QCheckBox" name="checkBoxConnectG1Today">
+            <property name="text">
+             <string>Connect To Gnutella 1 Today</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelG1Mode">
+            <property name="text">
+             <string>Mode:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxG1Mode">
+            <item>
+             <property name="text">
+              <string>Optimal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Leaf</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ultrapeer</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxG2Connections">
+         <property name="title">
+          <string>G2 Connections</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_73">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxG2LeafToHub">
+            <property name="prefix">
+             <string>Leaf to Hub: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QSpinBox" name="spinBoxG2HubToLeaf">
+            <property name="prefix">
+             <string>Hub to Leaf: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QSpinBox" name="spinBoxG2HubToHub">
+            <property name="prefix">
+             <string>Hub to Hub: </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="groupBoxG1Connections">
+         <property name="title">
+          <string>G1 Connections</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_74">
+          <property name="horizontalSpacing">
+           <number>2</number>
+          </property>
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxG1LeafToUltrapeer">
+            <property name="prefix">
+             <string>Leaf to Ultrapeer: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QSpinBox" name="spinBoxG1UltrapeerToLeaf">
+            <property name="prefix">
+             <string>Ultrapeer to Leaf: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QSpinBox" name="spinBoxG1LeafToLeaf">
+            <property name="prefix">
+             <string>Leaf to Leaf: </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBoxLinkCompression">
+         <property name="title">
+          <string>Link compression</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_75">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxCompressionHubToLeaf">
+            <property name="text">
+             <string>Hub to Leaf</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="checkBoxCompressionLeafToHub">
+            <property name="text">
+             <string>Leaf to Hub</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QCheckBox" name="checkBoxCompressionHubToHub">
+            <property name="text">
+             <string>Hub to Hub</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="pageAres"/>
-     <widget class="QWidget" name="pageEDonkey2k"/>
-     <widget class="QWidget" name="pageBittorrent"/>
-     <widget class="QWidget" name="pageProtocols"/>
-     <widget class="QWidget" name="pageSkins"/>
-     <widget class="QWidget" name="pagePlugins"/>
-     <widget class="QWidget" name="pageAdvanced"/>
+     <widget class="QWidget" name="pageEDonkey2k">
+      <layout class="QGridLayout" name="gridLayout_81">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxEDonkey2kNetwork">
+         <property name="title">
+          <string>eDonkey 2k Network</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_77">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxED2kAlwaysConnect">
+            <property name="text">
+             <string>Always Connect To eDonkey 2k</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="checkBoxED2kConnectKAD">
+            <property name="text">
+             <string>Connect To The Kad Network</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBoxED2kConnectToday">
+            <property name="text">
+             <string>Connect To eDonkey 2k Today</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxED2kGlobalSearching">
+         <property name="title">
+          <string>Global Searching</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_78">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxED2kSearchCahedServers">
+            <property name="text">
+             <string>Search Known Remote Severs In the Server Cache</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QSpinBox" name="spinBoxED2kMaxResults">
+            <property name="suffix">
+             <string> search results.</string>
+            </property>
+            <property name="prefix">
+             <string>Stop searching after </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>200</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="checkBoxED2kUpdateServerList">
+            <property name="text">
+             <string>Recieve And Update Server List From The Connected server</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxED2kConnections">
+         <property name="title">
+          <string>Client Link Connections</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_79">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxED2kMaxClients">
+            <property name="suffix">
+             <string> other eDonky 2k clients.</string>
+            </property>
+            <property name="prefix">
+             <string>Connect to no more than </string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>2048</number>
+            </property>
+            <property name="value">
+             <number>35</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBoxED2kTools">
+         <property name="title">
+          <string>eDonkey 2k Tools</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_80">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelED2kDownloadServerList">
+            <property name="text">
+             <string>Download eDonkey 2k server list from the web.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="toolButtonED2kDownloadServerList">
+            <property name="text">
+             <string>Download...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageBittorrent">
+      <layout class="QGridLayout" name="gridLayout_85">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxBTInterface">
+         <property name="title">
+          <string>Interface</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_84">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxBTSaveDialog">
+            <property name="text">
+             <string>Show Torrent Save Dialog When Opening Torrents</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBox_7">
+            <property name="text">
+             <string>Open New Torrents In Paused State</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxBTConnections">
+         <property name="title">
+          <string>Connections</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_83">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxSimultaneousTorrents">
+            <property name="suffix">
+             <string> Torrents at once.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="spinBoxBTClientConnections">
+            <property name="suffix">
+             <string> Client connections.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="checkBoxBTPreferTorrent">
+            <property name="text">
+             <string>Prefer Torrent Sources</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="checkBoxBTUseKademlia">
+            <property name="text">
+             <string>Use Kademlia With Bittorrent</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <layout class="QGridLayout" name="gridLayout_95">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBoxBTClearDownloaded">
+              <property name="text">
+               <string>Clear Downloaded Torrents</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="spinBoxBTRatioClear">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="suffix">
+               <string> %.</string>
+              </property>
+              <property name="prefix">
+               <string>when the ratio reaches </string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <spacer name="horizontalSpacer_16">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Preferred</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxEndgame">
+         <property name="title">
+          <string>Endgame</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_82">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBoxEndgame">
+            <property name="text">
+             <string>Enable Endgame Mode When Completing torrents.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageProtocols">
+      <layout class="QGridLayout" name="gridLayout_87">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxProtocolExplorer">
+         <property name="title">
+          <string>Panthera Common Architecture Protocol Explorer</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_86">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QTreeWidget" name="treeWidgetProtocolExplorer">
+            <column>
+             <property name="text">
+              <string>Protocol Explorer</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>Peer-to-Peer Network Protocols</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Gnutella 2 Network</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gnutella 1 Network</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ares Network</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>eDonkey 2k Network</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>eDonkey 2k KAD Network</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bittorrent Kademlia Network</string>
+              </property>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>File Transfer Protocols</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Hypertext Transfer Protocol (HTTP)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>File Transfer Protocol (FTP)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>eDonkey 2k Client Link (EFTP)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bittorrent Coupling (BT)</string>
+              </property>
+             </item>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageSkins">
+      <layout class="QGridLayout" name="gridLayout_90">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxSkins">
+         <property name="title">
+          <string>Skins</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_88">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" colspan="3">
+           <widget class="QTreeWidget" name="treeWidgetSkins">
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="indentation">
+             <number>20</number>
+            </property>
+            <property name="itemsExpandable">
+             <bool>true</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>Skin Name</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Author</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Version</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <layout class="QGridLayout" name="gridLayoutSkinTools">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pushButtonGetSkins">
+              <property name="text">
+               <string>Get More Skins</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="pushButtonInstallSkin">
+              <property name="text">
+               <string>Install</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>68</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="3">
+             <widget class="QPushButton" name="pushButtonPreviewSkin">
+              <property name="text">
+               <string>Preview</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QPushButton" name="pushButtonDeleteSkin">
+              <property name="text">
+               <string>Delete</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pagePlugins">
+      <layout class="QGridLayout" name="gridLayout_92">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0" colspan="3">
+        <widget class="QListWidget" name="listWidgetPlugins">
+         <item>
+          <property name="text">
+           <string>VLC Media Player Plugin</string>
+          </property>
+          <property name="checkState">
+           <enum>Checked</enum>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" rowspan="2" colspan="3">
+        <widget class="QGroupBox" name="groupBoxPluginInformation">
+         <property name="title">
+          <string>Plugin Information</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_91">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_89">
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelPluginDescriptionHeader">
+              <property name="text">
+               <string>Description:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelPluginNameHeader">
+              <property name="text">
+               <string>Name:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="labelPluginName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="labelPluginDescription">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="pushButtonGetPlugins">
+         <property name="text">
+          <string>Get More Plugins</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButtonPluginSettings">
+         <property name="text">
+          <string>Plugin Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="horizontalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageAdvanced">
+      <layout class="QGridLayout" name="gridLayout_94">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QTreeWidget" name="treeWidgetAdvancedSettings">
+         <property name="autoExpandDelay">
+          <number>-1</number>
+         </property>
+         <property name="itemsExpandable">
+          <bool>true</bool>
+         </property>
+         <attribute name="headerDefaultSectionSize">
+          <number>100</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Setting</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Value</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxAdvancedSettingControls">
+         <property name="title">
+          <string>Setting Properties</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_93">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSpinBox" name="spinBoxValue">
+            <property name="prefix">
+             <string>Value: </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButtonResetValue">
+            <property name="text">
+             <string>Reset To Default Value</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTreeWidget" name="treeWidgetSettingsNavigation">
+     <property name="minimumSize">
+      <size>
+       <width>110</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>180</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="headerHidden">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>Navigation</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string extracomment="Parent general">General</string>
+      </property>
+      <item>
+       <property name="text">
+        <string extracomment="Child General">Basic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string extracomment="Library">Library</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string extracomment="Media Player">Media Player</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Web</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Internet</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Connection</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Downloads</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Uploads</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Remote Access</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Networks</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Gnutella</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ares</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>eDonkey 2k</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bittorrent</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Protocols</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Skins</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Plugins</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Advanced</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="Graphics.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

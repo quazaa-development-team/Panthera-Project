@@ -23,6 +23,8 @@
 #include "ui_mainwindow.h"
 #include "splash.h"
 #include "settings.h"
+#include "profile.h"
+//#include "persistentsettings.h"
 #include <QResource>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -33,22 +35,43 @@ MainWindow::MainWindow(QWidget *parent)
     winSplash->setWindowFlags(Qt::FramelessWindowHint);
     winSplash->show();
     //Tray icon construction.
-        // Create the menu that will be used for the context menu
+    // Create the menu that will be used for the context menu
     winSplash->updateProgress(90, "Loading Tray Icon...");
     // Create the system tray right click menu.
-    menu = new QMenu(this);
-    menu->addAction(QPixmap(":/Icons/Resource/Panthera.png"),
-                    tr("&Show panthera"), this, SLOT(showOrHide()));
-    menu->addSeparator();
-    menu->addAction(QPixmap(":/Icons/Resource/button_cancel-32.png"), tr("&Quit"), qApp,
+    trayMenu = new QMenu(this);
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Panthera.png"),
+                    tr("&Show/Hide Panthera"), this, SLOT(on_trayIcon_showOrHide()));
+    trayMenu->addSeparator();
+    trayMenu->addAction(QPixmap(":/Icons/Resource/search-32.png"),
+                    tr("New Search"), this, SLOT(on_trayicon_newSearch()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Filetype URL.png"),
+                    tr("URL Download"), this, SLOT(on_trayicon_downloadFile()));
+    trayMenu->addSeparator();
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Play.png"),
+                    tr("Play Media"), this, SLOT(on_trayIcon_playMedia()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Pause.png"),
+                    tr("Pause Media"), this, SLOT(on_trayIcon_pauseMedia()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Stop.png"),
+                    tr("Stop Media"), this, SLOT(on_trayIcon_stopMedia()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Eject.png"),
+                    tr("Open Media"), this, SLOT(on_trayIcon_openMedia()));
+    trayMenu->addSeparator();
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Start.png"),
+                    tr("Previous Track"), this, SLOT(on_trayIcon_previousTrack()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/Player End.png"),
+                    tr("Next Track"), this, SLOT(on_trayIcon_nextTrack()));
+    trayMenu->addSeparator();
+    trayMenu->addAction(QPixmap(":/Icons/Resource/fileclose-32.png"),
+                    tr("E&xit After Transfers"), qApp, SLOT(on_exitAfterTransfers()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/button_cancel-32.png"), tr("E&xit"), qApp,
                     SLOT(quit()));
 
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setIcon(QIcon(":/Icons/Resource/Panthera.png"));
     trayIcon->setToolTip("Panthera");
-    trayIcon->setContextMenu(menu);
+    trayIcon->setContextMenu(trayMenu);
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
+            this, SLOT(on_trayIcon_activated(QSystemTrayIcon::ActivationReason)));
     trayIcon->show();
     //Load user interface
     winSplash->updateProgress(95, "Loading User Interface...");
@@ -63,6 +86,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    trayIcon->~QSystemTrayIcon();
     delete ui;
 }
 
@@ -154,14 +178,6 @@ void MainWindow::on_actionChat_triggered(bool checked)
 void MainWindow::on_actionSettings_triggered()
 {
     Settings *winSettings = new Settings(this);
-    winSettings->show();
-}
-
-void MainWindow::on_labelSkins_linkActivated(QString link)
-{
-    link.clear();
-    Settings *winSettings = new Settings(this);
-    winSettings->switchSettingsPage(18);
     winSettings->show();
 }
 
@@ -262,12 +278,6 @@ void MainWindow::on_pagesLibraryNavigator_currentChanged(int index)
     ui->pagesLibrary->setCurrentIndex(index);
 }
 
-void MainWindow::on_labelSecurity_linkActivated(QString link)
-{
-    link.clear();
-    ui->actionSecurity->trigger();
-}
-
 void MainWindow::on_labelMyTransfersLink_linkActivated(QString link)
 {
     link.clear();
@@ -280,7 +290,7 @@ void MainWindow::on_labelMyLibraryLink_linkActivated(QString link)
     ui->actionLibrary->trigger();
 }
 
-void MainWindow::on_toolButtonVolume_toggled(bool checked)
+void MainWindow::on_toolButtonMediaVolumeMute_toggled(bool checked)
 {
     QIcon iconNormal;
     QIcon iconMuted;
@@ -289,9 +299,9 @@ void MainWindow::on_toolButtonVolume_toggled(bool checked)
 
     if(checked)
     {
-        ui->toolButtonVolume->setIcon(iconMuted);
+        ui->toolButtonMediaVolumeMute->setIcon(iconMuted);
     } else {
-        ui->toolButtonVolume->setIcon(iconNormal);
+        ui->toolButtonMediaVolumeMute->setIcon(iconNormal);
     }
 }
 
@@ -305,6 +315,92 @@ void MainWindow::on_toolButtonNetworkSettings_clicked()
 void MainWindow::on_toolButtonChatSettings_clicked()
 {
     Settings *winSettings = new Settings(this);
-    winSettings->switchSettingsPage(18);
+    winSettings->switchSettingsPage(4);
     winSettings->show();
+}
+
+void MainWindow::on_toolButtonChatEditProfile_clicked()
+{
+    Profile *winProfile = new Profile(this);
+    winProfile->show();
+}
+
+void MainWindow::on_trayIcon_showOrHide()
+{
+    if (isHidden())
+    {
+        show();
+        raise();
+    }
+    else
+    {
+        hide();
+    }
+}
+
+void MainWindow::on_trayIcon_activated(QSystemTrayIcon::ActivationReason reason)
+{
+    switch (reason)
+    {
+    case QSystemTrayIcon::Unknown:
+        break;
+    case QSystemTrayIcon::DoubleClick:
+        on_trayIcon_showOrHide();
+        break;
+    case QSystemTrayIcon::Trigger:
+        break;
+    case QSystemTrayIcon::MiddleClick:
+        break;
+    default:
+        break;
+    }
+}
+
+void MainWindow::on_trayIcon_newSearch()
+{
+
+}
+
+void MainWindow::on_trayIcon_downloadFile()
+{
+
+}
+
+void MainWindow::on_trayIcon_playMedia()
+{
+
+}
+
+void MainWindow::on_trayIcon_stopMedia()
+{
+
+}
+
+void MainWindow::on_trayIcon_openMedia()
+{
+
+}
+
+void MainWindow::on_trayIcon_previousTrack()
+{
+
+}
+
+void MainWindow::on_trayIcon_nextTrack()
+{
+
+}
+
+void MainWindow::on_labelCustomiseSkins_linkActivated(QString link)
+{
+    link.clear();
+    Settings *winSettings = new Settings(this);
+    winSettings->switchSettingsPage(17);
+    winSettings->show();
+}
+
+void MainWindow::on_labelCustomiseSecurity_linkActivated(QString link)
+{
+    link.clear();
+    ui->actionSecurity->trigger();
 }

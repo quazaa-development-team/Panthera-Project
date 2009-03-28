@@ -1,5 +1,5 @@
 //
-// profile.h
+// persistentsettings.cpp
 //
 // Copyright  Panthera Project, 2009.
 // This file is part of PANTHERA (www.pantheraproject.net)
@@ -19,31 +19,18 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 
-#ifndef PROFILE_H
-#define PROFILE_H
+#include "persistentsettings.h"
 
-#include <QtGui/QDialog>
-#include "ui_profile.h"
-
-namespace Ui {
-    class Profile;
+PersistentSettings::PersistentSettings()
+{
 }
 
-class Profile : public QDialog {
-    Q_OBJECT
-    Q_DISABLE_COPY(Profile)
-public:
-    explicit Profile(QWidget *parent = 0);
-    virtual ~Profile();
+void PersistentSettings::loadSettings()
+{
 
-protected:
-    virtual void changeEvent(QEvent *e);
+}
 
-private:
-    Ui::Profile *m_ui;
+void PersistentSettings::saveSettings()
+{
 
-private slots:
-    void on_treeWidgetProfileNavigation_itemClicked(QTreeWidgetItem* item, int column);
-};
-
-#endif // PROFILE_H
+}

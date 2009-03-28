@@ -152,6 +152,8 @@
         <file>Resource/Tagged heart.png</file>
         <file>Resource/Ghost invisible.png</file>
         <file>Resource/SpeakerMute.png</file>
+        <file>Resource/BrowseFolder.png</file>
+        <file>Resource/Scheduler.png</file>
     </qresource>
     <qresource prefix="/Player" >
         <file>Resource/Player Stop.png</file>

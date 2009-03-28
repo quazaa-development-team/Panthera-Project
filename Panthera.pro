@@ -26,11 +26,13 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     splash.cpp \
     settings.cpp \
-    profile.cpp
+    profile.cpp \
+    persistentsettings.cpp
 HEADERS += mainwindow.h \
     splash.h \
     settings.h \
-    profile.h
+    profile.h \
+    persistentsettings.h
 FORMS += mainwindow.ui \
     splash.ui \
     settings.ui \
