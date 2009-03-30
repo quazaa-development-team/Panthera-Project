@@ -1,7 +1,7 @@
 //
 // settings.h
 //
-// Copyright © Panthera Project, 2009.
+// Copyright  Panthera Project, 2009.
 // This file is part of PANTHERA (www.pantheraproject.net)
 //
 // Panthera is free software; you can redistribute it
@@ -44,13 +44,21 @@ private:
     Ui::Settings *m_ui;
 
 private slots:
-    void on_toolButtonEditProfile_clicked();
+    void on_labelConfigureED2k_linkActivated(QString link);
+    void on_labelConfigureAres_linkActivated(QString link);
+    void on_labelConfigureG1_linkActivated(QString link);
+    void on_labelConfigureG2_linkActivated(QString link);
+    void on_labelRemote_linkActivated(QString link);
+    void on_labelUploads_linkActivated(QString link);
+    void on_labelDownloads_linkActivated(QString link);
+    void on_labelConnection_linkActivated(QString link);
+    void on_pushButtonEditProfile_clicked();
+    void on_treeWidgetSettingsNavigation_itemSelectionChanged();
     void on_labelWebIntegration_linkActivated(QString link);
     void on_labelCommunity_linkActivated(QString link);
     void on_labelMediaPlayer_linkActivated(QString link);
     void on_labelLibrary_linkActivated(QString link);
     void on_labelBasic_linkActivated(QString link);
-    void on_treeWidgetSettingsNavigation_itemClicked(QTreeWidgetItem* item, int column);
     void on_pushButtonOK_clicked();
     void on_pushButtonCancel_clicked();
 };

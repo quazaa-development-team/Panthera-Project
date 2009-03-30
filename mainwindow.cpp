@@ -20,23 +20,26 @@
 //
 
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "splash.h"
 #include "settings.h"
 #include "profile.h"
-//#include "persistentsettings.h"
+#include "about.h"
+#include "persistentsettings.h"
 #include <QResource>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindowClass)
 {
+    PersistentSettings PersistentSettings;
     //Create splash window
     Splash *winSplash = new Splash(this);
-    winSplash->setWindowFlags(Qt::FramelessWindowHint);
+    winSplash->setWindowFlags(Qt::SplashScreen);
     winSplash->show();
+    QApplication::processEvents();
     //Tray icon construction.
     // Create the menu that will be used for the context menu
     winSplash->updateProgress(90, "Loading Tray Icon...");
+    QApplication::processEvents();
     // Create the system tray right click menu.
     trayMenu = new QMenu(this);
     trayMenu->addAction(QPixmap(":/Icons/Resource/Panthera.png"),
@@ -62,10 +65,9 @@ MainWindow::MainWindow(QWidget *parent)
                     tr("Next Track"), this, SLOT(on_trayIcon_nextTrack()));
     trayMenu->addSeparator();
     trayMenu->addAction(QPixmap(":/Icons/Resource/fileclose-32.png"),
-                    tr("E&xit After Transfers"), qApp, SLOT(on_exitAfterTransfers()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/button_cancel-32.png"), tr("E&xit"), qApp,
-                    SLOT(quit()));
-
+                    tr("E&xit After Transfers"), this, SLOT(on_trayIcon_exitAfterTransfers()));
+    trayMenu->addAction(QPixmap(":/Icons/Resource/button_cancel-32.png"), tr("E&xit"), this,
+                    SLOT(close()));
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setIcon(QIcon(":/Icons/Resource/Panthera.png"));
     trayIcon->setToolTip("Panthera");
@@ -75,24 +77,33 @@ MainWindow::MainWindow(QWidget *parent)
     trayIcon->show();
     //Load user interface
     winSplash->updateProgress(95, "Loading User Interface...");
+    QApplication::processEvents();
     ui->setupUi(this);
+    PersistentSettings.loadMainWindowState(this);
     ui->pagesMain->setCurrentIndex(0);
     ui->pagesLibraryNavigator->setCurrentIndex(0);
     ui->pagesLibrary->setCurrentIndex(0);
     ui->pagesFileType->setCurrentIndex(0);
     winSplash->updateProgress(100, "Welcome to Panthera!");
+    QApplication::processEvents();
     winSplash->close();
 }
 
 MainWindow::~MainWindow()
 {
-    trayIcon->~QSystemTrayIcon();
     delete ui;
 }
 
 void MainWindow::on_actionExit_triggered()
 {
-    this->close();
+    close();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    PersistentSettings PersistentSettings;
+    trayIcon->~QSystemTrayIcon();
+    PersistentSettings.saveMainWindowState(this);
 }
 
 void MainWindow::on_actionHome_triggered(bool checked)
@@ -356,41 +367,6 @@ void MainWindow::on_trayIcon_activated(QSystemTrayIcon::ActivationReason reason)
     }
 }
 
-void MainWindow::on_trayIcon_newSearch()
-{
-
-}
-
-void MainWindow::on_trayIcon_downloadFile()
-{
-
-}
-
-void MainWindow::on_trayIcon_playMedia()
-{
-
-}
-
-void MainWindow::on_trayIcon_stopMedia()
-{
-
-}
-
-void MainWindow::on_trayIcon_openMedia()
-{
-
-}
-
-void MainWindow::on_trayIcon_previousTrack()
-{
-
-}
-
-void MainWindow::on_trayIcon_nextTrack()
-{
-
-}
-
 void MainWindow::on_labelCustomiseSkins_linkActivated(QString link)
 {
     link.clear();
@@ -403,4 +379,10 @@ void MainWindow::on_labelCustomiseSecurity_linkActivated(QString link)
 {
     link.clear();
     ui->actionSecurity->trigger();
+}
+
+void MainWindow::on_actionAbout_triggered()
+{
+    About *winAbout = new About(this);
+    winAbout->show();
 }

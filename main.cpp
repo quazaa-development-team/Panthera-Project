@@ -20,14 +20,23 @@
 //
 
 #include <QtGui/QApplication>
+#include <QSettings>
 #include "mainwindow.h"
 #include "splash.h"
 
 int main(int argc, char *argv[])
 {
     QApplication theApp(argc, argv);
+    QSettings m_qSettings("Panthera Project", "Panthera");
+    m_qSettings.setDefaultFormat(QSettings::IniFormat);
     theApp.processEvents();
-    MainWindow wndMain;
-    wndMain.show();
+    MainWindow winMain;
+    
+    m_qSettings.beginGroup("MainWindow");
+    if ( m_qSettings.value("WindowVisible", true).toBool() )
+    {
+        winMain.show();
+    }
+    m_qSettings.endGroup();
     return theApp.exec();
 }

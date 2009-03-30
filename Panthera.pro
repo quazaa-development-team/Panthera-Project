@@ -1,5 +1,5 @@
 # Panthera.pro
-# Copyright © Panthera Project, 2009.
+# Copyright Panthera Project, 2009.
 # This file is part of PANTHERA (www.pantheraproject.net)
 # Panthera is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License
@@ -27,14 +27,18 @@ SOURCES += main.cpp \
     splash.cpp \
     settings.cpp \
     profile.cpp \
-    persistentsettings.cpp
+    persistentsettings.cpp \
+    about.cpp
 HEADERS += mainwindow.h \
     splash.h \
     settings.h \
     profile.h \
-    persistentsettings.h
+    persistentsettings.h \
+    about.h
 FORMS += mainwindow.ui \
     splash.ui \
     settings.ui \
-    profile.ui
+    profile.ui \
+    about.ui
 RESOURCES += Graphics.qrc
+RC_FILE = Panthera.rc

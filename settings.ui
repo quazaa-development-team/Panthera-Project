@@ -10,15 +10,15 @@
     <x>0</x>
     <y>0</y>
     <width>544</width>
-    <height>365</height>
+    <height>373</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
+   <iconset resource="Graphics.qrc">
+    <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -31,7 +31,7 @@
     <number>0</number>
    </property>
    <item row="0" column="0" colspan="2">
-    <widget class="QFrame" name="frameSettingsHeader">
+    <widget class="QFrame" name="frameCommonHeader">
      <property name="minimumSize">
       <size>
        <width>0</width>
@@ -39,7 +39,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(11, 27, 99);</string>
+      <string notr="true">background-image: url(:/Graphics/Resource/FormHeaderBackground.png);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -55,7 +55,7 @@
        <number>0</number>
       </property>
       <item row="0" column="0">
-       <widget class="QLabel" name="labelSettingsHeader">
+       <widget class="QLabel" name="labelCommonHeader">
         <property name="styleSheet">
          <string notr="true">background-color: transparent;</string>
         </property>
@@ -118,7 +118,7 @@ p, li { white-space: pre-wrap; }
    <item row="1" column="1">
     <widget class="QStackedWidget" name="pagesSettings">
      <property name="currentIndex">
-      <number>15</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="pageGeneral">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -317,20 +317,11 @@ p, li { white-space: pre-wrap; }
           <string>General</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_28">
-          <property name="leftMargin">
+          <property name="margin">
            <number>2</number>
           </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
            <widget class="QCheckBox" name="checkBoxAutoConnect">
@@ -359,8 +350,14 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="3" column="0" colspan="2">
            <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QLabel" name="labelRates">
               <property name="text">
@@ -409,6 +406,27 @@ p, li { white-space: pre-wrap; }
                 <string>MegaBytes/second</string>
                </property>
               </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Language:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1804,6 +1822,12 @@ p, li { white-space: pre-wrap; }
           </property>
           <item row="0" column="0">
            <widget class="QLabel" name="labelProfileInfo">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>You can use your profile to share information about yourself on Gnutella Chat and IRC. If you do not want to identify yourself, no information is required.</string>
             </property>
@@ -1816,7 +1840,13 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QToolButton" name="toolButtonEditProfile">
+           <widget class="QPushButton" name="pushButtonEditProfile">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Edit My Profile</string>
             </property>
@@ -1887,6 +1917,9 @@ p, li { white-space: pre-wrap; }
               <property name="text">
                <string>Chat Font</string>
               </property>
+              <property name="buddy">
+               <cstring>fontComboBoxIRCChat</cstring>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1897,6 +1930,9 @@ p, li { white-space: pre-wrap; }
              <widget class="QLabel" name="labelIRCServer">
               <property name="text">
                <string>Server</string>
+              </property>
+              <property name="buddy">
+               <cstring>lineEditIRCServer</cstring>
               </property>
              </widget>
             </item>
@@ -1942,6 +1978,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="1" column="2">
         <widget class="QGroupBox" name="groupBoxIRCColors">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="title">
           <string>IRC Colors</string>
          </property>
@@ -1962,167 +2001,220 @@ p, li { white-space: pre-wrap; }
            <number>2</number>
           </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_41">
-            <property name="margin">
-             <number>2</number>
+           <widget class="QFrame" name="frameIRCColors">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelColorServerMessages">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(0, 0, 255);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="labelServerMessages">
-              <property name="text">
-               <string>Server Messages</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelColorTopics">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(170, 85, 127);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelColorRoomActions">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(0, 170, 0);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="labelColorNotices">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(255, 0, 0);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="labelColorChatBackground">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(255, 255, 255);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
-             <widget class="QLabel" name="labelColorText">
-              <property name="maximumSize">
-               <size>
-                <width>15</width>
-                <height>15</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">background-color: rgb(0, 0, 0);</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLabel" name="labelColorTopics_2">
-              <property name="text">
-               <string>Topics</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLabel" name="labelRoomActions">
-              <property name="text">
-               <string>Room Actions</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="labelNotices">
-              <property name="text">
-               <string>Notices</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLabel" name="labelChatBackground">
-              <property name="text">
-               <string>Chat Background</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="1">
-             <widget class="QLabel" name="labelText">
-              <property name="text">
-               <string>Text</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+            <layout class="QGridLayout" name="gridLayout_41">
+             <property name="margin">
+              <number>2</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelColorServerMessages">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 0, 255);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="labelServerMessages">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 255);</string>
+               </property>
+               <property name="text">
+                <string>Server Messages</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelColorTopics">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(170, 85, 127);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="labelColorRoomActions">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 170, 0);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="labelColorNotices">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 0, 0);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="labelColorChatBackground">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="labelColorNormalText">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="labelColorTopics_2">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(170, 85, 127);</string>
+               </property>
+               <property name="text">
+                <string>Topics</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="labelRoomActions">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 170, 0);</string>
+               </property>
+               <property name="text">
+                <string>Room Actions</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="labelNotices">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string>Notices</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="labelChatBackground">
+               <property name="text">
+                <string>Chat Background</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="labeNormallText">
+               <property name="text">
+                <string>Normal Text</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -2334,6 +2426,9 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="wordWrap">
              <bool>true</bool>
+            </property>
+            <property name="buddy">
+             <cstring>lineEditPlayerFileTypes_2</cstring>
             </property>
            </widget>
           </item>
@@ -2700,6 +2795,9 @@ p, li { white-space: pre-wrap; }
               <property name="text">
                <string>Address:</string>
               </property>
+              <property name="buddy">
+               <cstring>comboBoxInboundAddress</cstring>
+              </property>
              </widget>
             </item>
             <item row="0" column="1">
@@ -2721,6 +2819,9 @@ p, li { white-space: pre-wrap; }
              <widget class="QLabel" name="labelInboundSpeed">
               <property name="text">
                <string>Speed:</string>
+              </property>
+              <property name="buddy">
+               <cstring>comboBoxInboundSpeed</cstring>
               </property>
              </widget>
             </item>
@@ -2927,6 +3028,9 @@ p, li { white-space: pre-wrap; }
               <property name="text">
                <string>Address</string>
               </property>
+              <property name="buddy">
+               <cstring>comboBoxOutboundAddress</cstring>
+              </property>
              </widget>
             </item>
             <item row="0" column="1">
@@ -2948,6 +3052,9 @@ p, li { white-space: pre-wrap; }
              <widget class="QLabel" name="labelOutboundSpeed">
               <property name="text">
                <string>Speed</string>
+              </property>
+              <property name="buddy">
+               <cstring>comboBoxOutboundSpeed</cstring>
               </property>
              </widget>
             </item>
@@ -3117,6 +3224,9 @@ p, li { white-space: pre-wrap; }
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
+              <property name="buddy">
+               <cstring>comboBoxAcceptIncoming</cstring>
+              </property>
              </widget>
             </item>
             <item row="2" column="1" colspan="2">
@@ -3274,7 +3384,7 @@ p, li { white-space: pre-wrap; }
              <string>Browse For Completed</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="Graphics.qrc">
               <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
             </property>
             <property name="iconSize">
@@ -3309,7 +3419,7 @@ p, li { white-space: pre-wrap; }
              <string>...</string>
             </property>
             <property name="icon">
-             <iconset>
+             <iconset resource="Graphics.qrc">
               <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
             </property>
             <property name="iconSize">
@@ -3403,6 +3513,9 @@ p, li { white-space: pre-wrap; }
             <property name="text">
              <string>Total Download Bandwidth:</string>
             </property>
+            <property name="buddy">
+             <cstring>comboBoxDownloadBandwidth</cstring>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
@@ -3443,6 +3556,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="labelMaxQue">
             <property name="text">
              <string>Maximum Que Length:</string>
+            </property>
+            <property name="buddy">
+             <cstring>comboBoxQueLength</cstring>
             </property>
            </widget>
           </item>
@@ -3636,12 +3752,18 @@ p, li { white-space: pre-wrap; }
             <property name="text">
              <string>Limit:</string>
             </property>
+            <property name="buddy">
+             <cstring>comboBoxBandwidthLimit</cstring>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="labelBandwidthLimitMode">
             <property name="text">
              <string>Mode:</string>
+            </property>
+            <property name="buddy">
+             <cstring>comboBoxBandwidthLimitMode</cstring>
             </property>
            </widget>
           </item>
@@ -3789,6 +3911,9 @@ p, li { white-space: pre-wrap; }
               <property name="text">
                <string>Remote Access Is Disabled</string>
               </property>
+              <property name="buddy">
+               <cstring>checkBoxRemoteEnable</cstring>
+              </property>
              </widget>
             </item>
             <item row="1" column="0">
@@ -3839,6 +3964,9 @@ p, li { white-space: pre-wrap; }
             <property name="text">
              <string>Choose A Username</string>
             </property>
+            <property name="buddy">
+             <cstring>lineEditRemoteUsername</cstring>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
@@ -3848,6 +3976,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="labelRemotePassword">
             <property name="text">
              <string>Choose A Password:</string>
+            </property>
+            <property name="buddy">
+             <cstring>lineEditRemotePassword</cstring>
             </property>
            </widget>
           </item>
@@ -3941,7 +4072,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Gnutella 2 (G2)</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="Graphics.qrc">
                 <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
               </property>
              </widget>
@@ -4007,7 +4138,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Original Gnutella (G1)</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="Graphics.qrc">
                 <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
               </property>
              </widget>
@@ -4073,7 +4204,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Ares</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="Graphics.qrc">
                 <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
               </property>
              </widget>
@@ -4139,7 +4270,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To eDonkey 2k</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="Graphics.qrc">
                 <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
               </property>
              </widget>
@@ -4227,6 +4358,9 @@ p, li { white-space: pre-wrap; }
             <property name="text">
              <string>Mode:</string>
             </property>
+            <property name="buddy">
+             <cstring>comboBoxG2Mode</cstring>
+            </property>
            </widget>
           </item>
           <item row="2" column="1">
@@ -4281,6 +4415,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="labelG1Mode">
             <property name="text">
              <string>Mode:</string>
+            </property>
+            <property name="buddy">
+             <cstring>comboBoxG1Mode</cstring>
             </property>
            </widget>
           </item>
@@ -4553,6 +4690,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="labelED2kDownloadServerList">
             <property name="text">
              <string>Download eDonkey 2k server list from the web.</string>
+            </property>
+            <property name="buddy">
+             <cstring>toolButtonED2kDownloadServerList</cstring>
             </property>
            </widget>
           </item>
@@ -4966,6 +5106,9 @@ p, li { white-space: pre-wrap; }
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -4981,6 +5124,9 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
               </property>
               <property name="text">
                <string/>
@@ -5224,6 +5370,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Graphics.qrc"/>
+ </resources>
  <connections/>
 </ui>

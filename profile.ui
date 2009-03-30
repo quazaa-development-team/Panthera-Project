@@ -9,16 +9,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>363</height>
+    <width>518</width>
+    <height>346</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Edit Your Profile</string>
   </property>
   <property name="windowIcon">
    <iconset resource="Graphics.qrc">
-    <normaloff>:/Icons/Resource/Panthera.png</normaloff>:/Icons/Resource/Panthera.png</iconset>
+    <normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -34,15 +46,21 @@
     <number>0</number>
    </property>
    <item row="0" column="0" rowspan="2" colspan="3">
-    <widget class="QFrame" name="commonHeader">
+    <widget class="QFrame" name="frameCommonHeader">
      <property name="minimumSize">
       <size>
        <width>0</width>
        <height>50</height>
       </size>
      </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(11, 27, 99);</string>
+      <string notr="true">background-image: url(:/Graphics/Resource/FormHeaderBackground.png);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -76,10 +94,19 @@ p, li { white-space: pre-wrap; }
    </item>
    <item row="3" column="0" colspan="3">
     <layout class="QGridLayout" name="gridLayoutControls">
+     <property name="margin">
+      <number>4</number>
+     </property>
+     <property name="spacing">
+      <number>4</number>
+     </property>
      <item row="0" column="3">
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -118,7 +145,7 @@ p, li { white-space: pre-wrap; }
    <item row="2" column="0">
     <widget class="QTreeWidget" name="treeWidgetProfileNavigation">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -194,7 +221,7 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="pageIdentity">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -206,78 +233,71 @@ p, li { white-space: pre-wrap; }
        </property>
        <item row="0" column="0" colspan="3">
         <widget class="QGroupBox" name="groupBox">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Name</string>
          </property>
          <layout class="QGridLayout" name="gridLayout">
-          <property name="leftMargin">
+          <property name="margin">
            <number>2</number>
           </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_3">
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelNickname">
-              <property name="text">
-               <string>mIrc Nickname:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="lineEditNickname"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelAltNickname">
-              <property name="text">
-               <string>mIrc Alternate Nickname:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLineEdit" name="lineEditAltNickname"/>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="labelUserName">
-              <property name="text">
-               <string>mIrc User Name:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="lineEditUserName"/>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="labelRealName">
-              <property name="text">
-               <string>Real Name:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="lineEditRealName"/>
-            </item>
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelGScreenName">
-              <property name="text">
-               <string>Gnutella Screen Name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEditGSceenName"/>
-            </item>
-           </layout>
+           <widget class="QLabel" name="labelGScreenName">
+            <property name="text">
+             <string>Gnutella Screen Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditGSceenName"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelNickname">
+            <property name="text">
+             <string>mIrc Nickname:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditNickname"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelAltNickname">
+            <property name="text">
+             <string>mIrc Alternate Nickname:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEditAltNickname"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="labelUserName">
+            <property name="text">
+             <string>mIrc User Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEditUserName"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="labelRealName">
+            <property name="text">
+             <string>Real Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEditRealName"/>
           </item>
          </layout>
         </widget>
@@ -343,7 +363,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>68</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
@@ -361,6 +381,12 @@ p, li { white-space: pre-wrap; }
        </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBoxEmail">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>EMail Address</string>
          </property>
@@ -379,10 +405,22 @@ p, li { white-space: pre-wrap; }
        </item>
        <item row="1" column="0">
         <widget class="QGroupBox" name="groupBoxMessaging">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Instant Messaging/ Social Networking</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_7">
+         <layout class="QGridLayout" name="gridLayout_3">
           <property name="margin">
            <number>2</number>
           </property>
@@ -390,68 +428,64 @@ p, li { white-space: pre-wrap; }
            <number>2</number>
           </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_6">
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelMSN">
-              <property name="text">
-               <string>MSN/.NET Passport:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEditMSN"/>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelYahoo">
-              <property name="text">
-               <string>Yahoo ID:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="lineEditYahoo"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelICQ">
-              <property name="text">
-               <string>ICQ UIN:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLineEdit" name="lineEditICQ"/>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="labelAOL">
-              <property name="text">
-               <string>AOL Screen Name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="lineEditAOL"/>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="labelJabber">
-              <property name="text">
-               <string>Jabber ID</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="lineEditJabber"/>
-            </item>
-            <item row="5" column="0">
-             <widget class="QLabel" name="labelMySpace">
-              <property name="text">
-               <string>MySpace Profile</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="1">
-             <widget class="QLineEdit" name="lineEditMySpace"/>
-            </item>
-           </layout>
+           <widget class="QLabel" name="labelMSN">
+            <property name="text">
+             <string>MSN/.NET Passport:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditMSN"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelYahoo">
+            <property name="text">
+             <string>Yahoo ID:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditYahoo"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelICQ">
+            <property name="text">
+             <string>ICQ UIN:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEditICQ"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="labelAOL">
+            <property name="text">
+             <string>AOL Screen Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEditAOL"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="labelJabber">
+            <property name="text">
+             <string>Jabber ID:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEditJabber"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="labelMySpace">
+            <property name="text">
+             <string>MySpace Profile:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEditMySpace"/>
           </item>
          </layout>
         </widget>
@@ -468,116 +502,108 @@ p, li { white-space: pre-wrap; }
        </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBoxLocation">
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Location</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_12">
-          <property name="leftMargin">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="margin">
            <number>2</number>
           </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_9">
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelCountry">
-              <property name="text">
-               <string>Country</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelCity">
-              <property name="text">
-               <string>City</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QComboBox" name="comboBoxCountry">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QComboBox" name="comboBoxCity">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QLabel" name="labelCountry">
+            <property name="text">
+             <string>Country</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxCountry">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelCity">
+            <property name="text">
+             <string>City</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxCity">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
        </item>
        <item row="0" column="1">
         <widget class="QGroupBox" name="groupBoxMapping">
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Mapping</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_11">
-          <property name="leftMargin">
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="margin">
            <number>2</number>
           </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <property name="spacing">
-           <number>0</number>
+           <number>2</number>
           </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_10">
-            <item row="0" column="0">
-             <widget class="QLabel" name="labelLatitude">
-              <property name="text">
-               <string>Latitude</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLineEdit" name="lineEditLatitude"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelLongitude">
-              <property name="text">
-               <string>Longitude</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLineEdit" name="lineEditLonitude"/>
-            </item>
-           </layout>
+           <widget class="QLabel" name="labelLatitude">
+            <property name="text">
+             <string>Latitude</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelLongitude">
+            <property name="text">
+             <string>Longitude</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditLatitude"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEditLonitude"/>
           </item>
          </layout>
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBoxInterests">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Interests</string>
          </property>
@@ -598,12 +624,25 @@ p, li { white-space: pre-wrap; }
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLineEdit" name="lineEditInterest"/>
+           <widget class="QLineEdit" name="lineEditInterest">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
           </item>
           <item row="0" column="1" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_13">
             <item row="0" column="0">
-             <widget class="QToolButton" name="toolButtonInterestsAdd">
+             <widget class="QPushButton" name="pushButtonInterestsAdd">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -616,7 +655,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QToolButton" name="toolButtonInterestsRemove">
+             <widget class="QPushButton" name="pushButtonInterestsRemove">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -631,10 +670,36 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item row="0" column="2" rowspan="2">
-           <widget class="QListWidget" name="listWidgetInterests"/>
+           <widget class="QListWidget" name="listWidgetInterests">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QListWidget" name="listWidgetRemoved"/>
+           <widget class="QListWidget" name="listWidgetRemoved">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -663,8 +728,26 @@ p, li { white-space: pre-wrap; }
      </widget>
      <widget class="QWidget" name="pageAvatar">
       <layout class="QGridLayout" name="gridLayout_18">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBoxAvatarPreview">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Avatar Preview</string>
          </property>
@@ -699,7 +782,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
              <string/>
@@ -722,51 +805,25 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </item>
-       <item row="1" column="0" colspan="2">
+       <item row="1" column="0">
         <layout class="QGridLayout" name="gridLayout_17">
-         <item row="0" column="1">
+         <item row="0" column="0">
           <widget class="QPushButton" name="pushButtonBrowse">
            <property name="text">
             <string>Browse</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="2">
+         <item row="0" column="1">
           <widget class="QPushButton" name="pushButtonRemove">
            <property name="text">
             <string>Remove</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="3">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
         </layout>
        </item>
-       <item row="2" column="0" colspan="2">
+       <item row="2" column="0">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -791,6 +848,12 @@ p, li { white-space: pre-wrap; }
        </property>
        <item row="0" column="0">
         <widget class="QTreeWidget" name="treeWidgetFavorites">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <column>
           <property name="text">
            <string>Website</string>
@@ -820,10 +883,24 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item row="0" column="1" colspan="2">
-          <widget class="QLineEdit" name="lineEditWebsite"/>
+          <widget class="QLineEdit" name="lineEditWebsite">
+           <property name="maximumSize">
+            <size>
+             <width>315</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
          </item>
          <item row="1" column="1" colspan="2">
-          <widget class="QLineEdit" name="lineEditAddress"/>
+          <widget class="QLineEdit" name="lineEditAddress">
+           <property name="maximumSize">
+            <size>
+             <width>315</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QPushButton" name="pushButtonNewWebsite">
@@ -864,8 +941,14 @@ p, li { white-space: pre-wrap; }
        <property name="spacing">
         <number>4</number>
        </property>
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="labelFavoriteFiles">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="text">
           <string>Favorite files are reccomended to users who browse your profile. You can create favorite files by adding them to your favorites folder in your library.</string>
          </property>
@@ -877,84 +960,102 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QListWidget" name="listWidgetFavoriteFiles"/>
+       <item row="2" column="0">
+        <widget class="QListWidget" name="listWidgetFavoriteFiles">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
      <widget class="QWidget" name="pageCertificate">
       <layout class="QGridLayout" name="gridLayout_26">
+       <property name="margin">
+        <number>4</number>
+       </property>
+       <property name="spacing">
+        <number>4</number>
+       </property>
        <item row="1" column="0">
         <widget class="QGroupBox" name="groupBox_2">
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="title">
           <string>Globally Unique Identification Certificate</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_25">
+         <layout class="QGridLayout" name="gridLayout_9">
           <property name="margin">
-           <number>4</number>
+           <number>2</number>
           </property>
           <property name="spacing">
-           <number>4</number>
+           <number>2</number>
           </property>
-          <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_24">
-            <item row="0" column="1">
-             <widget class="QLabel" name="labelGUIDHeader">
-              <property name="text">
-               <string>GUID</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0" colspan="3">
-             <widget class="QLabel" name="labelGUID">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="pushButton">
-              <property name="text">
-               <string>Generate New</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <spacer name="horizontalSpacer_6">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="2" column="2">
-             <spacer name="horizontalSpacer_7">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+          <item row="0" column="1">
+           <widget class="QLabel" name="labelGUIDHeader">
+            <property name="text">
+             <string>GUID</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QLabel" name="labelGUID">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>151</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Generate New</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>150</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>

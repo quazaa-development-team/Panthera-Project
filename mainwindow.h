@@ -24,6 +24,7 @@
 
 #include <QtGui/QMainWindow>
 #include <QSystemTrayIcon>
+#include "ui_mainwindow.h"
 
 namespace Ui
 {
@@ -45,6 +46,8 @@ private:
     Ui::MainWindowClass *ui;
 
 private slots:
+    void on_actionAbout_triggered();
+    void closeEvent(QCloseEvent *event);
     void on_labelCustomiseSecurity_linkActivated(QString link);
     void on_labelCustomiseSkins_linkActivated(QString link);
     void on_toolButtonChatEditProfile_clicked();
@@ -68,13 +71,6 @@ private slots:
     void on_actionExit_triggered();
     void on_trayIcon_showOrHide();
     void on_trayIcon_activated(QSystemTrayIcon::ActivationReason reason);
-    void on_trayIcon_newSearch();
-    void on_trayIcon_downloadFile();
-    void on_trayIcon_playMedia();
-    void on_trayIcon_stopMedia();
-    void on_trayIcon_openMedia();
-    void on_trayIcon_previousTrack();
-    void on_trayIcon_nextTrack();
 };
 
 #endif // MAINWINDOW_H

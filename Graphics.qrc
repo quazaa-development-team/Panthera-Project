@@ -4,6 +4,8 @@
         <file>Resource/VLC.png</file>
         <file>Resource/Panthera48.png</file>
         <file>Resource/Volume.png</file>
+        <file>Resource/SplashBackground.png</file>
+        <file>Resource/FormHeaderBackground.png</file>
     </qresource>
     <qresource prefix="/Icons" >
         <file>Resource/Panthera.png</file>

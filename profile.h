@@ -43,7 +43,9 @@ private:
     Ui::Profile *m_ui;
 
 private slots:
-    void on_treeWidgetProfileNavigation_itemClicked(QTreeWidgetItem* item, int column);
+    void on_pushButtonCancel_clicked();
+    void on_pushButtonOK_clicked();
+    void on_treeWidgetProfileNavigation_itemSelectionChanged();
 };
 
 #endif // PROFILE_H
