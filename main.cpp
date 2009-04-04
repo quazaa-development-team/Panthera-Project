@@ -22,21 +22,22 @@
 #include <QtGui/QApplication>
 #include <QSettings>
 #include "mainwindow.h"
-#include "splash.h"
+#include "dialogsplash.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication theApp(argc, argv);
-    QSettings m_qSettings("Panthera Project", "Panthera");
-    m_qSettings.setDefaultFormat(QSettings::IniFormat);
-    theApp.processEvents();
-    MainWindow winMain;
-    
-    m_qSettings.beginGroup("MainWindow");
-    if ( m_qSettings.value("WindowVisible", true).toBool() )
-    {
-        winMain.show();
-    }
-    m_qSettings.endGroup();
-    return theApp.exec();
+	QApplication theApp(argc, argv);
+	QSettings m_qSettings("Panthera Project", "Panthera");
+	theApp.processEvents();
+	MainWindow winMain;
+	bool m_bIsVisible;
+
+	m_qSettings.beginGroup("MainWindow");
+	m_bIsVisible = m_qSettings.value("WindowVisible", true).toBool();
+	m_qSettings.endGroup();
+	if ( m_bIsVisible )
+	{
+		winMain.show();
+	}
+	return theApp.exec();
 }

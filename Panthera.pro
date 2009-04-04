@@ -24,21 +24,24 @@ TARGET = Panthera
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    splash.cpp \
-    settings.cpp \
-    profile.cpp \
     persistentsettings.cpp \
-    about.cpp
+    dialogwizard.cpp \
+    dialogabout.cpp \
+    dialogsettings.cpp \
+    dialogsplash.cpp \
+    dialogprofile.cpp
 HEADERS += mainwindow.h \
-    splash.h \
-    settings.h \
-    profile.h \
     persistentsettings.h \
-    about.h
+    dialogwizard.h \
+    dialogabout.h \
+    dialogsettings.h \
+    dialogsplash.h \
+    dialogprofile.h
 FORMS += mainwindow.ui \
-    splash.ui \
-    settings.ui \
-    profile.ui \
-    about.ui
+    dialogwizard.ui \
+    dialogabout.ui \
+    dialogsettings.ui \
+    dialogsplash.ui \
+    dialogprofile.ui
 RESOURCES += Graphics.qrc
 RC_FILE = Panthera.rc

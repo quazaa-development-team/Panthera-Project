@@ -156,6 +156,7 @@
         <file>Resource/SpeakerMute.png</file>
         <file>Resource/BrowseFolder.png</file>
         <file>Resource/Scheduler.png</file>
+        <file>Resource/Check Bullet 12x12.png</file>
     </qresource>
     <qresource prefix="/Player" >
         <file>Resource/Player Stop.png</file>
@@ -216,6 +217,9 @@
         <file>Resource/24x24 File Type/TV SZ.png</file>
         <file>Resource/24x24 File Type/Door.png</file>
         <file>Resource/24x24 File Type/connect_creating-32.png</file>
+        <file>Resource/24x24 File Type/Network Connections.png</file>
+        <file>Resource/24x24 File Type/SearchMonitor.png</file>
+        <file>Resource/24x24 File Type/Graph.png</file>
     </qresource>
     <qresource prefix="/Smileys" >
         <file>Resource/Smileys/Angel.png</file>

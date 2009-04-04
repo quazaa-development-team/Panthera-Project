@@ -26,26 +26,23 @@
 #include "ui_profile.h"
 
 namespace Ui {
-    class Profile;
+	class dlgProfile;
 }
 
-class Profile : public QDialog {
-    Q_OBJECT
-    Q_DISABLE_COPY(Profile)
+class dlgProfile : public QDialog {
+	Q_OBJECT
+	Q_DISABLE_COPY(dlgProfile)
 public:
-    explicit Profile(QWidget *parent = 0);
-    virtual ~Profile();
+	explicit dlgProfile(QWidget *parent = 0);
+	virtual ~dlgProfile();
 
 protected:
-    virtual void changeEvent(QEvent *e);
+	virtual void changeEvent(QEvent *e);
 
 private:
-    Ui::Profile *m_ui;
+	Ui::dlgProfile *m_ui;
 
-private slots:
-    void on_pushButtonCancel_clicked();
-    void on_pushButtonOK_clicked();
-    void on_treeWidgetProfileNavigation_itemSelectionChanged();
+
 };
 
 #endif // PROFILE_H

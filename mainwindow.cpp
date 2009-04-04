@@ -20,369 +20,582 @@
 //
 
 #include "mainwindow.h"
-#include "splash.h"
-#include "settings.h"
-#include "profile.h"
-#include "about.h"
-#include "persistentsettings.h"
 #include <QResource>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindowClass)
+	: QMainWindow(parent), ui(new Ui::MainWindowClass)
 {
-    PersistentSettings PersistentSettings;
-    //Create splash window
-    Splash *winSplash = new Splash(this);
-    winSplash->setWindowFlags(Qt::SplashScreen);
-    winSplash->show();
-    QApplication::processEvents();
-    //Tray icon construction.
-    // Create the menu that will be used for the context menu
-    winSplash->updateProgress(90, "Loading Tray Icon...");
-    QApplication::processEvents();
-    // Create the system tray right click menu.
-    trayMenu = new QMenu(this);
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Panthera.png"),
-                    tr("&Show/Hide Panthera"), this, SLOT(on_trayIcon_showOrHide()));
-    trayMenu->addSeparator();
-    trayMenu->addAction(QPixmap(":/Icons/Resource/search-32.png"),
-                    tr("New Search"), this, SLOT(on_trayicon_newSearch()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Filetype URL.png"),
-                    tr("URL Download"), this, SLOT(on_trayicon_downloadFile()));
-    trayMenu->addSeparator();
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Play.png"),
-                    tr("Play Media"), this, SLOT(on_trayIcon_playMedia()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Pause.png"),
-                    tr("Pause Media"), this, SLOT(on_trayIcon_pauseMedia()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Stop.png"),
-                    tr("Stop Media"), this, SLOT(on_trayIcon_stopMedia()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Eject.png"),
-                    tr("Open Media"), this, SLOT(on_trayIcon_openMedia()));
-    trayMenu->addSeparator();
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player Start.png"),
-                    tr("Previous Track"), this, SLOT(on_trayIcon_previousTrack()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/Player End.png"),
-                    tr("Next Track"), this, SLOT(on_trayIcon_nextTrack()));
-    trayMenu->addSeparator();
-    trayMenu->addAction(QPixmap(":/Icons/Resource/fileclose-32.png"),
-                    tr("E&xit After Transfers"), this, SLOT(on_trayIcon_exitAfterTransfers()));
-    trayMenu->addAction(QPixmap(":/Icons/Resource/button_cancel-32.png"), tr("E&xit"), this,
-                    SLOT(close()));
-    trayIcon = new QSystemTrayIcon(this);
-    trayIcon->setIcon(QIcon(":/Icons/Resource/Panthera.png"));
-    trayIcon->setToolTip("Panthera");
-    trayIcon->setContextMenu(trayMenu);
-    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(on_trayIcon_activated(QSystemTrayIcon::ActivationReason)));
-    trayIcon->show();
-    //Load user interface
-    winSplash->updateProgress(95, "Loading User Interface...");
-    QApplication::processEvents();
-    ui->setupUi(this);
-    PersistentSettings.loadMainWindowState(this);
-    ui->pagesMain->setCurrentIndex(0);
-    ui->pagesLibraryNavigator->setCurrentIndex(0);
-    ui->pagesLibrary->setCurrentIndex(0);
-    ui->pagesFileType->setCurrentIndex(0);
-    winSplash->updateProgress(100, "Welcome to Panthera!");
-    QApplication::processEvents();
-    winSplash->close();
+	//Create splash window
+	DialogSplash *dlgSplash = new DialogSplash(this);
+	dlgSplash->show();
+	QApplication::processEvents();
+	//Load Settings
+	Settings.loadSettings(dlgSplash);
+	//Check if this is Panthera's first run
+	if (Settings.Basic.FirstRun)
+	{
+		DialogWizard *dlgWizard = new DialogWizard(this);
+		dlgWizard->show();
+	}
+	//Load user interface
+	dlgSplash->updateProgress(90, "Loading User Interface...");
+	QApplication::processEvents();
+	ui->setupUi(this);
+	Settings.loadMainWindowState(this);
+	ui->pagesMain->setCurrentIndex(0);
+	ui->pagesLibraryNavigator->setCurrentIndex(0);
+	ui->pagesLibrary->setCurrentIndex(0);
+	ui->pagesFileType->setCurrentIndex(0);
+	//Tray icon construction.
+	// Create the menu that will be used for the context menu
+	dlgSplash->updateProgress(95, "Loading Tray Icon...");
+	QApplication::processEvents();
+	// Create the system tray right click menu.
+	trayMenu = new QMenu(this);
+	trayMenu->addAction(ui->actionShowOrHide);
+	trayMenu->addSeparator();
+	trayMenu->addAction(ui->actionNew_Search);
+	trayMenu->addAction(ui->actionURL_Download);
+	trayMenu->addSeparator();
+	trayMenu->addAction(ui->actionPlay_Media);
+	trayMenu->addAction(ui->actionPause_Media);
+	trayMenu->addAction(ui->actionStop_Media);
+	trayMenu->addAction(ui->actionOpen_Media);
+	trayMenu->addSeparator();
+	trayMenu->addAction(ui->actionPrevious_Track);
+	trayMenu->addAction(ui->actionNext_Track);
+	trayMenu->addSeparator();
+	trayMenu->addAction(ui->actionExit_After_Transfers);
+	trayMenu->addAction(ui->actionExit);
+	trayIcon = new QSystemTrayIcon(this);
+	trayIcon->setIcon(QIcon(":/Icons/Resource/Panthera.png"));
+	trayIcon->setToolTip("Panthera");
+	trayIcon->setContextMenu(trayMenu);
+	connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
+			this, SLOT(icon_activated(QSystemTrayIcon::ActivationReason)));
+	trayIcon->show();
+	dlgSplash->updateProgress(100, "Welcome to Panthera!");
+	QApplication::processEvents();
+	dlgSplash->close();
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+	trayIcon->~QSystemTrayIcon();
+	delete ui;
 }
 
 void MainWindow::on_actionExit_triggered()
 {
-    close();
+	close();
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    PersistentSettings PersistentSettings;
-    trayIcon->~QSystemTrayIcon();
-    PersistentSettings.saveMainWindowState(this);
+	Settings.saveMainWindowState(this);
+	event->accept();
 }
 
 void MainWindow::on_actionHome_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(0);
-    if (checked == false)
-    {
-        ui->actionHome->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(0);
+	if (checked == false)
+	{
+		ui->actionHome->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionLibrary_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(1);
-    if (checked == false)
-    {
-        ui->actionLibrary->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(1);
+	if (checked == false)
+	{
+		ui->actionLibrary->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionMedia_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(2);
-    if (checked == false)
-    {
-        ui->actionMedia->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(2);
+	if (checked == false)
+	{
+		ui->actionMedia->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionSearch_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(3);
-    if (checked == false)
-    {
-        ui->actionSearch->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(3);
+	if (checked == false)
+	{
+		ui->actionSearch->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionTransfers_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(4);
-    if (checked == false)
-    {
-        ui->actionTransfers->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(4);
+	if (checked == false)
+	{
+		ui->actionTransfers->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionSecurity_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(5);
-    if (checked == false)
-    {
-        ui->actionSecurity->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(5);
+	if (checked == false)
+	{
+		ui->actionSecurity->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionNetwork_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(6);
-    if (checked == false)
-    {
-        ui->actionNetwork->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(6);
+	if (checked == false)
+	{
+		ui->actionNetwork->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionChat_triggered(bool checked)
 {
-    ui->pagesMain->setCurrentIndex(7);
-    if (checked == false)
-    {
-        ui->actionChat->setChecked(true);
-        return;
-    }
+	ui->pagesMain->setCurrentIndex(7);
+	if (checked == false)
+	{
+		ui->actionChat->setChecked(true);
+		return;
+	}
 }
 
 void MainWindow::on_actionSettings_triggered()
 {
-    Settings *winSettings = new Settings(this);
-    winSettings->show();
+	DialogSettings *dlgSettings = new DialogSettings(this);
+	dlgSettings->show();
 }
 
 void MainWindow::on_comboBoxSearchFileType_currentIndexChanged(int index)
 {
-    ui->pagesFileType->setCurrentIndex(index);
+	ui->pagesFileType->setCurrentIndex(index);
 }
 
 void MainWindow::on_pagesMain_currentChanged(int page)
 {
-    switch (page)
-    {
-        case 0:
-            ui->actionHome->setChecked(true);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 1:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(true);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 2:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(true);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 3:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(true);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 4:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(true);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 5:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(true);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(false);
-            break;
-         case 6:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(true);
-            ui->actionChat->setChecked(false);
-            break;
-         case 7:
-            ui->actionHome->setChecked(false);
-            ui->actionLibrary->setChecked(false);
-            ui->actionMedia->setChecked(false);
-            ui->actionSearch->setChecked(false);
-            ui->actionTransfers->setChecked(false);
-            ui->actionSecurity->setChecked(false);
-            ui->actionNetwork->setChecked(false);
-            ui->actionChat->setChecked(true);
-            break;
-    }
+	switch (page)
+	{
+		case 0:
+			ui->actionHome->setChecked(true);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 1:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(true);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 2:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(true);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 3:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(true);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 4:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(true);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 5:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(true);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 6:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(true);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		 case 7:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(true);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 8:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(true);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 9:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(true);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 10:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(true);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 11:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(true);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 12:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(true);
+			ui->actionHit_Monitor->setChecked(false);
+			break;
+		case 13:
+			ui->actionHome->setChecked(false);
+			ui->actionLibrary->setChecked(false);
+			ui->actionMedia->setChecked(false);
+			ui->actionSearch->setChecked(false);
+			ui->actionTransfers->setChecked(false);
+			ui->actionSecurity->setChecked(false);
+			ui->actionNetwork->setChecked(false);
+			ui->actionChat->setChecked(false);
+			ui->actionHostcache->setChecked(false);
+			ui->actionDiscovery->setChecked(false);
+			ui->actionGraph->setChecked(false);
+			ui->actionPacket_Dump->setChecked(false);
+			ui->actionSearch_Monitor->setChecked(false);
+			ui->actionHit_Monitor->setChecked(true);
+			break;
+	}
 }
 
 void MainWindow::on_pagesLibraryNavigator_currentChanged(int index)
 {
-    ui->pagesLibrary->setCurrentIndex(index);
+	ui->pagesLibrary->setCurrentIndex(index);
 }
 
 void MainWindow::on_labelMyTransfersLink_linkActivated(QString link)
 {
-    link.clear();
-    ui->actionTransfers->trigger();
+	link.clear();
+	ui->actionTransfers->trigger();
 }
 
 void MainWindow::on_labelMyLibraryLink_linkActivated(QString link)
 {
-    link.clear();
-    ui->actionLibrary->trigger();
+	link.clear();
+	ui->actionLibrary->trigger();
 }
 
 void MainWindow::on_toolButtonMediaVolumeMute_toggled(bool checked)
 {
-    QIcon iconNormal;
-    QIcon iconMuted;
-    iconNormal.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Speaker.png")), QIcon::Normal, QIcon::On);
-    iconMuted.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/SpeakerMute.png")), QIcon::Normal, QIcon::On);
+	QIcon iconNormal;
+	QIcon iconMuted;
+	iconNormal.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/Speaker.png")), QIcon::Normal, QIcon::On);
+	iconMuted.addPixmap(QPixmap(QString::fromUtf8(":/Icons/Resource/SpeakerMute.png")), QIcon::Normal, QIcon::On);
 
-    if(checked)
-    {
-        ui->toolButtonMediaVolumeMute->setIcon(iconMuted);
-    } else {
-        ui->toolButtonMediaVolumeMute->setIcon(iconNormal);
-    }
+	if(checked)
+	{
+		ui->toolButtonMediaVolumeMute->setIcon(iconMuted);
+	} else {
+		ui->toolButtonMediaVolumeMute->setIcon(iconNormal);
+	}
 }
 
 void MainWindow::on_toolButtonNetworkSettings_clicked()
 {
-    Settings *winSettings = new Settings(this);
-    winSettings->switchSettingsPage(11);
-    winSettings->show();
+	DialogSettings *dlgSettings = new DialogSettings(this);
+	dlgSettings->switchSettingsPage(11);
+	dlgSettings->show();
 }
 
 void MainWindow::on_toolButtonChatSettings_clicked()
 {
-    Settings *winSettings = new Settings(this);
-    winSettings->switchSettingsPage(4);
-    winSettings->show();
+	DialogSettings *dlgSettings = new DialogSettings(this);
+	dlgSettings->switchSettingsPage(4);
+	dlgSettings->show();
 }
 
 void MainWindow::on_toolButtonChatEditProfile_clicked()
 {
-    Profile *winProfile = new Profile(this);
-    winProfile->show();
+	DialogProfile *dlgProfile = new DialogProfile(this);
+	dlgProfile->show();
 }
 
-void MainWindow::on_trayIcon_showOrHide()
+void MainWindow::icon_activated(QSystemTrayIcon::ActivationReason reason)
 {
-    if (isHidden())
-    {
-        show();
-        raise();
-    }
-    else
-    {
-        hide();
-    }
-}
-
-void MainWindow::on_trayIcon_activated(QSystemTrayIcon::ActivationReason reason)
-{
-    switch (reason)
-    {
-    case QSystemTrayIcon::Unknown:
-        break;
-    case QSystemTrayIcon::DoubleClick:
-        on_trayIcon_showOrHide();
-        break;
-    case QSystemTrayIcon::Trigger:
-        break;
-    case QSystemTrayIcon::MiddleClick:
-        break;
-    default:
-        break;
-    }
+	switch (reason)
+	{
+	case QSystemTrayIcon::Unknown:
+		break;
+	case QSystemTrayIcon::DoubleClick:
+		ui->actionShowOrHide->trigger();
+		break;
+	case QSystemTrayIcon::Trigger:
+		break;
+	case QSystemTrayIcon::MiddleClick:
+		break;
+	default:
+		break;
+	}
 }
 
 void MainWindow::on_labelCustomiseSkins_linkActivated(QString link)
 {
-    link.clear();
-    Settings *winSettings = new Settings(this);
-    winSettings->switchSettingsPage(17);
-    winSettings->show();
+	link.clear();
+	DialogSettings *dlgSettings = new DialogSettings(this);
+	dlgSettings->switchSettingsPage(17);
+	dlgSettings->show();
 }
 
 void MainWindow::on_labelCustomiseSecurity_linkActivated(QString link)
 {
-    link.clear();
-    ui->actionSecurity->trigger();
+	link.clear();
+	ui->actionSecurity->trigger();
 }
 
 void MainWindow::on_actionAbout_triggered()
 {
-    About *winAbout = new About(this);
-    winAbout->show();
+	DialogAbout *dlgAbout = new DialogAbout(this);
+	dlgAbout->show();
+}
+
+void MainWindow::on_actionEdit_My_Profile_triggered()
+{
+	DialogProfile *dlgProfile = new DialogProfile(this);
+	dlgProfile->show();
+}
+
+void MainWindow::on_labelCustomiseSettings_linkActivated(QString link)
+{
+	link.clear();
+	DialogWizard *dlgWizard = new DialogWizard(this);
+	dlgWizard->show();
+}
+
+void MainWindow::on_actionQuickstart_Wizard_triggered()
+{
+	DialogWizard *dlgWizard = new DialogWizard(this);
+	dlgWizard->show();
+}
+
+void MainWindow::on_actionHostcache_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(8);
+	if (checked == false)
+	{
+		ui->actionHostcache->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionDiscovery_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(9);
+	if (checked == false)
+	{
+		ui->actionDiscovery->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionGraph_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(10);
+	if (checked == false)
+	{
+		ui->actionGraph->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionPacket_Dump_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(11);
+	if (checked == false)
+	{
+		ui->actionPacket_Dump->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionHit_Monitor_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(13);
+	if (checked == false)
+	{
+		ui->actionHit_Monitor->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionSearch_Monitor_triggered(bool checked)
+{
+	ui->pagesMain->setCurrentIndex(12);
+	if (checked == false)
+	{
+		ui->actionSearch_Monitor->setChecked(true);
+		return;
+	}
+}
+
+void MainWindow::on_actionShowOrHide_triggered()
+{
+	if (isHidden())
+	{
+		show();
+		raise();
+	}
+	else
+	{
+		hide();
+	}
 }

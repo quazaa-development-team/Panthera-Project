@@ -95,6 +95,7 @@
    <value key="QtVersionId" type="int" >2</value>
    <value key="addQDumper" type="" ></value>
    <value key="buildDirectory" type="QString" >F:\Programming\Pantheraproject\trunk</value>
+   <value key="clearSystemEnvironment" type="bool" >false</value>
    <value key="useShadowBuild" type="bool" >false</value>
    <valuelist key="userEnvironmentChanges" type="QVariantList" />
   </valuemap>
@@ -221,43 +222,43 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-t4WFTdwJ12,guid=0ec8a9c41f08872ca60447c549cee4df</value>
-    <value type="QString" >DESKTOP_SESSION=default</value>
-    <value type="QString" >DESKTOP_STARTUP_ID=</value>
-    <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >GDMSESSION=default</value>
-    <value type="QString" >GDM_LANG=en_US.UTF-8</value>
-    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
-    <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=5595</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Ttjiyd/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-edQ8eZ/S.gpg-agent:5784:1</value>
-    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/joseph/.gtkrc-1.2-gnome2</value>
-    <value type="QString" >HOME=/home/joseph</value>
-    <value type="QString" >LANG=en_US.UTF-8</value>
-    <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib/dri</value>
-    <value type="QString" >LOGNAME=joseph</value>
-    <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-joseph</value>
-    <value type="QString" >PATH=/home/joseph/qtsdk-2009.01/qt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
-    <value type="QString" >PWD=/home/joseph</value>
-    <value type="QString" >QTDIR=/home/joseph/qtsdk-2009.01/qt</value>
-    <value type="QString" >SESSION_MANAGER=local/panthera-linux:/tmp/.ICE-unix/5624</value>
-    <value type="QString" >SHELL=/bin/bash</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Ttjiyd/ssh</value>
-    <value type="QString" >USER=joseph</value>
-    <value type="QString" >USERNAME=joseph</value>
-    <value type="QString" >WINDOWPATH=7</value>
-    <value type="QString" >XAUTHORITY=/home/joseph/.Xauthority</value>
-    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=51bbe0726b689edb09c9b73749c5a6bf-1238295774.14953-512250574</value>
+    <value type="QString" >ALLUSERSPROFILE=C:\Documents and Settings\All Users</value>
+    <value type="QString" >APPDATA=C:\Documents and Settings\Joe\Application Data</value>
+    <value type="QString" >APR_ICONV_PATH=C:\Program Files\Subversion\iconv</value>
+    <value type="QString" >COMMONPROGRAMFILES=C:\Program Files\Common Files</value>
+    <value type="QString" >COMPUTERNAME=PANTHERA-WINXP</value>
+    <value type="QString" >COMSPEC=C:\WINDOWS\system32\cmd.exe</value>
+    <value type="QString" >FP_NO_HOST_CHECK=NO</value>
+    <value type="QString" >HOMEDRIVE=C:</value>
+    <value type="QString" >HOMEPATH=\Documents and Settings\Joe</value>
+    <value type="QString" >LOGONSERVER=\\PANTHERA-WINXP</value>
+    <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
+    <value type="QString" >OS=Windows_NT</value>
+    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
+    <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 14 Stepping 8, GenuineIntel</value>
+    <value type="QString" >PROCESSOR_LEVEL=6</value>
+    <value type="QString" >PROCESSOR_REVISION=0e08</value>
+    <value type="QString" >PROGRAMFILES=C:\Program Files</value>
+    <value type="QString" >QTDIR=c:/Qt/2009.01/qt</value>
+    <value type="QString" >SESSIONNAME=Console</value>
+    <value type="QString" >SYSTEMDRIVE=C:</value>
+    <value type="QString" >SYSTEMROOT=C:\WINDOWS</value>
+    <value type="QString" >TEMP=C:\DOCUME~1\Joe\LOCALS~1\Temp</value>
+    <value type="QString" >TMP=C:\DOCUME~1\Joe\LOCALS~1\Temp</value>
+    <value type="QString" >USERDOMAIN=PANTHERA-WINXP</value>
+    <value type="QString" >USERNAME=Joe</value>
+    <value type="QString" >USERPROFILE=C:\Documents and Settings\Joe</value>
+    <value type="QString" >WINDIR=C:\WINDOWS</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >clean</value>
     <value type="QString" >-w</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.command" type="QString" >C:/Qt/2009.01/mingw/bin/mingw32-make.exe</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
-   <value key="abstractProcess.workingDirectory" type="QString" >/Storage/Programming/Pantheraproject/trunk</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >F:/Programming/Pantheraproject/trunk</value>
   </valuemap>
  </data>
  <data>
