@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>411</height>
+    <width>635</width>
+    <height>373</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,7 +23,7 @@
    <string>Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Graphics.qrc">
+   <iconset>
     <normaloff>:/Icons/Resource/Gear.png</normaloff>:/Icons/Resource/Gear.png</iconset>
   </property>
   <property name="modal">
@@ -210,7 +210,7 @@ p, li { white-space: pre-wrap; }
    <item row="1" column="1">
     <widget class="QStackedWidget" name="pagesSettings">
      <property name="currentIndex">
-      <number>7</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="pageGeneral">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -3674,7 +3674,7 @@ p, li { white-space: pre-wrap; }
              <string>Browse For Completed</string>
             </property>
             <property name="icon">
-             <iconset resource="Graphics.qrc">
+             <iconset>
               <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
             </property>
             <property name="iconSize">
@@ -3715,7 +3715,7 @@ p, li { white-space: pre-wrap; }
              <string>...</string>
             </property>
             <property name="icon">
-             <iconset resource="Graphics.qrc">
+             <iconset>
               <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
             </property>
             <property name="iconSize">
@@ -4390,7 +4390,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Gnutella 2 (G2)</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
               </property>
              </widget>
@@ -4468,7 +4468,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Original Gnutella (G1)</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
               </property>
              </widget>
@@ -4540,7 +4540,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To Ares</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
               </property>
              </widget>
@@ -4612,7 +4612,7 @@ p, li { white-space: pre-wrap; }
                <string>Connect To eDonkey 2k</string>
               </property>
               <property name="icon">
-               <iconset resource="Graphics.qrc">
+               <iconset>
                 <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
               </property>
              </widget>
@@ -5346,7 +5346,7 @@ p, li { white-space: pre-wrap; }
              <string>Browse For Completed</string>
             </property>
             <property name="icon">
-             <iconset resource="Graphics.qrc">
+             <iconset>
               <normaloff>:/Icons/Resource/BrowseFolder.png</normaloff>:/Icons/Resource/BrowseFolder.png</iconset>
             </property>
             <property name="iconSize">
@@ -5833,8 +5833,6 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="Graphics.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

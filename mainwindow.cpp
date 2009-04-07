@@ -34,6 +34,8 @@ MainWindow::MainWindow(QWidget *parent)
 	//Check if this is Panthera's first run
 	if (Settings.Basic.FirstRun)
 	{
+		Settings.saveSettings();
+		Settings.saveProfile();
 		DialogWizard *dlgWizard = new DialogWizard(this);
 		dlgWizard->show();
 	}
@@ -598,4 +600,11 @@ void MainWindow::on_actionShowOrHide_triggered()
 	{
 		hide();
 	}
+}
+
+void MainWindow::on_actionChoose_Skin_triggered()
+{
+	DialogSettings *dlgSettings = new DialogSettings(this);
+	dlgSettings->switchSettingsPage(17);
+	dlgSettings->show();
 }

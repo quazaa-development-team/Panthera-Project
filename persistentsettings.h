@@ -25,6 +25,7 @@
 #include <QObject>
 #include <QSettings>
 #include <QStringList>
+#include <QList>
 #include <QColor>
 #include <QUuid>
 #include "mainwindow.h"
@@ -43,6 +44,21 @@ public:
 
 	// Attributes
 public:
+	struct sLive
+	{
+		bool		DiskSpaceWarning;						// Has the user been warned of low disk space?
+		bool		DiskWriteWarning;						// Has the user been warned of write problems?
+		bool		AdultWarning;							// Has the user been warned about the adult filter?
+		bool		QueueLimitWarning;						// Has the user been warned about limiting the max Q position accepted?
+		bool		DefaultED2KServersLoaded;				// Has Panthera already loaded default ED2K servers?
+		bool		DonkeyServerWarning;					// Has the user been warned about having an empty server list?
+		bool		UploadLimitWarning;						// Has the user been warned about the ed2k/BT ratio?
+		bool		DiskSpaceStop;							// Has Panthera paused all downloads due to critical disk space?
+		int			BandwidthScale;							// Monitor slider settings
+		bool		AutoClose;
+		QString		LastDuplicateHash;						// Stores the hash of the file about which the warning was shown
+		bool		MaliciousWarning;						// Is the warning dialog opened?
+	} Live;
 
 	struct sBasic
 	{
@@ -67,19 +83,18 @@ public:
 		bool		TrayMinimise;							// Minimise to tray or task panel.
 		bool		UsingSkin;								// Is the user using a skin instead of the default interface?
 		QString		SkinFile;								// Full path to the skin file
-
-		/*Possibly use these later as things start coming together. TODO: Delete any useless variables.
-		QString		Path;									// Installation path for Panthera
-		QString		UserPath;								// Path for user data. (May be the same as above for single user installs)
-		bool		MultiUser;								// Multiuser installation
 		int			LogLevel;								// Log severity (0 - MSG_ERROR .. 4 - MSG_DEBUG)
 		bool		SearchLog;								// Display search facility log information
 		bool		DebugLog;								// Create a log file
 		int			MaxDebugLogSize;						// Max size of the log file
 		int			DiskSpaceWarning;						// Value at which to warn the user about low disk space
 		int			DiskSpaceStop;							// Value at which to pause all downloads due to low disk space
-		int			MinTransfersRest;						// For how long at least to suspend Transfers each round
 		bool		LogShowTimestamp;						// Show timestamps in the system log?
+
+		/*Possibly use these later as things start coming together. Some won't be needed. TODO: Delete any useless variables.
+		QString		Path;									// Installation path for Panthera
+		QString		UserPath;								// Path for user data. (May be the same as above for single user installs)
+		bool		MultiUser;								// Multiuser installation		
 		bool		SizeLists;
 		bool		HashIntegrity;
 		bool		AlwaysOpenURLs;
@@ -106,26 +121,18 @@ public:
 		int			HistoryDays;							// Remember files for this many days
 		QStringList	SafeExecuteTypes;						// These file types are safe to open
 		QStringList	NeverShareTypes;						// Never share these file types
-
-		/*
 		bool		PartialMatch;
 		bool		SourceMesh;
 		int			SourceExpire;
 		int			TigerHeight;
 		int			QueryRouteSize;
-		bool		ShowVirtual;
 		int			TreeSize;
-		int			PanelSize;
-		bool		ShowPanel;
 		bool		ShowCoverArt;
 		QString		SchemaURI;
 		QString		FilterURI;
 		int			ThumbSize;
 		int			MaxMaliciousFileSize;					// Size for which to trigger malicious software search
 		bool		PreferAPETags;							// Read APE tags first and only then ID3 tags from audio files
-		bool		UseFolderGUID;							// Save/Load folder GUID using NTFS stream
-		bool		MarkFileAsDownload;						// Mark downloaded file using NTFS stream as Internet Explorer
-		bool		UseCustomFolders;						// Use desktop.ini
 		bool		ScanAPE;								// Enable .ape,.mac,.apl metadata extraction by internals
 		bool		ScanASF;								// Enable .asf,.wma,.wmv metadata extraction by internals
 		bool		ScanAVI;								// Enable .avi metadata extraction by internals
@@ -138,6 +145,14 @@ public:
 		bool		ScanMSI;								// Enable .msi metadata extraction by internals
 		bool		ScanOGG;								// Enable .ogg metadata extraction by internals
 		bool		ScanPDF;								// Enable .pdf metadata extraction by internals
+
+		/*
+		bool		ShowVirtual;
+		int			PanelSize;
+		bool		ShowPanel;
+		bool		UseFolderGUID;							// Save/Load folder GUID using NTFS stream
+		bool		MarkFileAsDownload;						// Mark downloaded file using NTFS stream as Internet Explorer
+		bool		UseCustomFolders;						// Use desktop.ini
 		*/
 	} Library;
 
@@ -184,6 +199,7 @@ public:
 		int			ClearPrevious;							// Clear previous search results? 0 - ask user; 1 - no; 2 - yes.
 		int			MaxPreviewLength;						// Max size of search previews
 		int			SearchThrottle;							// How often each individual search may run. Low values may cause source finding to get overlooked.
+		QString		ShareMonkeyBaseURL;
 		/*
 		QString		LastSchemaURI;
 		QString		BlankSchemaURI;
@@ -194,7 +210,6 @@ public:
 		QString		MonitorFilter;
 		int			MonitorQueue;
 		int			BrowseTreeSize;
-		QString		ShareMonkeyBaseURL;
 		bool		SanityCheck;							// Drop hits of banned hosts
 		*/
 	} Search;
@@ -238,6 +253,7 @@ public:
 		QString		JabberID;								// Jabber ID
 		QString		MyspaceProfile;							// Myspace profile excluding http://profile.myspace.com/
 		QString		Country;								// Your country..
+		QString		StateProvince;							// Your state or province
 		QString		City;									// Your city
 		QString		Latitude;								// Location for a disgruntled P2P user to aim a missile
 		QString		Longitude;								// Location for a disgruntled P2P user to aim a missile
@@ -245,6 +261,7 @@ public:
 		QString		Biography;								// Your life story..
 		QString		AvatarPath;								// Path to an avatar image file. Panthera logo used if blank
 		QStringList	Favorites;								// Favorite websites
+		QStringList	FavoritesURL;							// Favorite Websites URLs
 		QString		GUID;									// Unique ID for each client. Can be regenerated
 	} Profile;
 
@@ -283,11 +300,24 @@ public:
 		QString		RemotePassword;							// Remote access password
 	} Web;
 
+	struct sWebServices
+	{
+		QString		BitziAgent;
+		QString		BitziWebView;
+		QString		BitziWebSubmit;
+		QString		BitziXML;
+		bool		BitziOkay;
+		QString		ShareMonkeyCid;							// Affiliate ID
+		bool		ShareMonkeySaveThumbnail;
+		bool		ShareMonkeyOkay;
+	} WebServices;
+
 	struct sTransfers
 	{
 		int			RatesUnit;								// Units that the transfer rates are to be displayed in
 		bool		SimpleProgressBar;						// Displays a simplified progress bar (lower CPU use)
 		bool		RequireConnectedNetwork;				// Only upload/download to connected networks
+		int			MinTransfersRest;						// For how long at least to suspend Transfers each round
 	} Transfers;
 
 	struct sDownloads
@@ -335,7 +365,7 @@ public:
 		bool		SortSources;							// Automatically sort sources (Status, protocol, queue)
 		int			SourcesWanted;							// Number of sources Panthera 'wants'. (Will not request more than this number of sources from ed2k)
 		int			MaxReviews;								// Maximum number of reviews to store per download
-		int			DropFailedSourcesThreshold;		// The number of sources where Panthera start dropping failed sources after only one attempt
+		int			DropFailedSourcesThreshold;				// The number of sources where Panthera start dropping failed sources after only one attempt
 		//bool		WebHookEnable;
 		//QStringList	WebHookExtensions;
 	} Downloads;
@@ -581,40 +611,6 @@ public:
 	{
 
 	} Scheduler;
-
-	struct sLive
-	{
-		bool		DiskSpaceWarning;						// Has the user been warned of low disk space?
-		bool		DiskWriteWarning;						// Has the user been warned of write problems?
-		bool		AdultWarning;							// Has the user been warned about the adult filter?
-		bool		QueueLimitWarning;						// Has the user been warned about limiting the max Q position accepted?
-		bool		DefaultED2KServersLoaded;				// Has Panthera already loaded default ED2K servers?
-		bool		DonkeyServerWarning;					// Has the user been warned about having an empty server list?
-		bool		UploadLimitWarning;						// Has the user been warned about the ed2k/BT ratio?
-		bool		DiskSpaceStop;							// Has Panthera paused all downloads due to critical disk space?
-		int			BandwidthScale;							// Monitor slider settings
-		bool		AutoClose;
-		QString		LastDuplicateHash;						// Stores the hash of the file about which the warning was shown
-		bool		MaliciousWarning;						// Is the warning dialog opened?
-	} Live;
-
-	struct sExperimental
-	{
-
-
-	} Experimental;
-
-	struct sWebServices
-	{
-		QString		BitziAgent;
-		QString		BitziWebView;
-		QString		BitziWebSubmit;
-		QString		BitziXML;
-		bool		BitziOkay;
-		QString		ShareMonkeyCid;							// Affiliate ID
-		bool		ShareMonkeySaveThumbnail;
-		bool		ShareMonkeyOkay;
-	} WebServices;
 };
 
 extern PersistentSettings Settings;

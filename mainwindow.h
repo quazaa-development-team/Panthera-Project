@@ -53,7 +53,8 @@ private:
 	Ui::MainWindowClass *ui;
 
 private slots:
-void on_actionShowOrHide_triggered();
+void on_actionChoose_Skin_triggered();
+	void on_actionShowOrHide_triggered();
 	void on_actionSearch_Monitor_triggered(bool checked);
 	void on_actionHit_Monitor_triggered(bool checked);
 	void on_actionPacket_Dump_triggered(bool checked);
