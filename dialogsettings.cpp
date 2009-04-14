@@ -29,6 +29,10 @@ DialogSettings::DialogSettings(QWidget *parent) :
 {
     m_ui->setupUi(this);
 	m_ui->pagesSettings->setCurrentIndex(0);
+	m_ui->toolButtonNavigationGeneral->setChecked(true);
+	m_ui->toolButtonNavigationInternet->setChecked(false);
+	m_ui->toolButtonNavigationNetworks->setChecked(false);
+	m_ui->groupBoxAdultFilter->setVisible(false);
 }
 
 DialogSettings::~DialogSettings()
@@ -60,106 +64,13 @@ void DialogSettings::on_pushButtonOK_clicked()
 void DialogSettings::switchSettingsPage(int pageIndex)
 {
 	m_ui->pagesSettings->setCurrentIndex(pageIndex);
-}
-
-void DialogSettings::on_labelBasic_linkActivated(QString link)
-{
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(1);
-}
-
-void DialogSettings::on_labelLibrary_linkActivated(QString link)
-{
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(2);
-}
-
-void DialogSettings::on_labelMediaPlayer_linkActivated(QString link)
-{
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(3);
-}
-
-void DialogSettings::on_labelCommunity_linkActivated(QString link)
-{
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(4);
-}
-
-void DialogSettings::on_labelWebIntegration_linkActivated(QString link)
-{
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(5);
-}
-
-void DialogSettings::on_treeWidgetSettingsNavigation_itemSelectionChanged()
-{
-	QTreeWidgetItem* item = m_ui->treeWidgetSettingsNavigation->currentItem();
-	int column = m_ui->treeWidgetSettingsNavigation->currentColumn();
-	QByteArray m_aItemName;
-	m_aItemName.append(item->text(column));
-
-	if (m_aItemName.contains("General"))
+	switch (pageIndex)
 	{
-		m_ui->pagesSettings->setCurrentIndex(0);
-		return;
-	} else if (m_aItemName.contains("Basic")) {
-		m_ui->pagesSettings->setCurrentIndex(1);
-		return;
-	} else if (m_aItemName.contains("Library")) {
-		m_ui->pagesSettings->setCurrentIndex(2);
-		return;
-	} else if (m_aItemName.contains("Media Player")) {
-		m_ui->pagesSettings->setCurrentIndex(3);
-		return;
-	} else if (m_aItemName.contains("Chat")) {
-		m_ui->pagesSettings->setCurrentIndex(4);
-		return;
-	} else if (m_aItemName.contains("Web")) {
-		m_ui->pagesSettings->setCurrentIndex(5);
-		return;
-	} else if (m_aItemName.contains("Internet")) {
-		m_ui->pagesSettings->setCurrentIndex(6);
-		return;
-	} else if (m_aItemName.contains("Connection")) {
-		m_ui->pagesSettings->setCurrentIndex(7);
-		return;
-	} else if (m_aItemName.contains("Downloads")) {
-		m_ui->pagesSettings->setCurrentIndex(8);
-		return;
-	} else if (m_aItemName.contains("Uploads")) {
-		m_ui->pagesSettings->setCurrentIndex(9);
-		return;
-	} else if (m_aItemName.contains("Remote Access")) {
-		m_ui->pagesSettings->setCurrentIndex(10);
-		return;
-	} else if (m_aItemName.contains("Networks")) {
-		m_ui->pagesSettings->setCurrentIndex(11);
-		return;
-	} else if (m_aItemName.contains("Gnutella")) {
-		m_ui->pagesSettings->setCurrentIndex(12);
-		return;
-	} else if (m_aItemName.contains("Ares")) {
-		m_ui->pagesSettings->setCurrentIndex(13);
-		return;
-	} else if (m_aItemName.contains("eDonkey 2k")) {
-		m_ui->pagesSettings->setCurrentIndex(14);
-		return;
-	} else if (m_aItemName.contains("Bittorrent")) {
-		m_ui->pagesSettings->setCurrentIndex(15);
-		return;
-	} else if (m_aItemName.contains("Protocols")) {
-		m_ui->pagesSettings->setCurrentIndex(16);
-		return;
-	} else if (m_aItemName.contains("Skins")) {
-		m_ui->pagesSettings->setCurrentIndex(17);
-		return;
-	} else if (m_aItemName.contains("Plugins")) {
-		m_ui->pagesSettings->setCurrentIndex(18);
-		return;
-	} else if (m_aItemName.contains("Advanced")) {
-		m_ui->pagesSettings->setCurrentIndex(19);
-		return;
+		case 20:
+			m_ui->toolButtonNavigationGeneral->setChecked(false);
+			m_ui->toolButtonNavigationInternet->setChecked(false);
+			m_ui->toolButtonNavigationNetworks->setChecked(true);
+			break;
 	}
 }
 
@@ -169,58 +80,82 @@ void DialogSettings::on_pushButtonEditProfile_clicked()
 	dlgProfile->show();
 }
 
-void DialogSettings::on_labelConnection_linkActivated(QString link)
+void DialogSettings::on_toolButtonNavigationGeneral_toggled(bool checked)
 {
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(7);
-	return;
+	if (checked)
+	{
+		m_ui->frameNavigationGeneral->setMaximumHeight(16777215);
+	} else {
+		m_ui->frameNavigationGeneral->setMaximumHeight(25);
+	}
 }
 
-void DialogSettings::on_labelDownloads_linkActivated(QString link)
+void DialogSettings::on_toolButtonNavigationInternet_toggled(bool checked)
 {
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(8);
-	return;
+	if (checked)
+	{
+		m_ui->frameNavigationInternet->setMaximumHeight(16777215);
+	} else {
+		m_ui->frameNavigationInternet->setMaximumHeight(25);
+	}
 }
 
-void DialogSettings::on_labelUploads_linkActivated(QString link)
+void DialogSettings::on_toolButtonNavigationNetworks_toggled(bool checked)
 {
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(9);
-	return;
+	if (checked)
+	{
+		m_ui->frameNavigationNetworks->setMaximumHeight(16777215);
+	} else {
+		m_ui->frameNavigationNetworks->setMaximumHeight(25);
+	}
 }
 
-void DialogSettings::on_labelRemote_linkActivated(QString link)
+void DialogSettings::on_listWidgetNavigationGeneral_currentRowChanged(int currentRow)
 {
-	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(10);
-	return;
+	m_ui->pagesSettings->setCurrentIndex(currentRow + 1);
+}
+
+void DialogSettings::on_listWidgetNavigationInternet_currentRowChanged(int currentRow)
+{
+	m_ui->pagesSettings->setCurrentIndex(currentRow + 10);
+}
+
+void DialogSettings::on_listWidgetNavigationNetworks_currentRowChanged(int currentRow)
+{
+	m_ui->pagesSettings->setCurrentIndex(currentRow + 16);
 }
 
 void DialogSettings::on_labelConfigureG2_linkActivated(QString link)
 {
 	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(12);
-	return;
+	m_ui->pagesSettings->setCurrentIndex(16);
 }
 
 void DialogSettings::on_labelConfigureG1_linkActivated(QString link)
 {
 	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(12);
-	return;
+	m_ui->pagesSettings->setCurrentIndex(16);
 }
 
 void DialogSettings::on_labelConfigureAres_linkActivated(QString link)
 {
 	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(13);
-	return;
+	m_ui->pagesSettings->setCurrentIndex(17);
 }
 
-void DialogSettings::on_labelConfigureED2k_linkActivated(QString link)
+void DialogSettings::on_labelConfigureEDonkey2k_linkActivated(QString link)
 {
 	link.clear();
-	m_ui->pagesSettings->setCurrentIndex(14);
-	return;
+	m_ui->pagesSettings->setCurrentIndex(18);
+}
+
+void DialogSettings::on_labelConfigreBittorrent_linkActivated(QString link)
+{
+	link.clear();
+	m_ui->pagesSettings->setCurrentIndex(19);
+}
+
+void DialogSettings::on_pushButton_clicked()
+{
+	m_ui->groupBoxAdultFilter->setVisible(true);
 }

@@ -92,7 +92,7 @@
   <variable>buildConfiguration-Debug</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
-   <value key="QtVersionId" type="int" >2</value>
+   <value key="QtVersionId" type="int" >0</value>
    <value key="addQDumper" type="" ></value>
    <value key="buildDirectory" type="QString" >F:\Programming\Pantheraproject\trunk</value>
    <value key="clearSystemEnvironment" type="bool" >false</value>
@@ -104,7 +104,7 @@
   <variable>buildConfiguration-Release</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-   <value key="QtVersionId" type="int" >2</value>
+   <value key="QtVersionId" type="int" >0</value>
    <value key="addQDumper" type="" ></value>
    <value key="buildDirectory" type="QString" >/Storage/Programming/Pantheraproject/trunk</value>
    <valuelist key="userEnvironmentChanges" type="QVariantList" />
@@ -133,8 +133,8 @@
     <value type="QString" >LOGONSERVER=\\PANTHERA-WINXP</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.PSC1</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 14 Stepping 8, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>
@@ -181,8 +181,8 @@
     <value type="QString" >LOGONSERVER=\\PANTHERA-WINXP</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.PSC1</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 14 Stepping 8, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>
@@ -234,8 +234,8 @@
     <value type="QString" >LOGONSERVER=\\PANTHERA-WINXP</value>
     <value type="QString" >NUMBER_OF_PROCESSORS=1</value>
     <value type="QString" >OS=Windows_NT</value>
-    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin</value>
-    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</value>
+    <value type="QString" >PATH=c:\Qt\2009.01\qt\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Subversion\bin;C:\Qt\2009.01\mingw\bin;C:\WINDOWS\system32\WindowsPowerShell\v1.0</value>
+    <value type="QString" >PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.PSC1</value>
     <value type="QString" >PROCESSOR_ARCHITECTURE=x86</value>
     <value type="QString" >PROCESSOR_IDENTIFIER=x86 Family 6 Model 14 Stepping 8, GenuineIntel</value>
     <value type="QString" >PROCESSOR_LEVEL=6</value>

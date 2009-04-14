@@ -157,6 +157,7 @@
         <file>Resource/BrowseFolder.png</file>
         <file>Resource/Scheduler.png</file>
         <file>Resource/Check Bullet 12x12.png</file>
+        <file>Resource/Gnutella.png</file>
     </qresource>
     <qresource prefix="/Player" >
         <file>Resource/Player Stop.png</file>

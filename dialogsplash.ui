@@ -22,7 +22,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog {
-    background-image: url(:/Graphics/Resource/SplashBackground.png);
+    background-image: url(:/Graphics/Resource/PantheraHomeSplash.png);
+	background-color: rgb(41, 56, 106);
 }</string>
   </property>
   <property name="modal">

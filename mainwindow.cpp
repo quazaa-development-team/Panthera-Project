@@ -27,10 +27,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	//Create splash window
 	DialogSplash *dlgSplash = new DialogSplash(this);
+	dlgSplash->setWindowFlags(Qt::SplashScreen);
 	dlgSplash->show();
 	QApplication::processEvents();
 	//Load Settings
-	Settings.loadSettings(dlgSplash);
+	dlgSplash->updateProgress(5, "Loading Settings...");
+	QApplication::processEvents();
+	Settings.loadSettings();
 	//Check if this is Panthera's first run
 	if (Settings.Basic.FirstRun)
 	{
@@ -455,14 +458,14 @@ void MainWindow::on_toolButtonMediaVolumeMute_toggled(bool checked)
 void MainWindow::on_toolButtonNetworkSettings_clicked()
 {
 	DialogSettings *dlgSettings = new DialogSettings(this);
-	dlgSettings->switchSettingsPage(11);
+	dlgSettings->switchSettingsPage(20);
 	dlgSettings->show();
 }
 
 void MainWindow::on_toolButtonChatSettings_clicked()
 {
 	DialogSettings *dlgSettings = new DialogSettings(this);
-	dlgSettings->switchSettingsPage(4);
+	dlgSettings->switchSettingsPage(7);
 	dlgSettings->show();
 }
 
@@ -494,7 +497,7 @@ void MainWindow::on_labelCustomiseSkins_linkActivated(QString link)
 {
 	link.clear();
 	DialogSettings *dlgSettings = new DialogSettings(this);
-	dlgSettings->switchSettingsPage(17);
+	dlgSettings->switchSettingsPage(3);
 	dlgSettings->show();
 }
 
@@ -605,6 +608,6 @@ void MainWindow::on_actionShowOrHide_triggered()
 void MainWindow::on_actionChoose_Skin_triggered()
 {
 	DialogSettings *dlgSettings = new DialogSettings(this);
-	dlgSettings->switchSettingsPage(17);
+	dlgSettings->switchSettingsPage(3);
 	dlgSettings->show();
 }

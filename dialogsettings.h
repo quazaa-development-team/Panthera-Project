@@ -43,21 +43,19 @@ private:
     Ui::DialogSettings *m_ui;
 
 private slots:
-	void on_labelConfigureED2k_linkActivated(QString link);
+void on_pushButton_clicked();
+		void on_labelConfigreBittorrent_linkActivated(QString link);
+	void on_labelConfigureEDonkey2k_linkActivated(QString link);
 	void on_labelConfigureAres_linkActivated(QString link);
 	void on_labelConfigureG1_linkActivated(QString link);
 	void on_labelConfigureG2_linkActivated(QString link);
-	void on_labelRemote_linkActivated(QString link);
-	void on_labelUploads_linkActivated(QString link);
-	void on_labelDownloads_linkActivated(QString link);
-	void on_labelConnection_linkActivated(QString link);
+	void on_listWidgetNavigationInternet_currentRowChanged(int currentRow);
+	void on_listWidgetNavigationNetworks_currentRowChanged(int currentRow);
+	void on_listWidgetNavigationGeneral_currentRowChanged(int currentRow);
+	void on_toolButtonNavigationNetworks_toggled(bool checked);
+	void on_toolButtonNavigationInternet_toggled(bool checked);
+	void on_toolButtonNavigationGeneral_toggled(bool checked);
 	void on_pushButtonEditProfile_clicked();
-	void on_treeWidgetSettingsNavigation_itemSelectionChanged();
-	void on_labelWebIntegration_linkActivated(QString link);
-	void on_labelCommunity_linkActivated(QString link);
-	void on_labelMediaPlayer_linkActivated(QString link);
-	void on_labelLibrary_linkActivated(QString link);
-	void on_labelBasic_linkActivated(QString link);
 	void on_pushButtonOK_clicked();
 	void on_pushButtonCancel_clicked();
 };
