@@ -13,11 +13,23 @@
     <height>295</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>518</width>
+    <height>295</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>518</width>
+    <height>295</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Edit Profile</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="Graphics.qrc">
     <normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</normaloff>:/Icons/FileType/Resource/24x24 File Type/Identity.png</iconset>
   </property>
   <property name="modal">
@@ -209,7 +221,7 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="pageIdentity">
       <layout class="QGridLayout" name="gridLayout_5">
@@ -331,7 +343,7 @@ p, li { white-space: pre-wrap; }
             <number>109</number>
            </property>
            <property name="value">
-            <number>1</number>
+            <number>18</number>
            </property>
           </widget>
          </item>
@@ -1106,6 +1118,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Graphics.qrc"/>
+ </resources>
  <connections/>
 </ui>

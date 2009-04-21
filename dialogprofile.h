@@ -44,8 +44,8 @@ protected:
 private:
     Ui::DialogProfile *m_ui;
 
-private slots:
-void on_pushButtonGenerateNewGUID_clicked();
+private Q_SLOTS:
+	void on_pushButtonGenerateNewGUID_clicked();
 	void on_pushButtonRemoveWebsite_clicked();
 	void on_pushButtonNewWebsite_clicked();
 	void on_pushButtonRemove_clicked();

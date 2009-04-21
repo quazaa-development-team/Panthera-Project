@@ -41,7 +41,7 @@ protected:
 private:
     Ui::DialogAbout *m_ui;
 
-private slots:
+private Q_SLOTS:
 	void on_pushButtonOK_clicked();
 };
 

@@ -22,8 +22,6 @@
 #include "dialogprofile.h"
 #include "ui_dialogprofile.h"
 
-QString m_sTempAvatarFileName;
-
 DialogProfile::DialogProfile(QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::DialogProfile)
@@ -284,8 +282,11 @@ void DialogProfile::on_lineEditInterest_textEdited(QString )
 
 void DialogProfile::on_pushButtonInterestsAdd_clicked()
 {
-	m_ui->listWidgetInterests->addItem(m_ui->lineEditInterest->text());
-	m_ui->pushButtonApply->setEnabled(true);
+	if (m_ui->lineEditInterest->text() != "")
+	{
+		m_ui->listWidgetInterests->addItem(m_ui->lineEditInterest->text());
+		m_ui->pushButtonApply->setEnabled(true);
+	}
 }
 
 void DialogProfile::on_pushButtonInterestsRemove_clicked()

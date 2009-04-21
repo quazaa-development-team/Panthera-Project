@@ -124,8 +124,8 @@ void PersistentSettings::loadSettings()
 	Settings.Library.HashWindow = m_qSettings.value("HashWindow", true).toBool();
 	Settings.Library.HighPriorityHashing = m_qSettings.value("HighPriorityHashing", false).toInt();
 	Settings.Library.HighPriorityHashingSpeed = m_qSettings.value("HighPriorityHashingSpeed", 20).toBool();
-	Settings.Library.HistoryDays = m_qSettings.value("HistoryDays", 32).toInt();
-	Settings.Library.HistoryTotal = m_qSettings.value("HistoryTotal", 3).toInt();
+	Settings.Library.HistoryDays = m_qSettings.value("HistoryDays", 3).toInt();
+	Settings.Library.HistoryTotal = m_qSettings.value("HistoryTotal", 32).toInt();
 	Settings.Library.LowPriorityHashingSpeed = m_qSettings.value("LowPriorityHashingSpeed", 2).toInt();
 	Settings.Library.NeverShareTypes = m_qSettings.value("NeverShareTypes",
 														 QStringList() << "vbs" << "js" << "jc!" << "fb!" << "bc!" << "!ut"
@@ -159,6 +159,8 @@ void PersistentSettings::loadSettings()
 	Settings.Library.ScanOGG = m_qSettings.value("ScanOGG", true).toBool();
 	Settings.Library.ScanPDF = m_qSettings.value("ScanPDF", true).toBool();
 	Settings.Library.SchemaURI = m_qSettings.value("SchemaURI", "http://www.limewire.com/schemas/audio.xsd").toString();
+	Settings.Library.Shares = m_qSettings.value("Shares", QStringList() << QDir::homePath() + "/My Documents/Panthera Downloads"
+												<< QDir::homePath() + "/Panthera/Torrents").toStringList();
 	Settings.Library.ShowCoverArt = m_qSettings.value("ShowCoverArt", true).toBool();
 	Settings.Library.SmartSeriesDetection = m_qSettings.value("SmartSeriesDetection", false).toBool();
 	Settings.Library.SourceExpire = m_qSettings.value("SourceExpire", 86400).toInt();
@@ -173,10 +175,8 @@ void PersistentSettings::loadSettings()
 	m_qSettings.beginGroup("MediaPlayer");
 	Settings.MediaPlayer.Aspect = m_qSettings.value("Aspect", 0).toInt();
 	Settings.MediaPlayer.AudioVisualPlugin = m_qSettings.value("AudioVisualPlugin", "").toString();
-	Settings.MediaPlayer.CustomPlayer = m_qSettings.value("CustomPlayer", false).toBool();
 	Settings.MediaPlayer.CustomPlayerPath = m_qSettings.value("CustomPlayerPath", "").toString();
-	Settings.MediaPlayer.EnableBuiltInPlay = m_qSettings.value("EnableBuiltInPlay", true).toBool();
-	Settings.MediaPlayer.EnableBuiltInPlaylist = m_qSettings.value("EnableBuiltInPlaylist", true).toBool();
+	Settings.MediaPlayer.MediaHandler = m_qSettings.value("MediaHandler", 0).toInt();
 	Settings.MediaPlayer.FileTypes = m_qSettings.value("FileTypes", QStringList() << "asx" << "wax" << "m3u" << "wvx" << "wmx"
 													   << "asf" << "wav" << "snd" << "au" << "aif" << "aifc" << "aiff" << "mp3"
 													   << "cda" << "mid" << "rmi" << "midi" << "avi" << "mpeg" << "mpg"
@@ -186,7 +186,6 @@ void PersistentSettings::loadSettings()
 	Settings.MediaPlayer.Playlist = m_qSettings.value("Playlist", QStringList()).toStringList();
 	Settings.MediaPlayer.Random = m_qSettings.value("Random", false).toBool();
 	Settings.MediaPlayer.Repeat = m_qSettings.value("Repeat", false).toBool();
-	Settings.MediaPlayer.ShellPlay = m_qSettings.value("ShellPlay", false).toBool();
 	Settings.MediaPlayer.StatusVisible = m_qSettings.value("StatusVisible", true).toBool();
 	Settings.MediaPlayer.Volume = m_qSettings.value("Volume", 100).toInt();
 	Settings.MediaPlayer.Zoom = m_qSettings.value("Zoom", 0).toInt();
@@ -214,22 +213,22 @@ void PersistentSettings::loadSettings()
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Chat");
-	Settings.Chat.AllowFileTransfers = m_qSettings.value("AllowFileTransfers", true).toBool();
 	Settings.Chat.AwayMessageIdleTime = m_qSettings.value("AwayMessageIdleTime", 30).toInt();
-	Settings.Chat.ChatBackground = m_qSettings.value("ChatBackground", "").toString();
-	Settings.Chat.ChatConnectOnStartup = m_qSettings.value("ChatConnectOnStartup", false).toBool();
-	Settings.Chat.ChatScreenFont = m_qSettings.value("ChatScreenFont", QFont()).value<QFont>();
-	Settings.Chat.ChatShowTimestamp = m_qSettings.value("ChatShowTimestamp", false).toBool();
-	Settings.Chat.ChatTextColorChatBackground = m_qSettings.value("ChatTextColorChatBackground", QColor(qRgb(255,255,255))).value<QColor>();
-	Settings.Chat.ChatTextColorNormalText = m_qSettings.value("ChatTextColorNormalText", QColor(qRgb(0,0,0))).value<QColor>();
-	Settings.Chat.ChatTextColorNotices = m_qSettings.value("ChatTextColorNotices", QColor(qRgb(255,0,0))).value<QColor>();
-	Settings.Chat.ChatTextColorRoomActions = m_qSettings.value("ChatTextColorRoomActions", QColor(qRgb(0,170,0))).value<QColor>();
-	Settings.Chat.ChatTextColorServerMessages = m_qSettings.value("ChatTextColorServerMessages", QColor(qRgb(0,0,255))).value<QColor>();
-	Settings.Chat.ChatTextColorTopics = m_qSettings.value("ChatTextColorTopics", QColor(qRgb(170,85,127))).value<QColor>();
+	Settings.Chat.Background = m_qSettings.value("Background", "").toString();
+	Settings.Chat.ConnectOnStartup = m_qSettings.value("ConnectOnStartup", false).toBool();
+	Settings.Chat.ColorChatBackground = m_qSettings.value("ColorChatBackground", QColor(qRgb(255,255,255))).value<QColor>();
+	Settings.Chat.ColorNormalText = m_qSettings.value("ColorNormalText", QColor(qRgb(0,0,0))).value<QColor>();
+	Settings.Chat.ColorNoticesText = m_qSettings.value("ColorNoticesText", QColor(qRgb(255,0,0))).value<QColor>();
+	Settings.Chat.ColorRoomActionsText = m_qSettings.value("ColorRoomActionsText", QColor(qRgb(0,170,0))).value<QColor>();
+	Settings.Chat.ColorServerMessagesText = m_qSettings.value("ColorServerMessagesText", QColor(qRgb(0,0,255))).value<QColor>();
+	Settings.Chat.ColorTopicsText = m_qSettings.value("ColorTopicsText", QColor(qRgb(170,85,127))).value<QColor>();
 	Settings.Chat.EnableChatAllNetworks = m_qSettings.value("EnableChatAllNetworks", true).toBool();
+	Settings.Chat.EnableFileTransfers = m_qSettings.value("EnableFileTransfers", true).toBool();
 	Settings.Chat.GnutellaChatEnable = m_qSettings.value("GnutellaChatEnable", true).toBool();
 	Settings.Chat.IrcServerName = m_qSettings.value("IrcServerName", "irc.p2pchat.net").toString();
-	Settings.Chat.IrcServerPort = m_qSettings.value("IrcServerPort", "6667").toString();
+	Settings.Chat.IrcServerPort = m_qSettings.value("IrcServerPort", 6667).toInt();
+	Settings.Chat.ScreenFont = m_qSettings.value("ScreenFont", QFont()).value<QFont>();
+	Settings.Chat.ShowTimestamp = m_qSettings.value("ShowTimestamp", false).toBool();
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Profile");
@@ -261,6 +260,7 @@ void PersistentSettings::loadSettings()
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Connection");
+	Settings.Connection.CanAcceptIncoming = m_qSettings.value("CanAcceptIncoming", 0).toInt();
 	Settings.Connection.ConnectThrottle = m_qSettings.value("ConnectThrottle", 250).toInt();
 	Settings.Connection.DetectConnectionLoss = m_qSettings.value("DetectConnectionLoss", true).toBool();
 	Settings.Connection.DetectConnectionReset = m_qSettings.value("DetectConnectionReset", false).toBool();
@@ -268,10 +268,10 @@ void PersistentSettings::loadSettings()
 	Settings.Connection.FailurePenalty = m_qSettings.value("FailurePenalty", 300).toInt();
 	Settings.Connection.InAddress = m_qSettings.value("InAddress", "").toString();
 	Settings.Connection.InBind = m_qSettings.value("InBind", false).toBool();
-	Settings.Connection.InPort = m_qSettings.value("InPort", 0).toInt();
-	Settings.Connection.InSpeed = m_qSettings.value("InSpeed", 2048).toInt();
+	Settings.Connection.InSpeed = m_qSettings.value("InSpeed", 1050.00).toDouble();
 	Settings.Connection.OutAddress = m_qSettings.value("OutAddress", "").toString();
-	Settings.Connection.OutSpeed = m_qSettings.value("OutSpeed", 256).toInt();
+	Settings.Connection.OutSpeed = m_qSettings.value("OutSpeed", 32.00).toDouble();
+	Settings.Connection.Port = m_qSettings.value("Port", 6350).toInt();
 	Settings.Connection.RandomPort = m_qSettings.value("RandomPort", false).toBool();
 	Settings.Connection.SendBuffer = m_qSettings.value("SendBuffer", 2048).toInt();
 	Settings.Connection.TimeoutConnect = m_qSettings.value("TimeoutConnect", 16).toInt();
@@ -287,6 +287,10 @@ void PersistentSettings::loadSettings()
 	Settings.Web.Foxy = m_qSettings.value("Foxy", true).toBool();
 	Settings.Web.Gnutella = m_qSettings.value("Gnutella", true).toBool();
 	Settings.Web.Magnet = m_qSettings.value("Magnet", true).toBool();
+	Settings.Web.ManageDownloadTypes = m_qSettings.value("ManageDownloadTypes", QStringList() << "7z" << "ace" << "arj"
+														 << "bin" << "exe" << "fml" << "grs" << "gz" << "hqx" << "iso"
+														 << "lzh" << "mp3" << "msi" << "r0" << "rar" << "sit" << "tar"
+														 << "tgz" << "z" << "zip").toStringList();
 	Settings.Web.Piolet = m_qSettings.value("Piolet", true).toBool();
 	Settings.Web.Torrent = m_qSettings.value("Torrent", true).toBool();
 	m_qSettings.endGroup();
@@ -303,7 +307,7 @@ void PersistentSettings::loadSettings()
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Transfers");
-	Settings.Transfers.BandwidthDownloads = m_qSettings.value("Downloads", 0).toInt();
+	Settings.Transfers.BandwidthDownloads = m_qSettings.value("Downloads", 1500.0).toDouble();
 	Settings.Transfers.BandwidthHubIn = m_qSettings.value("HubIn", 0).toInt();
 	Settings.Transfers.BandwidthHubOut = m_qSettings.value("HubOut", 0).toInt();
 	Settings.Transfers.BandwidthHubUploads = m_qSettings.value("HubUploads", 40).toInt();
@@ -313,7 +317,8 @@ void PersistentSettings::loadSettings()
 	Settings.Transfers.BandwidthPeerOut = m_qSettings.value("PeerOut", 0).toInt();
 	Settings.Transfers.BandwidthRequest = m_qSettings.value("Request", 32).toInt();
 	Settings.Transfers.BandwidthUdpOut = m_qSettings.value("UdpOut", 0).toInt();
-	Settings.Transfers.BandwidthUploads = m_qSettings.value("Uploads", 0).toInt();
+	Settings.Transfers.BandwidthUploads = m_qSettings.value("Uploads", 384.0).toDouble();
+	Settings.Downloads.QueueLimit = m_qSettings.value("QueueLimit", 0).toInt();
 	Settings.Transfers.MinTransfersRest = m_qSettings.value("MinTransfersRest", 15).toInt();
 	Settings.Transfers.RatesUnit = m_qSettings.value("RatesUnit", 1).toInt();
 	Settings.Transfers.RequireConnectedNetwork = m_qSettings.value("RequireConnectedNetwork", true).toBool();
@@ -327,12 +332,12 @@ void PersistentSettings::loadSettings()
 	Settings.Downloads.ChunkSize = m_qSettings.value("ChunkSize", 524288).toInt();
 	Settings.Downloads.ChunkStrap = m_qSettings.value("ChunkStrap", 131072).toInt();
 	Settings.Downloads.ClearDelay = m_qSettings.value("ClearDelay", 30000).toInt();
-	Settings.Downloads.CompletePath = m_qSettings.value("CompletePath", "").toString();
+	Settings.Downloads.CompletePath = m_qSettings.value("CompletePath", QDir::homePath() + "/My Documents/Panthera Downloads").toString();
 	Settings.Downloads.ConnectThrottle = m_qSettings.value("ConnectThrottle", 800).toInt();
 	Settings.Downloads.DropFailedSourcesThreshold = m_qSettings.value("DropFailedSourcesThreshold", 20).toInt();
 	Settings.Downloads.ExpandDownloads = m_qSettings.value("ExpandDownloads", false).toBool();
 	Settings.Downloads.FlushSD = m_qSettings.value("FlushSD", true).toBool();
-	Settings.Downloads.IncompletePath = m_qSettings.value("IncompletePath", "").toString();
+	Settings.Downloads.IncompletePath = m_qSettings.value("IncompletePath", QDir::homePath() + "/Panthera/Incomplete").toString();
 	Settings.Downloads.MaxAllowedFailures = m_qSettings.value("MaxAllowedFailures", 10).toInt();
 	Settings.Downloads.MaxConnectingSources = m_qSettings.value("MaxConnectingSources", 8).toInt();
 	Settings.Downloads.MaxFiles = m_qSettings.value("MaxFiles", 26).toInt();
@@ -344,7 +349,7 @@ void PersistentSettings::loadSettings()
 	Settings.Downloads.MinSources = m_qSettings.value("MinSources", 1).toInt();
 	Settings.Downloads.NeverDrop = m_qSettings.value("NeverDrop", false).toBool();
 	Settings.Downloads.PushTimeout = m_qSettings.value("PushTimeout", 45000).toInt();
-	Settings.Downloads.QueueLimit = m_qSettings.value("QueueLimit", 0).toInt();
+	Settings.Downloads.QueueLimit = m_qSettings.value("QueueLimit", 3).toInt();
 	Settings.Downloads.RequestHash = m_qSettings.value("RequestHash", true).toBool();
 	Settings.Downloads.RequestHTTP11 = m_qSettings.value("RequestHTTP11", true).toBool();
 	Settings.Downloads.RequestURLENC = m_qSettings.value("RequestURLENC", true).toBool();
@@ -400,7 +405,7 @@ void PersistentSettings::loadSettings()
 	Settings.Security.EnableFirewallException = m_qSettings.value("EnableFirewallException", true).toBool();
 	Settings.Security.EnableUPnP = m_qSettings.value("EnableUPnP", true).toBool();
 	Settings.Security.FirewallState = m_qSettings.value("FirewallState", 0).toInt();
-	Settings.Security.GnutellaChatFilter = m_qSettings.value("GnutellaChatFilter", true).toBool();
+	Settings.Security.ChatFilter = m_qSettings.value("ChatFilter", true).toBool();
 	Settings.Security.IrcFloodLimit = m_qSettings.value("IrcFloodLimit", 24).toInt();
 	Settings.Security.IrcFloodProtection = m_qSettings.value("IrcFloodProtection", true).toBool();
 	Settings.Security.RemoteEnable = m_qSettings.value("RemoteEnable", false).toBool();
@@ -519,7 +524,7 @@ void PersistentSettings::loadSettings()
 	Settings.eDonkey2k.LearnNewServers = m_qSettings.value("LearnNewServers", false).toBool();
 	Settings.eDonkey2k.LearnNewServersClient = m_qSettings.value("LearnNewServersClient", false).toBool();
 	Settings.eDonkey2k.MagnetSearch = m_qSettings.value("MagnetSearch", true).toBool();
-	Settings.eDonkey2k.MaxLinks = m_qSettings.value("MaxLinks", 35).toInt();
+	Settings.eDonkey2k.MaxClients = m_qSettings.value("MaxClients", 35).toInt();
 	Settings.eDonkey2k.MaxResults = m_qSettings.value("MaxResults", 100).toInt();
 	Settings.eDonkey2k.MaxShareCount = m_qSettings.value("MaxShareCount", 1000).toInt();
 	Settings.eDonkey2k.MetAutoQuery = m_qSettings.value("MetAutoQuery", true).toBool();
@@ -533,6 +538,7 @@ void PersistentSettings::loadSettings()
 	Settings.eDonkey2k.ReAskTime = m_qSettings.value("ReAskTime", 29).toInt();
 	Settings.eDonkey2k.RequestPipe = m_qSettings.value("RequestPipe", 3).toInt();
 	Settings.eDonkey2k.RequestSize = m_qSettings.value("RequestSize", 90).toInt();
+	Settings.eDonkey2k.SearchCachedServers = m_qSettings.value("SearchCachedServers", true).toBool();
 	Settings.eDonkey2k.SendPortServer = m_qSettings.value("SendPortServer", false).toBool();
 	Settings.eDonkey2k.ServerListURL = m_qSettings.value("ServerListURL", "http://ocbmaurice.dyndns.org/pl/slist.pl/server.met?download/server-best.met").toString();
 	Settings.eDonkey2k.ServerWalk = m_qSettings.value("ServerWalk", true).toBool();
@@ -546,14 +552,17 @@ void PersistentSettings::loadSettings()
 	Settings.Bittorrent.AutoSeed = m_qSettings.value("AutoSeed", true).toBool();
 	Settings.Bittorrent.BandwidthPercentage = m_qSettings.value("BandwidthPercentage", 80).toInt();
 	Settings.Bittorrent.ClearRatio = m_qSettings.value("ClearRatio", 120).toInt();
+	Settings.Bittorrent.CodePage = m_qSettings.value("CodePage", 0).toInt();
 	Settings.Bittorrent.DefaultTracker = m_qSettings.value("DefaultTracker", "").toString();
 	Settings.Bittorrent.DefaultTrackerPeriod = m_qSettings.value("DefaultTrackerPeriod", 5).toInt();
 	Settings.Bittorrent.DhtPruneTime = m_qSettings.value("DhtPruneTime", 30).toInt();
 	Settings.Bittorrent.DownloadConnections = m_qSettings.value("DownloadConnections", 40).toInt();
 	Settings.Bittorrent.DownloadTorrents = m_qSettings.value("DownloadTorrents", 4).toInt();
 	Settings.Bittorrent.Endgame = m_qSettings.value("Endgame", true).toBool();
+	Settings.Bittorrent.ExtraKeys = m_qSettings.value("ExtraKeys", true).toBool();
 	Settings.Bittorrent.LinkPing = m_qSettings.value("LinkPing", 120).toInt();
 	Settings.Bittorrent.LinkTimeout = m_qSettings.value("LinkTimeout", 180).toInt();
+	Settings.Bittorrent.Managed = m_qSettings.value("Managed", true).toBool();
 	Settings.Bittorrent.PreferBTSources = m_qSettings.value("PreferBTSources", true).toBool();
 	Settings.Bittorrent.RandomPeriod = m_qSettings.value("RandomPeriod", 30).toInt();
 	Settings.Bittorrent.RequestLimit = m_qSettings.value("RequestLimit", 128).toInt();
@@ -563,14 +572,12 @@ void PersistentSettings::loadSettings()
 	Settings.Bittorrent.SourceExchangePeriod = m_qSettings.value("SourceExchangePeriod", 10).toInt();
 	Settings.Bittorrent.StartPaused = m_qSettings.value("StartPaused", false).toBool();
 	Settings.Bittorrent.TestPartials = m_qSettings.value("TestPartials", true).toBool();
-	Settings.Bittorrent.TorrentCodePage = m_qSettings.value("TorrentCodePage", 0).toInt();
-	Settings.Bittorrent.TorrentExtraKeys = m_qSettings.value("TorrentExtraKeys", true).toBool();
-	Settings.Bittorrent.TorrentPath = m_qSettings.value("TorrentPath", "").toString();
-	Settings.Bittorrent.TorrentUseTemp = m_qSettings.value("TorrentUseTemp", false).toBool();
+	Settings.Bittorrent.TorrentPath = m_qSettings.value("TorrentPath", QDir::homePath() + "/Panthera/Torrents").toString();
 	Settings.Bittorrent.TrackerKey = m_qSettings.value("TrackerKey", true).toBool();
 	Settings.Bittorrent.UploadCount = m_qSettings.value("UploadCount", 4).toInt();
 	Settings.Bittorrent.UseKademlia = m_qSettings.value("UseKademlia", true).toBool();
 	Settings.Bittorrent.UseSaveDialog = m_qSettings.value("UseSaveDialog", false).toBool();
+	Settings.Bittorrent.UseTemp = m_qSettings.value("UseTemp", false).toBool();
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Discovery");
@@ -689,17 +696,14 @@ void PersistentSettings::saveSettings()
 	m_qSettings.beginGroup("MediaPlayer");
 	m_qSettings.setValue("Aspect", Settings.MediaPlayer.Aspect);
 	m_qSettings.setValue("AudioVisualPlugin", Settings.MediaPlayer.AudioVisualPlugin);
-	m_qSettings.setValue("CustomPlayer", Settings.MediaPlayer.CustomPlayer);
 	m_qSettings.setValue("CustomPlayerPath", Settings.MediaPlayer.CustomPlayerPath);
-	m_qSettings.setValue("EnableBuiltInPlay", Settings.MediaPlayer.EnableBuiltInPlay);
-	m_qSettings.setValue("EnableBuiltInPlaylist", Settings.MediaPlayer.EnableBuiltInPlaylist);
+	m_qSettings.setValue("MediaHandler", Settings.MediaPlayer.MediaHandler);
 	m_qSettings.setValue("FileTypes", Settings.MediaPlayer.FileTypes);
 	m_qSettings.setValue("ListVisible", Settings.MediaPlayer.ListVisible);
 	m_qSettings.setValue("Mute", Settings.MediaPlayer.Mute);
 	m_qSettings.setValue("Playlist", Settings.MediaPlayer.Playlist);
 	m_qSettings.setValue("Random", Settings.MediaPlayer.Random);
 	m_qSettings.setValue("Repeat", Settings.MediaPlayer.Repeat);
-	m_qSettings.setValue("ShellPlay", Settings.MediaPlayer.ShellPlay);
 	m_qSettings.setValue("StatusVisible", Settings.MediaPlayer.StatusVisible);
 	m_qSettings.setValue("Volume", Settings.MediaPlayer.Volume);
 	m_qSettings.setValue("Zoom", Settings.MediaPlayer.Zoom);
@@ -727,25 +731,26 @@ void PersistentSettings::saveSettings()
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Chat");
-	m_qSettings.setValue("AllowFileTransfers", Settings.Chat.AllowFileTransfers);
 	m_qSettings.setValue("AwayMessageIdleTime", Settings.Chat.AwayMessageIdleTime);
-	m_qSettings.setValue("ChatBackground", Settings.Chat.ChatBackground);
-	m_qSettings.setValue("ChatConnectOnStartup", Settings.Chat.ChatConnectOnStartup);
-	m_qSettings.setValue("ChatScreenFont", Settings.Chat.ChatScreenFont);
-	m_qSettings.setValue("ChatShowTimestamp", Settings.Chat.ChatShowTimestamp);
-	m_qSettings.setValue("ChatTextColorChatBackground", Settings.Chat.ChatTextColorChatBackground);
-	m_qSettings.setValue("ChatTextColorNormalText", Settings.Chat.ChatTextColorNormalText);
-	m_qSettings.setValue("ChatTextColorNotices", Settings.Chat.ChatTextColorNotices);
-	m_qSettings.setValue("ChatTextColorRoomActions", Settings.Chat.ChatTextColorRoomActions);
-	m_qSettings.setValue("ChatTextColorServerMessages", Settings.Chat.ChatTextColorServerMessages);
-	m_qSettings.setValue("ChatTextColorTopics", Settings.Chat.ChatTextColorTopics);
+	m_qSettings.setValue("Background", Settings.Chat.Background);
+	m_qSettings.setValue("ConnectOnStartup", Settings.Chat.ConnectOnStartup);
+	m_qSettings.setValue("ColorChatBackground", Settings.Chat.ColorChatBackground);
+	m_qSettings.setValue("ColorNormalText", Settings.Chat.ColorNormalText);
+	m_qSettings.setValue("ColorNoticesText", Settings.Chat.ColorNoticesText);
+	m_qSettings.setValue("ColorRoomActionsText", Settings.Chat.ColorRoomActionsText);
+	m_qSettings.setValue("ColorServerMessagesText", Settings.Chat.ColorServerMessagesText);
+	m_qSettings.setValue("ColorTopicsText", Settings.Chat.ColorTopicsText);
 	m_qSettings.setValue("EnableChatAllNetworks", Settings.Chat.EnableChatAllNetworks);
+	m_qSettings.setValue("EnableFileTransfers", Settings.Chat.EnableFileTransfers);
 	m_qSettings.setValue("GnutellaChatEnable", Settings.Chat.GnutellaChatEnable);
 	m_qSettings.setValue("IrcServerName", Settings.Chat.IrcServerName);
 	m_qSettings.setValue("IrcServerPort", Settings.Chat.IrcServerPort);
+	m_qSettings.setValue("ScreenFont", Settings.Chat.ScreenFont);
+	m_qSettings.setValue("ShowTimestamp", Settings.Chat.ShowTimestamp);
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Connection");
+	m_qSettings.setValue("CanAcceptIncoming", Settings.Connection.CanAcceptIncoming);
 	m_qSettings.setValue("ConnectThrottle", Settings.Connection.ConnectThrottle);
 	m_qSettings.setValue("DetectConnectionLoss", Settings.Connection.DetectConnectionLoss);
 	m_qSettings.setValue("DetectConnectionReset", Settings.Connection.DetectConnectionReset);
@@ -753,10 +758,10 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("FailurePenalty", Settings.Connection.FailurePenalty);
 	m_qSettings.setValue("InAddress", Settings.Connection.InAddress);
 	m_qSettings.setValue("InBind", Settings.Connection.InBind);
-	m_qSettings.setValue("InPort", Settings.Connection.InPort);
 	m_qSettings.setValue("InSpeed", Settings.Connection.InSpeed);
 	m_qSettings.setValue("OutAddress", Settings.Connection.OutAddress);
 	m_qSettings.setValue("OutSpeed", Settings.Connection.OutSpeed);
+	m_qSettings.setValue("Port", Settings.Connection.Port);
 	m_qSettings.setValue("RandomPort", Settings.Connection.RandomPort);
 	m_qSettings.setValue("SendBuffer", Settings.Connection.SendBuffer);
 	m_qSettings.setValue("TimeoutConnect", Settings.Connection.TimeoutConnect);
@@ -772,6 +777,7 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("Foxy", Settings.Web.Foxy);
 	m_qSettings.setValue("Gnutella", Settings.Web.Gnutella);
 	m_qSettings.setValue("Magnet", Settings.Web.Magnet);
+	m_qSettings.setValue("ManageDownloadTypes", Settings.Web.ManageDownloadTypes);
 	m_qSettings.setValue("Piolet", Settings.Web.Piolet);
 	m_qSettings.setValue("Torrent", Settings.Web.Torrent);
 	m_qSettings.endGroup();
@@ -889,7 +895,7 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("EnableFirewallException", Settings.Security.EnableFirewallException);
 	m_qSettings.setValue("EnableUPnP", Settings.Security.EnableUPnP);
 	m_qSettings.setValue("FirewallState", Settings.Security.FirewallState);
-	m_qSettings.setValue("GnutellaChatFilter", Settings.Security.GnutellaChatFilter);
+	m_qSettings.setValue("ChatFilter", Settings.Security.ChatFilter);
 	m_qSettings.setValue("IrcFloodLimit", Settings.Security.IrcFloodLimit);
 	m_qSettings.setValue("IrcFloodProtection", Settings.Security.IrcFloodProtection);
 	m_qSettings.setValue("MaxMaliciousFileSize", Settings.Security.MaxMaliciousFileSize);
@@ -1009,7 +1015,7 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("LearnNewServers", Settings.eDonkey2k.LearnNewServers);
 	m_qSettings.setValue("LearnNewServersClient", Settings.eDonkey2k.LearnNewServersClient);
 	m_qSettings.setValue("MagnetSearch", Settings.eDonkey2k.MagnetSearch);
-	m_qSettings.setValue("MaxLinks", Settings.eDonkey2k.MaxLinks);
+	m_qSettings.setValue("MaxClients", Settings.eDonkey2k.MaxClients);
 	m_qSettings.setValue("MaxResults", Settings.eDonkey2k.MaxResults);
 	m_qSettings.setValue("MaxShareCount", Settings.eDonkey2k.MaxShareCount);
 	m_qSettings.setValue("MetAutoQuery", Settings.eDonkey2k.MetAutoQuery);
@@ -1023,6 +1029,7 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("ReAskTime", Settings.eDonkey2k.ReAskTime);
 	m_qSettings.setValue("RequestPipe", Settings.eDonkey2k.RequestPipe);
 	m_qSettings.setValue("RequestSize", Settings.eDonkey2k.RequestSize);
+	m_qSettings.setValue("SearchCachedServers", Settings.eDonkey2k.SearchCachedServers);
 	m_qSettings.setValue("SendPortServer", Settings.eDonkey2k.SendPortServer);
 	m_qSettings.setValue("ServerListURL", Settings.eDonkey2k.ServerListURL);
 	m_qSettings.setValue("ServerWalk", Settings.eDonkey2k.ServerWalk);
@@ -1036,14 +1043,17 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("AutoSeed", Settings.Bittorrent.AutoSeed);
 	m_qSettings.setValue("BandwidthPercentage", Settings.Bittorrent.BandwidthPercentage);
 	m_qSettings.setValue("ClearRatio", Settings.Bittorrent.ClearRatio);
+	m_qSettings.setValue("CodePage", Settings.Bittorrent.CodePage);
 	m_qSettings.setValue("DefaultTracker", Settings.Bittorrent.DefaultTracker);
 	m_qSettings.setValue("DefaultTrackerPeriod", Settings.Bittorrent.DefaultTrackerPeriod);
 	m_qSettings.setValue("DhtPruneTime", Settings.Bittorrent.DhtPruneTime);
 	m_qSettings.setValue("DownloadConnections", Settings.Bittorrent.DownloadConnections);
 	m_qSettings.setValue("DownloadTorrents", Settings.Bittorrent.DownloadTorrents);
 	m_qSettings.setValue("Endgame", Settings.Bittorrent.Endgame);
+	m_qSettings.setValue("ExtraKeys", Settings.Bittorrent.ExtraKeys);
 	m_qSettings.setValue("LinkPing", Settings.Bittorrent.LinkPing);
 	m_qSettings.setValue("LinkTimeout", Settings.Bittorrent.LinkTimeout);
+	m_qSettings.setValue("Managed", Settings.Bittorrent.Managed);
 	m_qSettings.setValue("PreferBTSources", Settings.Bittorrent.PreferBTSources);
 	m_qSettings.setValue("RandomPeriod", Settings.Bittorrent.RandomPeriod);
 	m_qSettings.setValue("RequestLimit", Settings.Bittorrent.RequestLimit);
@@ -1053,14 +1063,12 @@ void PersistentSettings::saveSettings()
 	m_qSettings.setValue("SourceExchangePeriod", Settings.Bittorrent.SourceExchangePeriod);
 	m_qSettings.setValue("StartPaused", Settings.Bittorrent.StartPaused);
 	m_qSettings.setValue("TestPartials", Settings.Bittorrent.TestPartials);
-	m_qSettings.setValue("TorrentCodePage", Settings.Bittorrent.TorrentCodePage);
-	m_qSettings.setValue("TorrentExtraKeys", Settings.Bittorrent.TorrentExtraKeys);
 	m_qSettings.setValue("TorrentPath", Settings.Bittorrent.TorrentPath);
-	m_qSettings.setValue("TorrentUseTemp", Settings.Bittorrent.TorrentUseTemp);
 	m_qSettings.setValue("TrackerKey", Settings.Bittorrent.TrackerKey);
 	m_qSettings.setValue("UploadCount", Settings.Bittorrent.UploadCount);
 	m_qSettings.setValue("UseKademlia", Settings.Bittorrent.UseKademlia);
 	m_qSettings.setValue("UseSaveDialog", Settings.Bittorrent.UseSaveDialog);
+	m_qSettings.setValue("UseTemp", Settings.Bittorrent.UseTemp);
 	m_qSettings.endGroup();
 
 	m_qSettings.beginGroup("Discovery");
@@ -1112,4 +1120,56 @@ void PersistentSettings::saveProfile()
 	m_qSettings.setValue("YahooID", Settings.Profile.YahooID);
 	m_qSettings.endGroup();
 	return;
+}
+
+void PersistentSettings::saveWizard()
+{
+	QSettings m_qSettings("Panthera Project", "Panthera");
+
+	m_qSettings.beginGroup("Transfers");
+	m_qSettings.setValue("BandwidthDownloads", Settings.Transfers.BandwidthDownloads);
+	m_qSettings.setValue("BandwidthUploads", Settings.Transfers.BandwidthUploads);
+	m_qSettings.setValue("SimpleProgressBar", Settings.Transfers.SimpleProgressBar);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Security");
+	m_qSettings.setValue("EnableUPnP", Settings.Security.EnableUPnP);
+	m_qSettings.setValue("AllowSharesBrowse", Settings.Security.AllowSharesBrowse);
+	m_qSettings.setValue("AllowProfileBrowse", Settings.Security.AllowProfileBrowse);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Profile");
+	m_qSettings.setValue("IrcNickname", Settings.Profile.IrcNickname);
+	m_qSettings.setValue("IrcAlternateNickname", Settings.Profile.IrcAlternateNickname);
+	m_qSettings.setValue("GnutellaScreenName", Settings.Profile.GnutellaScreenName);
+	m_qSettings.setValue("Gender", Settings.Profile.Gender);
+	m_qSettings.setValue("Age", Settings.Profile.Age);
+	m_qSettings.setValue("Country", Settings.Profile.Country);
+	m_qSettings.setValue("StateProvince", Settings.Profile.StateProvince);
+	m_qSettings.setValue("City", Settings.Profile.City);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Gnutella2");
+	m_qSettings.setValue("EnableAlways", Settings.Gnutella2.EnableAlways);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Gnutella1");
+	m_qSettings.setValue("EnableAlways", Settings.Gnutella1.EnableAlways);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Ares");
+	m_qSettings.setValue("EnableAlways", Settings.Ares.EnableAlways);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("eDonkey2k");
+	m_qSettings.setValue("EnableAlways", Settings.eDonkey2k.EnableAlways);
+	m_qSettings.setValue("EnableKadAlways", Settings.eDonkey2k.EnableKadAlways);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Web");
+	m_qSettings.setValue("Torrent", Settings.Web.Torrent);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Bittorrent");
+	m_qSettings.setValue("UseKademlia", Settings.Bittorrent.UseKademlia);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Basic");
+	m_qSettings.setValue("ConnectOnStartup", Settings.Basic.ConnectOnStartup);
+	m_qSettings.setValue("StartWithSystem", Settings.Basic.StartWithSystem);
+	m_qSettings.endGroup();
+	m_qSettings.beginGroup("Library");
+	m_qSettings.setValue("HighPriorityHashing", Settings.Library.HighPriorityHashing);
+	m_qSettings.endGroup();
 }

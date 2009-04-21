@@ -20,6 +20,13 @@
 //
 
 #include "mainwindow.h"
+#include "persistentsettings.h"
+#include "dialogsplash.h"
+#include "dialogsettings.h"
+#include "dialogprofile.h"
+#include "dialogabout.h"
+#include "dialogwizard.h"
+#include "dialogeditshares.h"
 #include <QResource>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -185,11 +192,6 @@ void MainWindow::on_actionSettings_triggered()
 {
 	DialogSettings *dlgSettings = new DialogSettings(this);
 	dlgSettings->show();
-}
-
-void MainWindow::on_comboBoxSearchFileType_currentIndexChanged(int index)
-{
-	ui->pagesFileType->setCurrentIndex(index);
 }
 
 void MainWindow::on_pagesMain_currentChanged(int page)
@@ -610,4 +612,273 @@ void MainWindow::on_actionChoose_Skin_triggered()
 	DialogSettings *dlgSettings = new DialogSettings(this);
 	dlgSettings->switchSettingsPage(3);
 	dlgSettings->show();
+}
+
+void MainWindow::on_toolButtonMyLibraryToolHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameMyLibraryTool->setMaximumHeight(180);
+	} else {
+		ui->frameMyLibraryTool->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonDownloadsToolHeader_clicked(bool checked)
+{
+	if (!checked && !ui->toolButtonUploadsToolHeader->isChecked())
+	{
+		ui->frameTransfersTool->setMaximumHeight(65);
+	}
+	else if (checked && ui->toolButtonUploadsToolHeader->isChecked())
+	{
+		ui->frameTransfersTool->setMaximumHeight(185);
+	}
+	else
+	{
+		ui->frameTransfersTool->setMaximumHeight(125);
+	}
+}
+
+
+void MainWindow::on_toolButtonUploadsToolHeader_clicked(bool checked)
+{
+	if (!checked && !ui->toolButtonDownloadsToolHeader->isChecked())
+	{
+		ui->frameTransfersTool->setMaximumHeight(65);
+	}
+	else if (checked && ui->toolButtonDownloadsToolHeader->isChecked())
+	{
+		ui->frameTransfersTool->setMaximumHeight(185);
+	}
+	else
+	{
+		ui->frameTransfersTool->setMaximumHeight(125);
+	}
+}
+
+void MainWindow::on_toolButtonConnectionToolHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameConnectionTool->setMaximumHeight(119);
+	} else {
+		ui->frameConnectionTool->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonTorrentsToolHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameTorrentsTool->setMaximumHeight(99);
+	} else {
+		ui->frameTorrentsTool->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonSearchHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameSearchTool->setMaximumHeight(124);
+	} else {
+		ui->frameSearchTool->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonNetworksHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameSearchNetworks->setMaximumHeight(87);
+	} else {
+		ui->frameSearchNetworks->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonAnyFileHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonResultsHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameResults->setMaximumHeight(118);
+	} else {
+		ui->frameResults->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonRoomsHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameRooms->setMaximumHeight(16777215);
+	} else {
+		ui->frameRooms->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonFriendsHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameFriends->setMaximumHeight(16777215);
+	} else {
+		ui->frameFriends->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonUsersHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->frameChatUsers->setMaximumHeight(16777215);
+	} else {
+		ui->frameChatUsers->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonApplicationHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonArchiveHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonAudioHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonBittorrentHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonBookHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonImageHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonPresentationHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonROMHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonSkinHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonSourceCodeHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonSpreadsheetHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonVideoHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_toolButtonWordProcessingHeader_clicked(bool checked)
+{
+	if (checked)
+	{
+		ui->pagesFileType->setMaximumHeight(16777215);
+	} else {
+		ui->pagesFileType->setMaximumHeight(25);
+	}
+}
+
+void MainWindow::on_actionShares_triggered()
+{
+	DialogEditShares *dlgEditShares = new DialogEditShares(this);
+	dlgEditShares->show();
 }

@@ -28,6 +28,7 @@
 #include <QList>
 #include <QColor>
 #include <QUuid>
+#include <QDir>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialogsplash.h"
@@ -41,6 +42,7 @@ public:
 	void loadSettings();
 	void saveSettings();
 	void saveProfile();
+	void saveWizard();
 
 	// Attributes
 public:
@@ -144,6 +146,7 @@ public:
 		bool		ScanOGG;								// Enable .ogg metadata extraction by internals
 		bool		ScanPDF;								// Enable .pdf metadata extraction by internals
 		QString		SchemaURI;
+		QStringList	Shares;									// A list of your shared folders
 		bool		ShowCoverArt;
 		bool		SmartSeriesDetection;					// Organize video files in Library by using predefined patterns
 		int			SourceExpire;
@@ -168,17 +171,14 @@ public:
 	{
 		int			Aspect;									// Size video is displayed in
 		QString		AudioVisualPlugin;						// Path to visual plugin for audio. Null if none is used.
-		bool		CustomPlayer;							// User has selected a custom media player
 		QString		CustomPlayerPath;						// Path to the custom player executable
-		bool		EnableBuiltInPlay;						// Use the built in VLC media player to play files
-		bool		EnableBuiltInPlaylist;					// Use the built in VLC media player playlist
+		int			MediaHandler;							// Media Player (0 Built In, 1 Shell Open, 2 Custom)
 		QStringList	FileTypes;								// Try to open these file types as media files
 		bool		ListVisible;							// Is playlist visible
 		bool		Mute;									// Is sound muted
 		QStringList	Playlist;								// Save playlist so it can be reopened when closing/opening Panthera
 		bool		Random;									// Is random turned on for media files?
 		bool		Repeat;									// Is repeat turned on for media files?
-		bool		ShellPlay;								// Open media with the default external media player
 		bool		StatusVisible;							// Display time remaining, etc
 		int			Volume;									// Sound volume
 		int			Zoom;									// The zoom level for video
@@ -203,6 +203,7 @@ public:
 		QString		BlankSchemaURI;
 		int			BrowseTreeSize;
 		int			ClearPrevious;							// Clear previous search results? 0 - ask user; 1 - no; 2 - yes.
+		bool		EnableFileTransfers;					// Enable file transfers through IRC
 		bool		ExpandSearchMatches;					// Expand multi-source search matches
 		int			FilterMask;
 		bool		HideSearchBar;							// Hide search sidebar when starting search
@@ -223,22 +224,22 @@ public:
 
 	struct sChat
 	{
-		bool		AllowFileTransfers;						// Allow file transfers over Irc
 		int			AwayMessageIdleTime;					// Time in secs of idle system time before showing away message
-		QString		ChatBackground;							// Path to an image for the background of the chat window
-		bool		ChatConnectOnStartup;					// Connect to the chat server and enter rooms on startup
-		QFont		ChatScreenFont;							// Font for the chat screen
-		bool		ChatShowTimestamp;						// Show timestamps at the beginning of messages
-		QColor		ChatTextColorChatBackground;			// Color for the background of the chat window
-		QColor		ChatTextColorNormalText;				// Color for normal text in the chat window
-		QColor		ChatTextColorNotices;					// Color for notices in the chat window
-		QColor		ChatTextColorRoomActions;				// Color for room actions in the chat window
-		QColor		ChatTextColorServerMessages;			// Color for server messages in the chat window
-		QColor		ChatTextColorTopics;					// Color for topics in the chat window
+		QString		Background;								// Path to an image for the background of the chat window
+		bool		ConnectOnStartup;						// Connect to the chat server and enter rooms on startup
+		QColor		ColorChatBackground;					// Color for the background of the chat window
+		QColor		ColorNormalText;						// Color for normal text in the chat window
+		QColor		ColorNoticesText;						// Color for notices in the chat window
+		QColor		ColorRoomActionsText;					// Color for room actions in the chat window
+		QColor		ColorServerMessagesText;				// Color for server messages in the chat window
+		QColor		ColorTopicsText;						// Color for topics in the chat window
 		bool		EnableChatAllNetworks;					// Is chat allowed over other protocols? (ed2k, etc)
+		bool		EnableFileTransfers;					// Enable IRC File Transfers
 		bool		GnutellaChatEnable;						// Is Gnutella chat enabled with compatible clients?
 		QString		IrcServerName;							// Web address of the Irc chat server
-		QString		IrcServerPort;							// Port to connect to the chat server on
+		int			IrcServerPort;							// Port to connect to the chat server on
+		QFont		ScreenFont;								// Font for the chat screen
+		bool		ShowTimestamp;							// Show timestamps at the beginning of messages
 	} Chat;
 
 	struct sProfile
@@ -272,6 +273,7 @@ public:
 
 	struct sConnection
 	{
+		int			CanAcceptIncoming;						// Can we accept incoming connections or are they being blocked
 		int			ConnectThrottle;						// Delay between connection attempts. (Neighbour connections)
 		bool		DetectConnectionLoss;					// Detect loss of internet connection
 		bool		DetectConnectionReset;					// Detect regaining of internet connection
@@ -279,10 +281,10 @@ public:
 		int			FailurePenalty;							// Delay after connection failure (seconds, default = 300) (Neighbour connections)
 		QString		InAddress;								// Inbound IP address
 		bool		InBind;									// Force binding to selected address
-		int			InPort;									// Incoming port
-		int			InSpeed;								// Inbound internet connection speed in Kilobits/second
+		double		InSpeed;								// Inbound internet connection speed in Kilobits/second
 		QString		OutAddress;								// Outbound IP address
-		int			OutSpeed;								// Outbound internet connection speed in Kilobits/second
+		double		OutSpeed;								// Outbound internet connection speed in Kilobits/second
+		int			Port;									// Incoming port
 		bool		RandomPort;								// Select a random incoming port
 		int			SendBuffer;								// Size of data send blocks
 		int			TimeoutConnect;							// Time to wait for a connection before dropping the connection
@@ -299,6 +301,7 @@ public:
 		bool		Foxy;									// Use Panthera to open Foxy links (slightly altered magnet)
 		bool		Gnutella;								// Use Panthera to open Gnutella links (gnutella:)
 		bool		Magnet;									// Use Panthera to open Magnet links (magnet:)
+		QStringList	ManageDownloadTypes;					// Use Panthera to manage these download types
 		bool		Piolet;									// Use Panthera to open Piolet links (mp2p:)
 		bool		Torrent;								// Use Panthera to open torrent links (.torrent files and torrent:)
 	} Web;
@@ -317,7 +320,7 @@ public:
 
 	struct sTransfers
 	{
-		int			BandwidthDownloads;								// Inbound speed limit in Bytes/seconds
+		double		BandwidthDownloads;								// Inbound speed limit in Bytes/seconds
 		int			BandwidthHubIn;
 		int			BandwidthHubOut;
 		int			BandwidthHubUploads;
@@ -327,7 +330,7 @@ public:
 		int			BandwidthPeerOut;
 		int			BandwidthRequest;
 		int			BandwidthUdpOut;
-		int			BandwidthUploads;								// Outbound speed limit in Bytes/seconds
+		double		BandwidthUploads;								// Outbound speed limit in Bytes/seconds
 		int			MinTransfersRest;						// For how long at least to suspend Transfers each round
 		int			RatesUnit;								// Units that the transfer rates are to be displayed in
 		bool		RequireConnectedNetwork;				// Only upload/download to connected networks
@@ -421,8 +424,8 @@ public:
 		bool		EnableFirewallException;				// Create Firewall exception at startup
 		bool		EnableUPnP;								// Use UPnP to automatically set up firewalls/routers
 		int			FirewallState;							// Is a firewall blocking incloming connections?
-		bool		GnutellaChatFilter;						// Filter out chat spam
-		int			IrcFloodLimit;							// Number of messages sent by a user in 5 seconds before ignoring them
+		bool		ChatFilter;								// Filter out chat spam
+		int			IrcFloodLimit;							// Number of messages sent by a user in 1 second before ignoring them
 		bool		IrcFloodProtection;						// Automatically ignore users that flood chat rooms with text
 		int			MaxMaliciousFileSize;					// Size for which to trigger malicious software search
 		bool		RemoteEnable;							// Enable remote access?
@@ -546,7 +549,7 @@ public:
 		bool		LearnNewServers;						// Get new servers from servers
 		bool		LearnNewServersClient;					// Get new servers from clients
 		bool		MagnetSearch;							// Search for magnets over ed2k (lower server load)
-		int			MaxLinks;								// Max ed2k client links
+		int			MaxClients;								// Max ed2k client links
 		int			MaxResults;								// Stop searching after this many search results
 		int			MaxShareCount;							// Hard limit on file list sent to server
 		bool		MetAutoQuery;							// Auto query for a new server list
@@ -560,6 +563,7 @@ public:
 		int			ReAskTime;
 		int			RequestPipe;
 		int			RequestSize;
+		bool		SearchCachedServers;					// Search on known remote servers in the server cache
 		bool		SendPortServer;							// Send port in tag to ed2k servers. (not needed for newer servers)
 		QString		ServerListURL;							// URL address to auto query for a new server list
 		bool		ServerWalk;								// Enable global UDP walk of servers
@@ -574,14 +578,17 @@ public:
 		bool		AutoSeed;								// Automatically re-seed most recently completed torrent on start-up
 		int			BandwidthPercentage;					// Percentage of bandwidth to use when BT active.
 		int			ClearRatio;								// Share ratio a torrent must reach to be cleared. (Minimum 100%)
+		int			CodePage;								// The code page to assume for a .torrent file if it isn't UTF-8
 		QString		DefaultTracker;							// Default tracker to use if trackers listed in torrent are down
 		int			DefaultTrackerPeriod;					// Delay between tracker contact attempts if one is not specified by tracker
 		int			DhtPruneTime;
 		int			DownloadConnections;					// Number of active torrent connections allowed
 		int			DownloadTorrents;						// Number of torrents to download at once
 		bool		Endgame;								// Allow endgame mode when completing torrents. (Download same chunk from multiple sources)
+		bool		ExtraKeys;								// Check for '.utf8' keys if there is an encoding error
 		int			LinkPing;
 		int			LinkTimeout;
+		bool		Managed;								// Managed Torrents
 		bool		PreferBTSources;						// Prefer downloading from BT sources when appropriate
 		int			RandomPeriod;
 		int			RequestLimit;
@@ -591,14 +598,12 @@ public:
 		int			SourceExchangePeriod;					// Time to exchange sources with new peers
 		bool		StartPaused;							// Start torrents in a paused state
 		bool		TestPartials;							// Do on integrity check of Bittorrent partials
-		int			TorrentCodePage;						// The code page to assume for a .torrent file if it isn't UTF-8
-		bool		TorrentExtraKeys;						// Check for '.utf8' keys if there is an encoding error
 		QString		TorrentPath;							// Where .torrent files are stored
-		bool		TorrentUseTemp;							// Store incomplete torrent downloads in the temporary folder
 		bool		TrackerKey;								// Send a key (random value) to trackers
 		int			UploadCount;							// Number of active torrent uploads allowed
 		bool		UseKademlia;							// Use Kademlia with bittorrent
 		bool		UseSaveDialog;							// Use torrent save dialog or use default settings
+		bool		UseTemp;								// Store incomplete torrent downloads in the temporary folder
 	} Bittorrent;
 
 	struct sDiscovery

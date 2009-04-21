@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>345</height>
+    <width>1193</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -34,10 +34,16 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>Resource/Panthera.png</normaloff>Resource/Panthera.png</iconset>
+    <normaloff>C:/Documents and Settings/Joe/.designer/backup/Resource/Panthera.png</normaloff>C:/Documents and Settings/Joe/.designer/backup/Resource/Panthera.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QToolButton {
+   <string notr="true">QMainWindow::separator {
+     background: yellow;
+     width: 10px; /* when vertical */
+     height: 10px; /* when horizontal */
+ }
+
+QToolButton {
     border: 1px solid transparent;
     background-color: transparent;
 }
@@ -57,18 +63,7 @@ QToolButton:checked {
      border: 1px solid rgb(78, 96, 255);
      background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                        stop: 0 #dadbde, stop: 1 #f6f7fa);
- }
-
-QwwRichTextButton {
-	background-color: rgb(78, 124, 179);
-	color: rgb(255, 255, 255);
-	border: none;
-	margin-top: -4px;
-}
-
-QwwRichTextButton:hover {
-	background-color: rgb(56, 90, 129);
-}</string>
+ }</string>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -78,16 +73,7 @@ QwwRichTextButton:hover {
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <property name="leftMargin">
-     <number>6</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
+    <property name="margin">
      <number>0</number>
     </property>
     <item row="0" column="0">
@@ -99,7 +85,7 @@ QwwRichTextButton:hover {
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageHome">
        <layout class="QGridLayout" name="gridLayout_2">
@@ -141,6 +127,9 @@ QwwRichTextButton:hover {
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
              <property name="text">
               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -162,9 +151,9 @@ p, li { white-space: pre-wrap; }
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-307</y>
-             <width>565</width>
-             <height>554</height>
+             <y>0</y>
+             <width>521</width>
+             <height>504</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_26">
@@ -798,8 +787,8 @@ border-image: color transparent;
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>191</width>
-             <height>601</height>
+             <width>151</width>
+             <height>607</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_10">
@@ -817,7 +806,7 @@ border-image: color transparent;
 }</string>
               </property>
               <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
+               <enum>QFrame::NoFrame</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
@@ -829,7 +818,7 @@ border-image: color transparent;
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="4" column="1">
+               <item row="5" column="1">
                 <widget class="QFrame" name="frameTorrentsTool">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -864,7 +853,7 @@ border-image: color transparent;
                   <item row="1" column="0">
                    <widget class="QListWidget" name="listWidgetTorrentsTool">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -872,7 +861,7 @@ border-image: color transparent;
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>60</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -894,7 +883,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QToolButton" name="toolButton_5">
+                   <widget class="QToolButton" name="toolButtonTorrentsToolHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -932,6 +921,12 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
@@ -940,7 +935,7 @@ QToolButton:hover {
                  </layout>
                 </widget>
                </item>
-               <item row="3" column="1">
+               <item row="2" column="1">
                 <widget class="QFrame" name="frameConnectionTool">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -974,6 +969,12 @@ QToolButton:hover {
                   </property>
                   <item row="2" column="0">
                    <widget class="QListWidget" name="listWidgetConnectionTool">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
@@ -1002,7 +1003,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QToolButton" name="toolButton_4">
+                   <widget class="QToolButton" name="toolButtonConnectionToolHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1040,6 +1041,12 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
@@ -1048,7 +1055,7 @@ QToolButton:hover {
                  </layout>
                 </widget>
                </item>
-               <item row="2" column="1">
+               <item row="1" column="1">
                 <widget class="QFrame" name="frameTransfersTool">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1082,10 +1089,16 @@ QToolButton:hover {
                   </property>
                   <item row="2" column="0">
                    <widget class="QListWidget" name="listWidgetDownloadsTool">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>60</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -1108,10 +1121,16 @@ p, li { white-space: pre-wrap; }
                   </item>
                   <item row="5" column="0">
                    <widget class="QListWidget" name="listWidgetUploadsTool">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>60</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -1122,7 +1141,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QToolButton" name="toolButton_2">
+                   <widget class="QToolButton" name="toolButtonDownloadsToolHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1160,13 +1179,19 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
                   <item row="4" column="0">
-                   <widget class="QToolButton" name="toolButton_3">
+                   <widget class="QToolButton" name="toolButtonUploadsToolHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1204,6 +1229,12 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
@@ -1212,7 +1243,7 @@ QToolButton:hover {
                  </layout>
                 </widget>
                </item>
-               <item row="1" column="1">
+               <item row="0" column="1">
                 <widget class="QFrame" name="frameMyLibraryTool">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1229,7 +1260,7 @@ QToolButton:hover {
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>16777215</height>
+                   <height>180</height>
                   </size>
                  </property>
                  <property name="styleSheet">
@@ -1251,17 +1282,20 @@ QToolButton:hover {
                    <number>0</number>
                   </property>
                   <item row="6" column="0">
-                   <widget class="QLabel" name="labelMyLibraryLink">
-                    <property name="text">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;dummy&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Go To My Library&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <widget class="Line" name="line_14">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
                     </property>
                    </widget>
                   </item>
-                  <item row="5" column="0">
+                  <item row="8" column="0">
+                   <widget class="Line" name="line_15">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
                    <widget class="QLabel" name="labelSharedFiles">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1272,7 +1306,18 @@ p, li { white-space: pre-wrap; }
                     </property>
                    </widget>
                   </item>
-                  <item row="8" column="0">
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="labelMyLibraryLink">
+                    <property name="text">
+                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;dummy&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Go To My Library&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
                    <widget class="QLabel" name="labelHashingProgress">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1286,7 +1331,7 @@ p, li { white-space: pre-wrap; }
                     </property>
                    </widget>
                   </item>
-                  <item row="10" column="0">
+                  <item row="9" column="0">
                    <widget class="QLabel" name="labelHashFaster">
                     <property name="text">
                      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1297,22 +1342,8 @@ p, li { white-space: pre-wrap; }
                     </property>
                    </widget>
                   </item>
-                  <item row="7" column="0">
-                   <widget class="Line" name="line_14">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="9" column="0">
-                   <widget class="Line" name="line_15">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="2" column="0">
-                   <widget class="QToolButton" name="toolButton">
+                   <widget class="QToolButton" name="toolButtonMyLibraryToolHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1350,29 +1381,29 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
                    </widget>
                   </item>
                   <item row="3" column="0">
-                   <widget class="QListWidget" name="listWidgetMyLibraryTool">
+                   <widget class="QListWidget" name="listWidgetLibraryTool">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>0</height>
-                     </size>
-                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
-                      <height>60</height>
+                      <height>16777215</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -1384,6 +1415,22 @@ QToolButton:hover {
                   </item>
                  </layout>
                 </widget>
+               </item>
+               <item row="6" column="1">
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
               </layout>
              </widget>
@@ -1466,10 +1513,10 @@ p, li { white-space: pre-wrap; }
 }</string>
           </property>
           <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
+           <enum>QFrame::StyledPanel</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Plain</enum>
+           <enum>QFrame::Sunken</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_16">
            <property name="margin">
@@ -1904,6 +1951,9 @@ p, li { white-space: pre-wrap; }
               <layout class="QGridLayout" name="gridLayout_19" rowminimumheight="0" columnminimumwidth="0,0,0,0">
                <property name="sizeConstraint">
                 <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
+               <property name="margin">
+                <number>0</number>
                </property>
                <property name="spacing">
                 <number>0</number>
@@ -3445,7 +3495,7 @@ p, li { white-space: pre-wrap; }
              <x>0</x>
              <y>0</y>
              <width>201</width>
-             <height>436</height>
+             <height>444</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -3466,7 +3516,7 @@ p, li { white-space: pre-wrap; }
 }</string>
               </property>
               <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
+               <enum>QFrame::NoFrame</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
@@ -3478,310 +3528,19 @@ p, li { white-space: pre-wrap; }
                <property name="spacing">
                 <number>4</number>
                </property>
-               <item row="0" column="0">
-                <widget class="QFrame" name="frameSearchTool">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QFrame {
-	background-color: rgb(161, 178, 231);
-}</string>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Sunken</enum>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_61">
-                  <property name="horizontalSpacing">
-                   <number>2</number>
-                  </property>
-                  <property name="verticalSpacing">
-                   <number>0</number>
-                  </property>
-                  <property name="margin">
-                   <number>0</number>
-                  </property>
-                  <item row="1" column="0" colspan="2">
-                   <widget class="QLabel" name="labelTypeSearch">
-                    <property name="text">
-                     <string>Type Your Search Here:</string>
-                    </property>
-                    <property name="buddy">
-                     <cstring>lineEditSearchTool</cstring>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0" colspan="2">
-                   <widget class="QLineEdit" name="lineEditSearchTool">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QLabel" name="labelSearchFileType">
-                    <property name="text">
-                     <string>File Type:</string>
-                    </property>
-                    <property name="buddy">
-                     <cstring>comboBoxSearchFileType</cstring>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="5" column="0" colspan="2">
-                   <widget class="QComboBox" name="comboBoxSearchFileType">
-                    <property name="styleSheet">
-                     <string notr="true">QAbstractItemView {
-	background-color: rgb(255, 255, 255);
-}</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>Any File Type</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Application</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Applications.png</normaloff>:/Icons/Resource/Applications.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Archive</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Archive.png</normaloff>:/Icons/Resource/Archive.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Audio</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Bittorrent</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Book</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Notebook.png</normaloff>:/Icons/Resource/Notebook.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Image</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Images.png</normaloff>:/Icons/Resource/Images.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Presentation</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Presentacion.png</normaloff>:/Icons/Resource/Presentacion.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>ROM Image</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Snes.png</normaloff>:/Icons/Resource/Snes.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Skin</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Source Code</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/source.png</normaloff>:/Icons/Resource/source.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Spreadsheet</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Spreadsheet2.png</normaloff>:/Icons/Resource/Spreadsheet2.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Video</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Word Processing</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="Graphics.qrc">
-                       <normaloff>:/Icons/Resource/Document.png</normaloff>:/Icons/Resource/Document.png</iconset>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item row="6" column="0" colspan="2">
-                   <layout class="QGridLayout" name="gridLayoutSearchButtons">
-                    <property name="topMargin">
-                     <number>4</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>4</number>
-                    </property>
-                    <property name="spacing">
-                     <number>6</number>
-                    </property>
-                    <item row="0" column="0">
-                     <widget class="QToolButton" name="toolButtonSearchStart">
-                      <property name="styleSheet">
-                       <string notr="true"/>
-                      </property>
-                      <property name="text">
-                       <string>Search</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="Graphics.qrc">
-                        <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
-                      </property>
-                      <property name="popupMode">
-                       <enum>QToolButton::InstantPopup</enum>
-                      </property>
-                      <property name="toolButtonStyle">
-                       <enum>Qt::ToolButtonTextBesideIcon</enum>
-                      </property>
-                      <property name="autoRaise">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="QToolButton" name="toolButtonSearchClear">
-                      <property name="styleSheet">
-                       <string notr="true"/>
-                      </property>
-                      <property name="text">
-                       <string>Clear</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="Graphics.qrc">
-                        <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
-                      </property>
-                      <property name="popupMode">
-                       <enum>QToolButton::InstantPopup</enum>
-                      </property>
-                      <property name="toolButtonStyle">
-                       <enum>Qt::ToolButtonTextBesideIcon</enum>
-                      </property>
-                      <property name="autoRaise">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QToolButton" name="toolButton_6">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QToolButton {
-	background-color: rgb(78, 124, 179);
-	color: rgb(255, 255, 255);
-	border: none;
-}
-
-QToolButton:hover {
-	background-color: rgb(56, 90, 129);
-}</string>
-                    </property>
-                    <property name="text">
-                     <string>Search</string>
-                    </property>
-                    <property name="icon">
-                     <iconset resource="Graphics.qrc">
-                      <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>20</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                    <property name="toolButtonStyle">
-                     <enum>Qt::ToolButtonTextBesideIcon</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item row="1" column="0">
+               <item row="2" column="0">
                 <widget class="QFrame" name="frameSearchNetworks">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>87</height>
+                  </size>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -3858,7 +3617,7 @@ QToolButton:hover {
                    </widget>
                   </item>
                   <item row="0" column="0" colspan="2">
-                   <widget class="QToolButton" name="toolButton_7">
+                   <widget class="QToolButton" name="toolButtonNetworksHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -3896,6 +3655,12 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
@@ -3904,13 +3669,19 @@ QToolButton:hover {
                  </layout>
                 </widget>
                </item>
-               <item row="3" column="0">
+               <item row="4" column="0">
                 <widget class="QFrame" name="frameResults">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>118</height>
+                  </size>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(161, 178, 231);</string>
@@ -3983,7 +3754,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QToolButton" name="toolButton_12">
+                   <widget class="QToolButton" name="toolButtonResultsHeader">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -4021,6 +3792,12 @@ QToolButton:hover {
                       <height>20</height>
                      </size>
                     </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
                     <property name="toolButtonStyle">
                      <enum>Qt::ToolButtonTextBesideIcon</enum>
                     </property>
@@ -4029,7 +3806,7 @@ QToolButton:hover {
                  </layout>
                 </widget>
                </item>
-               <item row="2" column="0">
+               <item row="3" column="0">
                 <widget class="QStackedWidget" name="pagesFileType">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -4053,7 +3830,7 @@ QToolButton:hover {
                   <enum>QFrame::Sunken</enum>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>13</number>
                  </property>
                  <widget class="QWidget" name="pageAnyFile">
                   <layout class="QGridLayout" name="gridLayout_64">
@@ -4064,11 +3841,11 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_3">
+                    <widget class="QScrollArea" name="scrollAreaAnyFile">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
+                       <verstretch>1</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="frameShape">
@@ -4282,7 +4059,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_8">
+                    <widget class="QToolButton" name="toolButtonAnyFileHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4320,6 +4097,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -4336,7 +4119,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_4">
+                    <widget class="QScrollArea" name="scrollAreaApplication">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -4348,7 +4137,7 @@ QToolButton:hover {
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>172</width>
+                        <width>152</width>
                         <height>875</height>
                        </rect>
                       </property>
@@ -4863,7 +4652,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_9">
+                    <widget class="QToolButton" name="toolButtonApplicationHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4901,6 +4690,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -4917,7 +4712,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_5">
+                    <widget class="QScrollArea" name="scrollAreaArchive">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -5206,7 +5007,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_11">
+                    <widget class="QToolButton" name="toolButtonArchiveHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5244,6 +5045,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -5260,7 +5067,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_6">
+                    <widget class="QScrollArea" name="scrollAreaAudio">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -5549,7 +5362,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_13">
+                    <widget class="QToolButton" name="toolButtonAudioHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5587,6 +5400,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -5603,7 +5422,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_7">
+                    <widget class="QScrollArea" name="scrollAreaBittorrent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -5855,7 +5680,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_14">
+                    <widget class="QToolButton" name="toolButtonBittorrentHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5893,6 +5718,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -5909,7 +5740,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_8">
+                    <widget class="QScrollArea" name="scrollAreaBook">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -6368,7 +6205,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_15">
+                    <widget class="QToolButton" name="toolButtonBookHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6406,6 +6243,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -6422,7 +6265,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_9">
+                    <widget class="QScrollArea" name="scrollAreaImage">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -6674,7 +6523,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_16">
+                    <widget class="QToolButton" name="toolButtonImageHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6712,6 +6561,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -6728,7 +6583,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_10">
+                    <widget class="QScrollArea" name="scrollAreaPresentation">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -7087,7 +6948,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_17">
+                    <widget class="QToolButton" name="toolButtonPresentationHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -7125,6 +6986,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -7141,7 +7008,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_11">
+                    <widget class="QScrollArea" name="scrollAreaROM">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -7450,7 +7323,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_18">
+                    <widget class="QToolButton" name="toolButtonROMHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -7488,6 +7361,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -7504,7 +7383,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_12">
+                    <widget class="QScrollArea" name="scrollAreaSkin">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -7803,7 +7688,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_19">
+                    <widget class="QToolButton" name="toolButtonSkinHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -7841,6 +7726,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -7857,7 +7748,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_13">
+                    <widget class="QScrollArea" name="scrollAreaSourceCode">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -8216,7 +8113,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_20">
+                    <widget class="QToolButton" name="toolButtonSourceCodeHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -8254,6 +8151,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -8270,7 +8173,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_14">
+                    <widget class="QScrollArea" name="scrollAreaSpreadsheet">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -8639,7 +8548,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_21">
+                    <widget class="QToolButton" name="toolButtonSpreadsheetHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -8677,6 +8586,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -8693,7 +8608,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_15">
+                    <widget class="QScrollArea" name="scrollAreaVideo">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -8972,7 +8893,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_22">
+                    <widget class="QToolButton" name="toolButtonVideoHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -9010,6 +8931,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -9026,7 +8953,13 @@ QToolButton:hover {
                     <number>0</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QScrollArea" name="scrollArea_16">
+                    <widget class="QScrollArea" name="scrollAreaWordProcessing">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>1</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
@@ -9038,7 +8971,7 @@ QToolButton:hover {
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>152</width>
+                        <width>174</width>
                         <height>783</height>
                        </rect>
                       </property>
@@ -9395,7 +9328,7 @@ QToolButton:hover {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QToolButton" name="toolButton_23">
+                    <widget class="QToolButton" name="toolButtonWordProcessingHeader">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -9433,6 +9366,12 @@ QToolButton:hover {
                        <height>20</height>
                       </size>
                      </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
                      <property name="toolButtonStyle">
                       <enum>Qt::ToolButtonTextBesideIcon</enum>
                      </property>
@@ -9441,6 +9380,355 @@ QToolButton:hover {
                   </layout>
                  </widget>
                 </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QFrame" name="frameSearchTool">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>130</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QFrame {
+	background-color: rgb(161, 178, 231);
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_61">
+                  <property name="margin">
+                   <number>0</number>
+                  </property>
+                  <property name="spacing">
+                   <number>2</number>
+                  </property>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QLabel" name="labelTypeSearch">
+                    <property name="text">
+                     <string>Type Your Search Here:</string>
+                    </property>
+                    <property name="buddy">
+                     <cstring>lineEditSearchTool</cstring>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QLineEdit" name="lineEditSearchTool">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QLabel" name="labelSearchFileType">
+                    <property name="text">
+                     <string>File Type:</string>
+                    </property>
+                    <property name="buddy">
+                     <cstring>comboBoxSearchFileType</cstring>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QToolButton" name="toolButtonSearchHeader">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QToolButton {
+	background-color: rgb(78, 124, 179);
+	color: rgb(255, 255, 255);
+	border: none;
+}
+
+QToolButton:hover {
+	background-color: rgb(56, 90, 129);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Search</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="Graphics.qrc">
+                      <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                    <property name="toolButtonStyle">
+                     <enum>Qt::ToolButtonTextBesideIcon</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QComboBox" name="comboBoxSearchFileType">
+                    <property name="styleSheet">
+                     <string notr="true">QAbstractItemView {
+	background-color: rgb(255, 255, 255);
+}</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Any File Type</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Application</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Applications.png</normaloff>:/Icons/Resource/Applications.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Archive</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Archive.png</normaloff>:/Icons/Resource/Archive.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Audio</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Speaker.png</normaloff>:/Icons/Resource/Speaker.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Bittorrent</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Book</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Notebook.png</normaloff>:/Icons/Resource/Notebook.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Image</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Images.png</normaloff>:/Icons/Resource/Images.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Presentation</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Presentacion.png</normaloff>:/Icons/Resource/Presentacion.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>ROM Image</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Snes.png</normaloff>:/Icons/Resource/Snes.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Skin</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Wallpaper Settings.png</normaloff>:/Icons/Resource/Wallpaper Settings.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Source Code</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/source.png</normaloff>:/Icons/Resource/source.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Spreadsheet</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Spreadsheet2.png</normaloff>:/Icons/Resource/Spreadsheet2.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Video</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/VisualHub.png</normaloff>:/Icons/Resource/VisualHub.png</iconset>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Word Processing</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Document.png</normaloff>:/Icons/Resource/Document.png</iconset>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="6" column="0" colspan="2">
+                   <widget class="QFrame" name="frameSearchButtons">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_94">
+                     <property name="margin">
+                      <number>0</number>
+                     </property>
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="0">
+                      <layout class="QGridLayout" name="gridLayoutSearchButtons">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QToolButton" name="toolButtonSearchStart">
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
+                         <property name="text">
+                          <string>Search</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="Graphics.qrc">
+                           <normaloff>:/Icons/Resource/search-32.png</normaloff>:/Icons/Resource/search-32.png</iconset>
+                         </property>
+                         <property name="popupMode">
+                          <enum>QToolButton::InstantPopup</enum>
+                         </property>
+                         <property name="toolButtonStyle">
+                          <enum>Qt::ToolButtonTextBesideIcon</enum>
+                         </property>
+                         <property name="autoRaise">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QToolButton" name="toolButtonSearchClear">
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
+                         <property name="text">
+                          <string>Clear</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="Graphics.qrc">
+                           <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
+                         </property>
+                         <property name="popupMode">
+                          <enum>QToolButton::InstantPopup</enum>
+                         </property>
+                         <property name="toolButtonStyle">
+                          <enum>Qt::ToolButtonTextBesideIcon</enum>
+                         </property>
+                         <property name="autoRaise">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <spacer name="verticalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
               </layout>
              </widget>
@@ -9512,8 +9800,8 @@ QToolButton:hover {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>572</width>
-                 <height>81</height>
+                 <width>971</width>
+                 <height>88</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_68">
@@ -9555,7 +9843,7 @@ QToolButton:hover {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>572</width>
+                 <width>971</width>
                  <height>118</height>
                 </rect>
                </property>
@@ -11090,6 +11378,12 @@ p, li { white-space: pre-wrap; }
             <height>0</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>210</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="styleSheet">
            <string notr="true">QFrame {
 	background-color: rgb(199, 202, 255);
@@ -11101,21 +11395,30 @@ p, li { white-space: pre-wrap; }
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout">
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0">
+           <property name="spacing">
+            <number>6</number>
+           </property>
            <property name="margin">
             <number>6</number>
            </property>
            <item>
             <widget class="QFrame" name="frameRooms">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>200</width>
+               <width>190</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="sizeIncrement">
+              <size>
+               <width>0</width>
                <height>0</height>
               </size>
              </property>
@@ -11170,58 +11473,8 @@ p, li { white-space: pre-wrap; }
                 </item>
                </widget>
               </item>
-              <item row="2" column="0">
-               <layout class="QGridLayout" name="gridLayoutRoomsToolbar">
-                <property name="topMargin">
-                 <number>4</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>4</number>
-                </property>
-                <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButtonRoomsAdd">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>Add</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                  <property name="autoRaise">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButtonRoomsRemove">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>Remove</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                  <property name="autoRaise">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
               <item row="0" column="0">
-               <widget class="QToolButton" name="toolButton_24">
+               <widget class="QToolButton" name="toolButtonRoomsHeader">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -11259,6 +11512,12 @@ QToolButton:hover {
                   <height>20</height>
                  </size>
                 </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                 <property name="toolButtonStyle">
                  <enum>Qt::ToolButtonTextBesideIcon</enum>
                 </property>
@@ -11267,16 +11526,96 @@ QToolButton:hover {
                 </property>
                </widget>
               </item>
+              <item row="2" column="0">
+               <widget class="QFrame" name="frameRoomsToolbar">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_135">
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayoutRoomsToolbar">
+                   <property name="topMargin">
+                    <number>4</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>4</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QToolButton" name="toolButtonRoomsAdd">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Add</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                     <property name="autoRaise">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QToolButton" name="toolButtonRoomsRemove">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Remove</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                     <property name="autoRaise">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
            <item>
             <widget class="QFrame" name="frameFriends">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>190</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="sizeIncrement">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
              <property name="styleSheet">
               <string notr="true">QFrame {
@@ -11314,58 +11653,8 @@ QToolButton:hover {
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
-               <layout class="QGridLayout" name="gridLayoutFriendsToolbar">
-                <property name="topMargin">
-                 <number>4</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>4</number>
-                </property>
-                <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButtonFriendsAdd">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>Add</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                  <property name="autoRaise">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButtonFriendsRemove">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="text">
-                   <string>Remove</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                  <property name="autoRaise">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
               <item row="0" column="0">
-               <widget class="QToolButton" name="toolButton_25">
+               <widget class="QToolButton" name="toolButtonFriendsHeader">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -11403,6 +11692,12 @@ QToolButton:hover {
                   <height>20</height>
                  </size>
                 </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                 <property name="toolButtonStyle">
                  <enum>Qt::ToolButtonTextBesideIcon</enum>
                 </property>
@@ -11411,8 +11706,92 @@ QToolButton:hover {
                 </property>
                </widget>
               </item>
+              <item row="2" column="0">
+               <widget class="QFrame" name="frameFriendsToolbar">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_136">
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayoutFriendsToolbar">
+                   <property name="topMargin">
+                    <number>4</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>4</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QToolButton" name="toolButtonFriendsAdd">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Add</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                     <property name="autoRaise">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QToolButton" name="toolButtonFriendsRemove">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Remove</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Edit Remove.png</normaloff>:/Icons/Resource/Edit Remove.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                     <property name="autoRaise">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -11513,6 +11892,12 @@ p, li { white-space: pre-wrap; }
             <height>0</height>
            </size>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>210</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="styleSheet">
            <string notr="true">QFrame {
 	background-color: rgb(199, 202, 255);
@@ -11524,16 +11909,19 @@ p, li { white-space: pre-wrap; }
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+           <property name="spacing">
+            <number>6</number>
+           </property>
            <property name="margin">
             <number>6</number>
            </property>
            <item>
             <widget class="QFrame" name="frameChatUsers">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="styleSheet">
@@ -11578,46 +11966,8 @@ p, li { white-space: pre-wrap; }
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <layout class="QGridLayout" name="gridLayoutUsersToolbar">
-                <property name="topMargin">
-                 <number>4</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>4</number>
-                </property>
-                <item row="0" column="0">
-                 <widget class="QToolButton" name="toolButtonUsersAddFriend">
-                  <property name="text">
-                   <string>Add To Friends</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QToolButton" name="toolButtonUsersIgnore">
-                  <property name="text">
-                   <string>Ignore</string>
-                  </property>
-                  <property name="icon">
-                   <iconset resource="Graphics.qrc">
-                    <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
-                  </property>
-                  <property name="toolButtonStyle">
-                   <enum>Qt::ToolButtonTextBesideIcon</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
               <item row="0" column="0">
-               <widget class="QToolButton" name="toolButton_26">
+               <widget class="QToolButton" name="toolButtonUsersHeader">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -11655,6 +12005,12 @@ QToolButton:hover {
                   <height>20</height>
                  </size>
                 </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                 <property name="toolButtonStyle">
                  <enum>Qt::ToolButtonTextBesideIcon</enum>
                 </property>
@@ -11663,8 +12019,80 @@ QToolButton:hover {
                 </property>
                </widget>
               </item>
+              <item row="2" column="0">
+               <widget class="QFrame" name="frameUsersToolbar">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_134">
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayoutUsersToolbar">
+                   <property name="topMargin">
+                    <number>4</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>4</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QToolButton" name="toolButtonUsersAddFriend">
+                     <property name="text">
+                      <string>Add To Friends</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Edit Add.png</normaloff>:/Icons/Resource/Edit Add.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QToolButton" name="toolButtonUsersIgnore">
+                     <property name="text">
+                      <string>Ignore</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="Graphics.qrc">
+                       <normaloff>:/Icons/Resource/Erase All.png</normaloff>:/Icons/Resource/Erase All.png</iconset>
+                     </property>
+                     <property name="toolButtonStyle">
+                      <enum>Qt::ToolButtonTextBesideIcon</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </widget>
@@ -13226,7 +13654,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1193</width>
      <height>21</height>
     </rect>
    </property>
@@ -13913,6 +14341,379 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>comboBoxFileType</tabstop>
+  <tabstop>toolButtonSearch</tabstop>
+  <tabstop>scrollAreaWelcome</tabstop>
+  <tabstop>toolButtonUploadsToolHeader</tabstop>
+  <tabstop>toolButtonAdvanced</tabstop>
+  <tabstop>scrollAreaWelcomeSidebar</tabstop>
+  <tabstop>listWidgetTorrentsTool</tabstop>
+  <tabstop>toolButtonTorrentsToolHeader</tabstop>
+  <tabstop>listWidgetConnectionTool</tabstop>
+  <tabstop>toolButtonConnectionToolHeader</tabstop>
+  <tabstop>listWidgetDownloadsTool</tabstop>
+  <tabstop>listWidgetUploadsTool</tabstop>
+  <tabstop>toolButtonDownloadsToolHeader</tabstop>
+  <tabstop>lineEditSearch</tabstop>
+  <tabstop>toolButtonMyLibraryToolHeader</tabstop>
+  <tabstop>toolButtonShareFiles</tabstop>
+  <tabstop>comboBoxType</tabstop>
+  <tabstop>pagesLibraryNavigator</tabstop>
+  <tabstop>treeWidgetLibraryNavigatorFolders</tabstop>
+  <tabstop>treeWidgetLibraryNavigatorOrganiser</tabstop>
+  <tabstop>lineEditFoldersSearchFiles</tabstop>
+  <tabstop>toolButtonFoldersSearchFiles</tabstop>
+  <tabstop>toolButtonFoldersSetView</tabstop>
+  <tabstop>toolButtonFoldersShowDetails</tabstop>
+  <tabstop>toolButtonOrganiserSetView</tabstop>
+  <tabstop>toolButtonOrganiserShowDetails</tabstop>
+  <tabstop>toolButtonOrganiserAddAlbum</tabstop>
+  <tabstop>toolButtonOrganiserDeleteAlbum</tabstop>
+  <tabstop>lineEditOrganiserFileSearch</tabstop>
+  <tabstop>toolButtonOrganiserFileSearch</tabstop>
+  <tabstop>toolButtonAddMedia</tabstop>
+  <tabstop>toolButtonRemoveMedia</tabstop>
+  <tabstop>toolButtonClearPlaylist</tabstop>
+  <tabstop>toolButtonSavePlaylist</tabstop>
+  <tabstop>listWidgetPlaylist</tabstop>
+  <tabstop>toolButtonMediaPrevious</tabstop>
+  <tabstop>toolButtonMediaRewind</tabstop>
+  <tabstop>toolButtonMediaStop</tabstop>
+  <tabstop>toolButtonMediaPlay</tabstop>
+  <tabstop>toolButtonMediaPause</tabstop>
+  <tabstop>toolButtonMediaFastForward</tabstop>
+  <tabstop>toolButtonMediaNext</tabstop>
+  <tabstop>horizontalSliderMediaVolume</tabstop>
+  <tabstop>toolButtonMediaToggleFullScreen</tabstop>
+  <tabstop>toolButtonMediaZoom</tabstop>
+  <tabstop>horizontalSliderMediaSeek</tabstop>
+  <tabstop>toolButtonMediaPlugins</tabstop>
+  <tabstop>toolButtonMediaVolumeMute</tabstop>
+  <tabstop>toolButtonShowHidePlaylist</tabstop>
+  <tabstop>toolButtonRepeat</tabstop>
+  <tabstop>toolButtonShuffle</tabstop>
+  <tabstop>scrollAreaSearchConfig</tabstop>
+  <tabstop>lineEditSearchTool</tabstop>
+  <tabstop>toolButtonSearchHeader</tabstop>
+  <tabstop>checkBoxSearchG2</tabstop>
+  <tabstop>checkBoxSearchG1</tabstop>
+  <tabstop>checkBoxSearchAres</tabstop>
+  <tabstop>checkBoxSearchED2k</tabstop>
+  <tabstop>toolButtonNetworksHeader</tabstop>
+  <tabstop>toolButtonResultsHeader</tabstop>
+  <tabstop>scrollAreaAnyFile</tabstop>
+  <tabstop>comboBoxSizeMin</tabstop>
+  <tabstop>comboBoxSizeMax</tabstop>
+  <tabstop>toolButtonAnyFileHeader</tabstop>
+  <tabstop>scrollAreaApplication</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_4</tabstop>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+  <tabstop>lineEdit_7</tabstop>
+  <tabstop>lineEdit_8</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>lineEdit_17</tabstop>
+  <tabstop>lineEdit_18</tabstop>
+  <tabstop>lineEdit_19</tabstop>
+  <tabstop>lineEdit_20</tabstop>
+  <tabstop>lineEdit_21</tabstop>
+  <tabstop>lineEdit_22</tabstop>
+  <tabstop>lineEdit_23</tabstop>
+  <tabstop>comboBoxSizeMin_2</tabstop>
+  <tabstop>comboBoxSizeMax_2</tabstop>
+  <tabstop>toolButtonApplicationHeader</tabstop>
+  <tabstop>scrollAreaArchive</tabstop>
+  <tabstop>comboBoxSizeMin_3</tabstop>
+  <tabstop>comboBoxSizeMax_3</tabstop>
+  <tabstop>lineEdit_24</tabstop>
+  <tabstop>lineEdit_25</tabstop>
+  <tabstop>lineEdit_26</tabstop>
+  <tabstop>lineEdit_28</tabstop>
+  <tabstop>lineEdit_29</tabstop>
+  <tabstop>lineEdit_31</tabstop>
+  <tabstop>lineEdit_32</tabstop>
+  <tabstop>lineEdit_30</tabstop>
+  <tabstop>toolButtonArchiveHeader</tabstop>
+  <tabstop>scrollAreaAudio</tabstop>
+  <tabstop>comboBoxSizeMin_4</tabstop>
+  <tabstop>comboBoxSizeMax_4</tabstop>
+  <tabstop>lineEdit_27</tabstop>
+  <tabstop>lineEdit_33</tabstop>
+  <tabstop>lineEdit_34</tabstop>
+  <tabstop>lineEdit_39</tabstop>
+  <tabstop>comboBox_7</tabstop>
+  <tabstop>comboBox_8</tabstop>
+  <tabstop>comboBox_9</tabstop>
+  <tabstop>comboBox_10</tabstop>
+  <tabstop>toolButtonAudioHeader</tabstop>
+  <tabstop>scrollAreaBittorrent</tabstop>
+  <tabstop>comboBoxSizeMin_5</tabstop>
+  <tabstop>comboBoxSizeMax_5</tabstop>
+  <tabstop>lineEdit_35</tabstop>
+  <tabstop>lineEdit_36</tabstop>
+  <tabstop>lineEdit_38</tabstop>
+  <tabstop>toolButtonBittorrentHeader</tabstop>
+  <tabstop>scrollAreaBook</tabstop>
+  <tabstop>comboBoxSizeMin_6</tabstop>
+  <tabstop>comboBoxSizeMax_6</tabstop>
+  <tabstop>lineEdit_37</tabstop>
+  <tabstop>lineEdit_40</tabstop>
+  <tabstop>lineEdit_41</tabstop>
+  <tabstop>lineEdit_42</tabstop>
+  <tabstop>lineEdit_43</tabstop>
+  <tabstop>comboBox_11</tabstop>
+  <tabstop>comboBox_12</tabstop>
+  <tabstop>comboBox_13</tabstop>
+  <tabstop>lineEdit_44</tabstop>
+  <tabstop>lineEdit_45</tabstop>
+  <tabstop>lineEdit_46</tabstop>
+  <tabstop>lineEdit_47</tabstop>
+  <tabstop>comboBox_14</tabstop>
+  <tabstop>lineEdit_48</tabstop>
+  <tabstop>lineEdit_49</tabstop>
+  <tabstop>lineEdit_50</tabstop>
+  <tabstop>lineEdit_51</tabstop>
+  <tabstop>comboBox_15</tabstop>
+  <tabstop>lineEdit_52</tabstop>
+  <tabstop>lineEdit_53</tabstop>
+  <tabstop>lineEdit_54</tabstop>
+  <tabstop>lineEdit_55</tabstop>
+  <tabstop>lineEdit_56</tabstop>
+  <tabstop>lineEdit_57</tabstop>
+  <tabstop>lineEdit_58</tabstop>
+  <tabstop>toolButtonBookHeader</tabstop>
+  <tabstop>scrollAreaImage</tabstop>
+  <tabstop>comboBoxSizeMin_7</tabstop>
+  <tabstop>comboBoxSizeMax_7</tabstop>
+  <tabstop>lineEdit_59</tabstop>
+  <tabstop>lineEdit_60</tabstop>
+  <tabstop>lineEdit_61</tabstop>
+  <tabstop>toolButtonImageHeader</tabstop>
+  <tabstop>scrollAreaPresentation</tabstop>
+  <tabstop>comboBoxSizeMin_8</tabstop>
+  <tabstop>comboBoxSizeMax_8</tabstop>
+  <tabstop>lineEdit_62</tabstop>
+  <tabstop>lineEdit_63</tabstop>
+  <tabstop>lineEdit_64</tabstop>
+  <tabstop>lineEdit_66</tabstop>
+  <tabstop>lineEdit_67</tabstop>
+  <tabstop>lineEdit_68</tabstop>
+  <tabstop>lineEdit_69</tabstop>
+  <tabstop>comboBox_16</tabstop>
+  <tabstop>lineEdit_65</tabstop>
+  <tabstop>lineEdit_70</tabstop>
+  <tabstop>comboBox_17</tabstop>
+  <tabstop>lineEdit_71</tabstop>
+  <tabstop>lineEdit_72</tabstop>
+  <tabstop>lineEdit_73</tabstop>
+  <tabstop>lineEdit_74</tabstop>
+  <tabstop>toolButtonPresentationHeader</tabstop>
+  <tabstop>scrollAreaROM</tabstop>
+  <tabstop>comboBoxSizeMin_9</tabstop>
+  <tabstop>comboBoxSizeMax_9</tabstop>
+  <tabstop>lineEdit_75</tabstop>
+  <tabstop>lineEdit_76</tabstop>
+  <tabstop>lineEdit_79</tabstop>
+  <tabstop>lineEdit_82</tabstop>
+  <tabstop>lineEdit_83</tabstop>
+  <tabstop>lineEdit_84</tabstop>
+  <tabstop>comboBox_18</tabstop>
+  <tabstop>comboBox_19</tabstop>
+  <tabstop>comboBox_20</tabstop>
+  <tabstop>comboBox_21</tabstop>
+  <tabstop>toolButtonROMHeader</tabstop>
+  <tabstop>scrollAreaSkin</tabstop>
+  <tabstop>comboBoxSizeMin_10</tabstop>
+  <tabstop>comboBoxSizeMax_10</tabstop>
+  <tabstop>lineEdit_77</tabstop>
+  <tabstop>lineEdit_78</tabstop>
+  <tabstop>lineEdit_80</tabstop>
+  <tabstop>lineEdit_81</tabstop>
+  <tabstop>lineEdit_85</tabstop>
+  <tabstop>lineEdit_87</tabstop>
+  <tabstop>lineEdit_88</tabstop>
+  <tabstop>lineEdit_89</tabstop>
+  <tabstop>comboBox_22</tabstop>
+  <tabstop>toolButtonSkinHeader</tabstop>
+  <tabstop>scrollAreaSourceCode</tabstop>
+  <tabstop>comboBoxSizeMin_11</tabstop>
+  <tabstop>comboBoxSizeMax_11</tabstop>
+  <tabstop>lineEdit_86</tabstop>
+  <tabstop>lineEdit_90</tabstop>
+  <tabstop>lineEdit_91</tabstop>
+  <tabstop>lineEdit_92</tabstop>
+  <tabstop>lineEdit_93</tabstop>
+  <tabstop>lineEdit_94</tabstop>
+  <tabstop>lineEdit_95</tabstop>
+  <tabstop>lineEdit_96</tabstop>
+  <tabstop>comboBox_23</tabstop>
+  <tabstop>lineEdit_97</tabstop>
+  <tabstop>lineEdit_98</tabstop>
+  <tabstop>lineEdit_99</tabstop>
+  <tabstop>lineEdit_100</tabstop>
+  <tabstop>lineEdit_101</tabstop>
+  <tabstop>lineEdit_102</tabstop>
+  <tabstop>toolButtonSourceCodeHeader</tabstop>
+  <tabstop>scrollAreaSpreadsheet</tabstop>
+  <tabstop>comboBoxSizeMin_12</tabstop>
+  <tabstop>comboBoxSizeMax_12</tabstop>
+  <tabstop>lineEdit_103</tabstop>
+  <tabstop>lineEdit_104</tabstop>
+  <tabstop>lineEdit_105</tabstop>
+  <tabstop>lineEdit_107</tabstop>
+  <tabstop>lineEdit_108</tabstop>
+  <tabstop>lineEdit_109</tabstop>
+  <tabstop>lineEdit_110</tabstop>
+  <tabstop>comboBox_24</tabstop>
+  <tabstop>comboBox_25</tabstop>
+  <tabstop>comboBox_26</tabstop>
+  <tabstop>lineEdit_106</tabstop>
+  <tabstop>lineEdit_111</tabstop>
+  <tabstop>lineEdit_112</tabstop>
+  <tabstop>lineEdit_113</tabstop>
+  <tabstop>lineEdit_114</tabstop>
+  <tabstop>lineEdit_115</tabstop>
+  <tabstop>toolButtonSpreadsheetHeader</tabstop>
+  <tabstop>scrollAreaVideo</tabstop>
+  <tabstop>comboBoxSizeMin_13</tabstop>
+  <tabstop>comboBoxSizeMax_13</tabstop>
+  <tabstop>lineEdit_116</tabstop>
+  <tabstop>lineEdit_118</tabstop>
+  <tabstop>lineEdit_120</tabstop>
+  <tabstop>lineEdit_121</tabstop>
+  <tabstop>lineEdit_122</tabstop>
+  <tabstop>comboBox_27</tabstop>
+  <tabstop>comboBox_28</tabstop>
+  <tabstop>toolButtonVideoHeader</tabstop>
+  <tabstop>scrollAreaWordProcessing</tabstop>
+  <tabstop>comboBoxSizeMin_14</tabstop>
+  <tabstop>comboBoxSizeMax_14</tabstop>
+  <tabstop>lineEdit_117</tabstop>
+  <tabstop>lineEdit_119</tabstop>
+  <tabstop>lineEdit_123</tabstop>
+  <tabstop>lineEdit_124</tabstop>
+  <tabstop>lineEdit_125</tabstop>
+  <tabstop>lineEdit_126</tabstop>
+  <tabstop>lineEdit_127</tabstop>
+  <tabstop>lineEdit_128</tabstop>
+  <tabstop>lineEdit_129</tabstop>
+  <tabstop>lineEdit_130</tabstop>
+  <tabstop>comboBox_29</tabstop>
+  <tabstop>comboBox_30</tabstop>
+  <tabstop>lineEdit_131</tabstop>
+  <tabstop>lineEdit_132</tabstop>
+  <tabstop>lineEdit_133</tabstop>
+  <tabstop>lineEdit_134</tabstop>
+  <tabstop>toolButtonWordProcessingHeader</tabstop>
+  <tabstop>pagesSearches</tabstop>
+  <tabstop>scrollAreaSearchResults</tabstop>
+  <tabstop>tableWidgetSearchResults</tabstop>
+  <tabstop>scrollAreaSearchItemDetails</tabstop>
+  <tabstop>toolButtonSearchDownload</tabstop>
+  <tabstop>toolButtonSearchBrowseUser</tabstop>
+  <tabstop>toolButtonShowSearch</tabstop>
+  <tabstop>toolButtonShowSearchDetails</tabstop>
+  <tabstop>lineEditSearchFilter</tabstop>
+  <tabstop>toolButtonSearchFilterMore</tabstop>
+  <tabstop>tableWidgetDownloads</tabstop>
+  <tabstop>toolButtonDownloadsPreview</tabstop>
+  <tabstop>toolButtonDownloadsPause</tabstop>
+  <tabstop>toolButtonDownloadsCancel</tabstop>
+  <tabstop>toolButtonDownloadsMarkJunk</tabstop>
+  <tabstop>toolButtonDownloadsProperties</tabstop>
+  <tabstop>toolButtonDownloadsClearCompleted</tabstop>
+  <tabstop>toolButtonDownloadsFilter</tabstop>
+  <tabstop>toolButtonDownloadsShowMonitor</tabstop>
+  <tabstop>toolButtonDownloadsAddTorrent</tabstop>
+  <tabstop>toolButtonDownloadsFilterAll</tabstop>
+  <tabstop>toolButtonDownloadsFilterAudio</tabstop>
+  <tabstop>toolButtonDownloadsFilterVideo</tabstop>
+  <tabstop>toolButtonDownloadsFilterImage</tabstop>
+  <tabstop>toolButtonDownloadsFilterBittorrent</tabstop>
+  <tabstop>tableWidgetUploads</tabstop>
+  <tabstop>toolButtonUploadsOpenPlay</tabstop>
+  <tabstop>toolButtonUploadsClear</tabstop>
+  <tabstop>toolButtonUploadsMarkJunk</tabstop>
+  <tabstop>toolButtonUploadsBrowseUser</tabstop>
+  <tabstop>toolButtonUploadsChatUser</tabstop>
+  <tabstop>toolButtonUploadsBanUser</tabstop>
+  <tabstop>toolButtonUploadsClearCompleted</tabstop>
+  <tabstop>toolButtonUploadsFilter</tabstop>
+  <tabstop>tableWidgetSecurity</tabstop>
+  <tabstop>toolButtonSecurityAddRule</tabstop>
+  <tabstop>toolButtonSecurityRemoveRule</tabstop>
+  <tabstop>toolButtonSecurityModifyRule</tabstop>
+  <tabstop>toolButtonSecurityImportRules</tabstop>
+  <tabstop>toolButtonSecurityExportRules</tabstop>
+  <tabstop>toolButtonSecuritySubscribeRules</tabstop>
+  <tabstop>textEditSystem</tabstop>
+  <tabstop>toolButtonNeigboursHostChat</tabstop>
+  <tabstop>toolButtonNeigboursHostBrowse</tabstop>
+  <tabstop>toolButtonNeigboursDisconnect</tabstop>
+  <tabstop>toolButtonNeigboursConnect</tabstop>
+  <tabstop>toolButtonNeigboursBan</tabstop>
+  <tabstop>toolButtonNetworkG2</tabstop>
+  <tabstop>toolButtonNetworkG1</tabstop>
+  <tabstop>toolButtonNetworkAres</tabstop>
+  <tabstop>toolButtonNetworkED2k</tabstop>
+  <tabstop>toolButtonNetworkSettings</tabstop>
+  <tabstop>tableWidgetNeigbours</tabstop>
+  <tabstop>listWidgetRooms</tabstop>
+  <tabstop>toolButtonRoomsHeader</tabstop>
+  <tabstop>listWidgetFriends</tabstop>
+  <tabstop>toolButtonFriendsHeader</tabstop>
+  <tabstop>listWidgetChatUsers</tabstop>
+  <tabstop>toolButtonUsersHeader</tabstop>
+  <tabstop>textEditChat</tabstop>
+  <tabstop>lineEditChatSend</tabstop>
+  <tabstop>toolButtonChatSend</tabstop>
+  <tabstop>toolButtonChatConnect</tabstop>
+  <tabstop>toolButtonChatDisconnect</tabstop>
+  <tabstop>toolButtonChatSmileys</tabstop>
+  <tabstop>toolButtonChatSettings</tabstop>
+  <tabstop>toolButtonChatEditProfile</tabstop>
+  <tabstop>treeWidgetHostCacheNavigation</tabstop>
+  <tabstop>toolButtonRemoveHost</tabstop>
+  <tabstop>toolButtonDisconnectFromHost</tabstop>
+  <tabstop>toolButtonConnectToHost</tabstop>
+  <tabstop>tableWidgetHosts</tabstop>
+  <tabstop>toolButtonBrowseStatistics</tabstop>
+  <tabstop>toolButtonDiscoveryProperties</tabstop>
+  <tabstop>toolButtonAdvertise</tabstop>
+  <tabstop>toolButtonQueryNow</tabstop>
+  <tabstop>toolButtonRemoveService</tabstop>
+  <tabstop>toolButtonAddService</tabstop>
+  <tabstop>toolButtonG2BootstrapToggle</tabstop>
+  <tabstop>toolButtonG1HostcacheToggle</tabstop>
+  <tabstop>toolButtonAresDiscoveryToggle</tabstop>
+  <tabstop>toolButtonEDonkey2kMetToggle</tabstop>
+  <tabstop>tableWidgetDiscoveryServices</tabstop>
+  <tabstop>treeWidgetGraph</tabstop>
+  <tabstop>graphicsViewGraph</tabstop>
+  <tabstop>toolButtonGraph1</tabstop>
+  <tabstop>tableWidgetPacketDump</tabstop>
+  <tabstop>toolButtonPacketDumpPause</tabstop>
+  <tabstop>toolButtonClearPacketDumpBuffer</tabstop>
+  <tabstop>tableWidgetSearchMonitor</tabstop>
+  <tabstop>toolButtonSearchForThis</tabstop>
+  <tabstop>toolButtonSearchMonitorBrowseUser</tabstop>
+  <tabstop>toolButtonSearchMonitorBanUser</tabstop>
+  <tabstop>toolButtonSearchMonitorPause</tabstop>
+  <tabstop>toolButtonClearSearchMonitorBuffer</tabstop>
+  <tabstop>tableWidgetHitMonitor</tabstop>
+  <tabstop>toolButtonHitDownload</tabstop>
+  <tabstop>toolButtonHitRequery</tabstop>
+  <tabstop>toolButtonHitPause</tabstop>
+  <tabstop>toolButtonClearHitBuffer</tabstop>
+  <tabstop>lineEditHitFilter</tabstop>
+  <tabstop>toolButtonHitFilterMore</tabstop>
+ </tabstops>
  <resources>
   <include location="Graphics.qrc"/>
  </resources>
@@ -13924,8 +14725,8 @@ p, li { white-space: pre-wrap; }
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>509</x>
-     <y>324</y>
+     <x>503</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
      <x>214</x>
@@ -13940,12 +14741,12 @@ p, li { white-space: pre-wrap; }
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>607</x>
-     <y>324</y>
+     <x>601</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>633</x>
-     <y>184</y>
+     <x>513</x>
+     <y>308</y>
     </hint>
    </hints>
   </connection>
@@ -13956,12 +14757,812 @@ p, li { white-space: pre-wrap; }
    <slot>setShown(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>644</x>
-     <y>324</y>
+     <x>638</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>799</x>
-     <y>297</y>
+     <x>683</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonDownloadsToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetDownloadsTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>-40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>-10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonUploadsToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetUploadsTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonConnectionToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetConnectionTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonConnectionToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelConnectionTime</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonTorrentsToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetTorrentsTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonTorrentsToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelSeedTorrentLink</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelHashingProgress</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>-93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelSharedFiles</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>-143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>line_14</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>-123</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>line_15</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>-86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelHashFaster</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>29</x>
+     <y>-69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelMyLibraryLink</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>-126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMyLibraryToolHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetLibraryTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>-224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>82</x>
+     <y>-194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelTypeSearch</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>22</x>
+     <y>-21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>22</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEditSearchTool</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>-21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelSearchFileType</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboBoxSearchFileType</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonNetworksHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelSearchNetworks</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>18</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>23</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonNetworksHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBoxSearchG2</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>53</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonNetworksHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBoxSearchG1</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>85</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonNetworksHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBoxSearchAres</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonNetworksHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>checkBoxSearchED2k</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxSearchFileType</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>pagesFileType</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAnyFileHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaAnyFile</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonApplicationHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaApplication</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsSearching</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsSearchingStatus</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsFound</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>24</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>24</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsFoundStatus</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsBlocked</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonResultsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>labelResultsBlockedStatus</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>386</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonArchiveHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaArchive</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAudioHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaAudio</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBittorrentHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaBittorrent</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonBookHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaBook</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonImageHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaImage</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonPresentationHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaPresentation</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonROMHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaROM</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSkinHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaSkin</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSourceCodeHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaSourceCode</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSpreadsheetHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaSpreadsheet</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonVideoHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaVideo</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonWordProcessingHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scrollAreaWordProcessing</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonRoomsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetRooms</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonFriendsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetFriends</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>frameSearchButtons</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>-21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonRoomsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>frameRoomsToolbar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonUsersHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>frameUsersToolbar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonUsersHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>listWidgetChatUsers</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>678</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonFriendsHeader</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>frameFriendsToolbar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>357</y>
     </hint>
    </hints>
   </connection>

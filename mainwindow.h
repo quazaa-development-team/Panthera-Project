@@ -26,12 +26,6 @@
 #include <QSystemTrayIcon>
 #include <QCloseEvent>
 #include "ui_mainwindow.h"
-#include "persistentsettings.h"
-#include "dialogsplash.h"
-#include "dialogsettings.h"
-#include "dialogprofile.h"
-#include "dialogabout.h"
-#include "dialogwizard.h"
 
 namespace Ui
 {
@@ -52,8 +46,34 @@ public:
 private:
 	Ui::MainWindowClass *ui;
 
-private slots:
-void on_actionChoose_Skin_triggered();
+private Q_SLOTS:
+void on_actionShares_triggered();
+	void on_toolButtonWordProcessingHeader_clicked(bool checked);
+	void on_toolButtonVideoHeader_clicked(bool checked);
+	void on_toolButtonSpreadsheetHeader_clicked(bool checked);
+	void on_toolButtonSourceCodeHeader_clicked(bool checked);
+	void on_toolButtonSkinHeader_clicked(bool checked);
+	void on_toolButtonROMHeader_clicked(bool checked);
+	void on_toolButtonPresentationHeader_clicked(bool checked);
+	void on_toolButtonImageHeader_clicked(bool checked);
+	void on_toolButtonBookHeader_clicked(bool checked);
+	void on_toolButtonBittorrentHeader_clicked(bool checked);
+	void on_toolButtonAudioHeader_clicked(bool checked);
+	void on_toolButtonArchiveHeader_clicked(bool checked);
+	void on_toolButtonApplicationHeader_clicked(bool checked);
+		void on_toolButtonUsersHeader_clicked(bool checked);
+	void on_toolButtonFriendsHeader_clicked(bool checked);
+	void on_toolButtonRoomsHeader_clicked(bool checked);
+	void on_toolButtonResultsHeader_clicked(bool checked);
+	void on_toolButtonAnyFileHeader_clicked(bool checked);
+	void on_toolButtonNetworksHeader_clicked(bool checked);
+	void on_toolButtonSearchHeader_clicked(bool checked);
+	void on_toolButtonTorrentsToolHeader_clicked(bool checked);
+	void on_toolButtonConnectionToolHeader_clicked(bool checked);
+	void on_toolButtonUploadsToolHeader_clicked(bool checked);
+	void on_toolButtonDownloadsToolHeader_clicked(bool checked);
+	void on_toolButtonMyLibraryToolHeader_clicked(bool checked);
+	void on_actionChoose_Skin_triggered();
 	void on_actionShowOrHide_triggered();
 	void on_actionSearch_Monitor_triggered(bool checked);
 	void on_actionHit_Monitor_triggered(bool checked);
@@ -76,7 +96,6 @@ void on_actionChoose_Skin_triggered();
 	void on_labelMyTransfersLink_linkActivated(QString link);
 	void on_pagesLibraryNavigator_currentChanged(int index);
 	void on_pagesMain_currentChanged(int page);
-	void on_comboBoxSearchFileType_currentIndexChanged(int index);
 	void on_actionSettings_triggered();
 	void on_actionChat_triggered(bool checked);
 	void on_actionMedia_triggered(bool checked);

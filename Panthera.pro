@@ -1,3 +1,7 @@
+XUPProjectSettings:QT_VERSION = Qt \
+    System \
+    (4.5.0)
+
 # Panthera.pro
 # Copyright Panthera Project, 2009.
 # This file is part of PANTHERA (www.pantheraproject.net)
@@ -15,33 +19,49 @@
 # -------------------------------------------------
 # Project created by QtCreator 2009-03-06T16:54:32
 # -------------------------------------------------
-QT += network \
+QT = core \
+    gui \
+    network \
     sql \
     webkit \
     xml \
     xmlpatterns
+CONFIG += exceptions \
+    rtti \
+    stl \
+    thread \
+    no_keywords
 TARGET = Panthera
 TEMPLATE = app
-SOURCES += main.cpp \
+SOURCES = main.cpp \
     mainwindow.cpp \
     persistentsettings.cpp \
     dialogwizard.cpp \
     dialogabout.cpp \
     dialogsettings.cpp \
     dialogsplash.cpp \
-    dialogprofile.cpp
-HEADERS += mainwindow.h \
+    dialogprofile.cpp \
+    dialogeditshares.cpp \
+    dialogcreatetorrent.cpp \
+    dialogopentorrent.cpp
+HEADERS = mainwindow.h \
     persistentsettings.h \
     dialogwizard.h \
     dialogabout.h \
     dialogsettings.h \
     dialogsplash.h \
-    dialogprofile.h
-FORMS += mainwindow.ui \
+    dialogprofile.h \
+    dialogeditshares.h \
+    dialogcreatetorrent.h \
+    dialogopentorrent.h
+FORMS = mainwindow.ui \
     dialogwizard.ui \
     dialogabout.ui \
     dialogsettings.ui \
     dialogsplash.ui \
-    dialogprofile.ui
-RESOURCES += Graphics.qrc
+    dialogprofile.ui \
+    dialogeditshares.ui \
+    dialogcreatetorrent.ui \
+    dialogopentorrent.ui
+RESOURCES = Graphics.qrc
 RC_FILE = Panthera.rc

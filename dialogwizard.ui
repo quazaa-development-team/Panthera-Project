@@ -9,9 +9,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>455</width>
-    <height>416</height>
+    <width>445</width>
+    <height>357</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>445</width>
+    <height>357</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>445</width>
+    <height>357</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>QuickStart Wizard</string>
@@ -74,7 +86,7 @@ p, li { white-space: pre-wrap; }
    <item row="1" column="0">
     <widget class="QStackedWidget" name="pagesWizard">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="pageWelcome">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -87,7 +99,7 @@ p, li { white-space: pre-wrap; }
        <item row="0" column="0">
         <widget class="QFrame" name="frameWelcome">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -99,6 +111,12 @@ p, li { white-space: pre-wrap; }
           <enum>QFrame::Sunken</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="labelWelcome">
             <property name="text">
@@ -129,6 +147,19 @@ p, li { white-space: pre-wrap; }
              <bool>true</bool>
             </property>
            </widget>
+          </item>
+          <item row="1" column="0">
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -204,9 +235,9 @@ p, li { white-space: pre-wrap; }
         <number>0</number>
        </property>
        <item row="0" column="0">
-        <widget class="QFrame" name="frame_2">
+        <widget class="QFrame" name="frameConnection">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -324,6 +355,19 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
+          <item row="6" column="0">
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </widget>
        </item>
@@ -410,7 +454,7 @@ p, li { white-space: pre-wrap; }
        <item row="0" column="0">
         <widget class="QFrame" name="frame_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -492,7 +536,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="3" column="0" colspan="2">
            <layout class="QGridLayout" name="gridLayout_17">
             <property name="sizeConstraint">
              <enum>QLayout::SetMaximumSize</enum>
@@ -500,16 +544,6 @@ p, li { white-space: pre-wrap; }
             <property name="spacing">
              <number>0</number>
             </property>
-            <item row="0" column="0" rowspan="2">
-             <widget class="QListView" name="listViewShares">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>120</height>
-               </size>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="1">
              <widget class="QPushButton" name="pushButtonSharesRemove">
               <property name="text">
@@ -524,7 +558,37 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
+            <item row="0" column="0" rowspan="2">
+             <widget class="QListWidget" name="listWidgetShares">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>120</height>
+               </size>
+              </property>
+             </widget>
+            </item>
            </layout>
+          </item>
+          <item row="5" column="0">
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBoxAllowBrowseShares">
+            <property name="text">
+             <string>AllowOthers To Browse My Shares</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -612,7 +676,7 @@ p, li { white-space: pre-wrap; }
        <item row="0" column="0">
         <widget class="QFrame" name="frame_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -624,6 +688,12 @@ p, li { white-space: pre-wrap; }
           <enum>QFrame::Sunken</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
           <item row="2" column="0">
            <layout class="QGridLayout" name="gridLayout_10">
             <item row="1" column="0">
@@ -657,7 +727,7 @@ p, li { white-space: pre-wrap; }
              <widget class="QLineEdit" name="lineEditIrcAlternateNick"/>
             </item>
             <item row="0" column="0" colspan="2">
-             <widget class="QCheckBox" name="checkBoxAllowBrowse">
+             <widget class="QCheckBox" name="checkBoxAllowBrowseProfile">
               <property name="text">
                <string>Allow others to browse my user profile.</string>
               </property>
@@ -731,7 +801,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="labelChatHeader">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -770,30 +840,10 @@ p, li { white-space: pre-wrap; }
                </property>
               </widget>
              </item>
-             <item row="0" column="1">
-              <widget class="QComboBox" name="comboBoxCountry">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
-             </item>
              <item row="2" column="0">
               <widget class="QLabel" name="labelCity">
                <property name="text">
                 <string>City:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QComboBox" name="comboBoxCity">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
                </property>
               </widget>
              </item>
@@ -804,18 +854,30 @@ p, li { white-space: pre-wrap; }
                </property>
               </widget>
              </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEditCountry"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEditCity"/>
+             </item>
              <item row="0" column="3">
-              <widget class="QComboBox" name="comboBoxStateProvince">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
+              <widget class="QLineEdit" name="lineEditStateProvince"/>
              </item>
             </layout>
            </widget>
+          </item>
+          <item row="5" column="0">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -903,7 +965,7 @@ p, li { white-space: pre-wrap; }
        <item row="0" column="0">
         <widget class="QFrame" name="frame_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -915,65 +977,16 @@ p, li { white-space: pre-wrap; }
           <enum>QFrame::Sunken</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_13">
-          <item row="2" column="0">
-           <widget class="QCheckBox" name="checkBoxG2Connect">
-            <property name="text">
-             <string>Connect to Gnutella 2 (Highly Reccomended)</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QCheckBox" name="checkBoxG1Connect">
-            <property name="text">
-             <string>Connect to the Original Gnutella</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QCheckBox" name="checkBoxAresConnect">
-            <property name="text">
-             <string>Connect to Ares</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QCheckBox" name="checkBoxED2kConnect">
-            <property name="text">
-             <string>Connect to eDonkey 2k</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0">
-           <widget class="QCheckBox" name="checkBoxBittorrentLinks">
-            <property name="text">
-             <string>Use Panthera for Bittorrent files and links.</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
-            </property>
-           </widget>
-          </item>
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
           <item row="1" column="0">
            <widget class="QLabel" name="labelNetworksHeader">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -993,27 +1006,99 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="checkBoxKadConnect">
-            <property name="text">
-             <string>Use the Kad network with eDonkey 2k</string>
-            </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
-            </property>
-           </widget>
+          <item row="2" column="0">
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBoxG2Connect">
+              <property name="text">
+               <string>Connect to Gnutella 2 (Highly Reccomended)</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/G2.png</normaloff>:/Icons/Resource/G2.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="checkBoxG1Connect">
+              <property name="text">
+               <string>Connect to the Original Gnutella</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/G1.png</normaloff>:/Icons/Resource/G1.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="checkBoxAresConnect">
+              <property name="text">
+               <string>Connect to Ares</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/Ares.png</normaloff>:/Icons/Resource/Ares.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="checkBoxED2kConnect">
+              <property name="text">
+               <string>Connect to eDonkey 2k</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QCheckBox" name="checkBoxKadConnect">
+              <property name="text">
+               <string>Use the Kad network with eDonkey 2k</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/EMule simple.png</normaloff>:/Icons/Resource/EMule simple.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QCheckBox" name="checkBoxBittorrentLinks">
+              <property name="text">
+               <string>Use Panthera for Bittorrent files and links.</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QCheckBox" name="checkBoxBittorrentKademliaConnect">
+              <property name="text">
+               <string>Use Kademlia with Bittorrent</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Graphics.qrc">
+                <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item row="8" column="0">
-           <widget class="QCheckBox" name="checkBoxBittorrentKademliaConnect">
-            <property name="text">
-             <string>Use Kademlia with Bittorrent</string>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
             </property>
-            <property name="icon">
-             <iconset resource="Graphics.qrc">
-              <normaloff>:/Icons/Resource/Bittorrent_32.png</normaloff>:/Icons/Resource/Bittorrent_32.png</iconset>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
             </property>
-           </widget>
+           </spacer>
           </item>
          </layout>
         </widget>
@@ -1101,7 +1186,7 @@ p, li { white-space: pre-wrap; }
        <item row="0" column="0">
         <widget class="QFrame" name="frame_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1114,12 +1199,12 @@ p, li { white-space: pre-wrap; }
          </property>
          <layout class="QGridLayout" name="gridLayout_15">
           <property name="margin">
-           <number>2</number>
+           <number>4</number>
           </property>
           <property name="spacing">
-           <number>2</number>
+           <number>4</number>
           </property>
-          <item row="7" column="0">
+          <item row="9" column="0">
            <widget class="QLabel" name="labelSystemFooter">
             <property name="text">
              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1135,7 +1220,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="labelSystemHeader">
             <property name="text">
              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1155,40 +1240,50 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QCheckBox" name="checkBoxConnectNetworksToday">
-            <property name="text">
-             <string>Connect to my chosen networks when I close this wizard.</string>
-            </property>
-           </widget>
-          </item>
           <item row="3" column="0">
-           <widget class="QCheckBox" name="checkBoxConnectNetworksAlways">
-            <property name="text">
-             <string>Connect to my chosen networks every time I start Panthera.</string>
-            </property>
-           </widget>
+           <layout class="QGridLayout" name="gridLayout_19">
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="checkBoxOSStart">
+              <property name="text">
+               <string>Start Panthera with my operating system.</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="checkBoxSimpleProgress">
+              <property name="text">
+               <string>Display simplified progress bars. (Reduces CPU use.)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="checkBoxSlowHashing">
+              <property name="text">
+               <string>Use low priority file hashing. (Reduces CPU use but takes longer.)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBoxConnectNetworksAlways">
+              <property name="text">
+               <string>Connect to my chosen networks every time I start Panthera.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item row="4" column="0">
-           <widget class="QCheckBox" name="checkBoxOSStart">
-            <property name="text">
-             <string>Start Panthera with my operating system.</string>
+          <item row="10" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
             </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QCheckBox" name="checkBoxSimpleProgress">
-            <property name="text">
-             <string>Display simplified progress bars. (Reduces CPU use.)</string>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
             </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="checkBoxSlowHashing">
-            <property name="text">
-             <string>Use low priority file hashing. (Reduces CPU use but takes longer.)</string>
-            </property>
-           </widget>
+           </spacer>
           </item>
          </layout>
         </widget>

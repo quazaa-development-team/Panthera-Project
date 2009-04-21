@@ -41,8 +41,10 @@ protected:
 private:
     Ui::DialogWizard *m_ui;
 
-private slots:
-	void on_pushButtonSystemExit_clicked();
+private Q_SLOTS:
+void on_pushButtonSharesRemove_clicked();
+	void on_pushButtonSharesAdd_clicked();
+		void on_pushButtonSystemExit_clicked();
 	void on_pushButtonSystemFinish_clicked();
 	void on_pushButtonSystemBack_clicked();
 	void on_pushButtonNetworksExit_clicked();
