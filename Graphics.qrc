@@ -84,15 +84,6 @@
         <file>Resource/Edit Remove.png</file>
         <file>Resource/Erase All.png</file>
         <file>Resource/PantheraHomeSplash.png</file>
-        <file>Resource/Pause Queue.png</file>
-        <file>Resource/Player Eject.png</file>
-        <file>Resource/Player End.png</file>
-        <file>Resource/Player Fwd.png</file>
-        <file>Resource/Player Pause.png</file>
-        <file>Resource/Player Play.png</file>
-        <file>Resource/Player Rew.png</file>
-        <file>Resource/Player Start.png</file>
-        <file>Resource/Player Stop.png</file>
         <file>Resource/Player Volume.png</file>
         <file>Resource/Playlist.png</file>
         <file>Resource/Plugins.png</file>
@@ -118,7 +109,6 @@
         <file>Resource/view_tree-256.png</file>
         <file>Resource/VisualHub.png</file>
         <file>Resource/VLC.png</file>
-        <file>Resource/Volume Normal Blue.png</file>
         <file>Resource/Zoom In.png</file>
         <file>Resource/Zoom Out.png</file>
         <file>Resource/Application.png</file>

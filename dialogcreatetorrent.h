@@ -19,6 +19,10 @@ protected:
 
 private:
     Ui::DialogCreateTorrent *m_ui;
+
+private Q_SLOTS:
+	void on_pushButtonSave_clicked();
+	void on_pushButtonCancel_clicked();
 };
 
 #endif // DIALOGCREATETORRENT_H

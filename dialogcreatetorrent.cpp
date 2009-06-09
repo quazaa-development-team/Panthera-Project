@@ -23,3 +23,13 @@ void DialogCreateTorrent::changeEvent(QEvent *e)
         break;
     }
 }
+
+void DialogCreateTorrent::on_pushButtonCancel_clicked()
+{
+	close();
+}
+
+void DialogCreateTorrent::on_pushButtonSave_clicked()
+{
+	close();
+}

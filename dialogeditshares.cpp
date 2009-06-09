@@ -1,7 +1,7 @@
 #include "dialogeditshares.h"
 #include "ui_dialogeditshares.h"
 #include "persistentsettings.h"
-#include <QFiledialog>
+#include <QFileDialog>
 
 DialogEditShares::DialogEditShares(QWidget *parent) :
     QDialog(parent),

@@ -650,7 +650,7 @@ QToolButton:hover {
    <item row="1" column="4">
     <widget class="QStackedWidget" name="pagesSettings">
      <property name="currentIndex">
-      <number>20</number>
+      <number>13</number>
      </property>
      <widget class="QWidget" name="pageIntroduction">
       <layout class="QGridLayout" name="gridLayout_5">
